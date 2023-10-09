@@ -102,20 +102,20 @@ public class RegionPage extends BaseClass
     {
         SaveProjectData spd=new SaveProjectData();
         String retailunit=spd.getprojectData("Retail");
-        config.click();
-        scheduleSettings.click();
+        CommonUtility.clickElement(config);
+        CommonUtility.clickElement(scheduleSettings);
         SoftAssert sa=new SoftAssert();
         sa.assertTrue(breadcrumvalue.getText().equalsIgnoreCase("Schedule Settings"));
-        region.click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        addregion.click();
+        CommonUtility.clickElement(region);
+        //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        CommonUtility.clickElement(addregion);
         Utility ut= new Utility();
         String init=ut.randomAlphaNumeric(2);
-        btnSoftRegion.click(); // select soft region
-        regionId.sendKeys(init);
-        regionSyscode.sendKeys(ConfigReader.getPropertyvalue("syscode"));
+        CommonUtility.clickElement(btnSoftRegion);// select soft region
+        CommonUtility.sendKeys(regionId,init);
+        CommonUtility.sendKeys(regionSyscode,ConfigReader.getPropertyvalue("syscode"));
         String sp_name=init+" region";
-        regiondesc.sendKeys(sp_name);
+        CommonUtility.sendKeys(regiondesc,sp_name);
         Actions a = new Actions(driver);
         int i=9;
         while(i>0) {
@@ -128,7 +128,7 @@ public class RegionPage extends BaseClass
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         if(retailpopup.isDisplayed())
         {
-            drodownRetailUnit.click();
+            CommonUtility.clickElement(drodownRetailUnit);
             List<WebElement> ele=driver.findElements(By.xpath("//div[@class='auto-complete-list-drop-down ng-isolate-scope']/div/span"));
             for (WebElement e:ele)
             {
@@ -137,12 +137,12 @@ public class RegionPage extends BaseClass
                 if(str.equalsIgnoreCase(retailunitvalue))
                 {
                     System.out.println("In ele selection");
-                    e.click();
+                    CommonUtility.clickElement(e);
                     break;
                 }
             }
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-            saveRetailunit.click();
+            CommonUtility.clickElement(saveRetailunit);
         }
 
         new Actions(driver).moveToElement(saveRegion).perform();
@@ -158,21 +158,20 @@ public class RegionPage extends BaseClass
     {
         SaveProjectData spd=new SaveProjectData();
         String retailunit=spd.getprojectData("Retail");
-        config.click();
-        scheduleSettings.click();
+        CommonUtility.clickElement(config);
+        CommonUtility.clickElement(scheduleSettings);
         SoftAssert sa=new SoftAssert();
         sa.assertTrue(breadcrumvalue.getText().equalsIgnoreCase("Schedule Settings"));
-        region.click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        addregion.click();
+        CommonUtility.clickElement(region);
+        CommonUtility.clickElement(addregion);
         Utility ut= new Utility();
         String init=ut.randomAlphaNumeric(2);
-        btnHardRegion.click(); // select hard region
-        threshold.sendKeys("90");
-        regionId.sendKeys(init);
-        regionSyscode.sendKeys(ConfigReader.getPropertyvalue("syscode"));
+        CommonUtility.clickElement(btnHardRegion);
+        CommonUtility.sendKeys(threshold,"90");
+        CommonUtility.sendKeys(regionId,init);
+        CommonUtility.sendKeys(regionSyscode,ConfigReader.getPropertyvalue("syscode"));
         String sp_name=init+" region";
-        regiondesc.sendKeys(sp_name);
+        CommonUtility.sendKeys(regiondesc,sp_name);
         JavaScriptExecutor js=new JavaScriptExecutor();
         Actions a = new Actions(driver);
         int i=9;
@@ -182,10 +181,10 @@ public class RegionPage extends BaseClass
         js.clickElementByJS(rdSubCount);
         js.clickElementByJS(rdRoundtopenny);
         js.clickElementByJS(btnaddRegion);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
         if(retailpopup.isDisplayed())
         {
-            drodownRetailUnit.click();
+            CommonUtility.clickElement(drodownRetailUnit);
             List<WebElement> ele=driver.findElements(By.xpath("//div[@class='auto-complete-list-drop-down ng-isolate-scope']/div/span"));
             for (WebElement e:ele)
             {
@@ -194,12 +193,11 @@ public class RegionPage extends BaseClass
                 if(str.equalsIgnoreCase(retailunitvalue))
                 {
                     System.out.println("In ele selection");
-                    e.click();
+                    CommonUtility.clickElement(e);
                     break;
                 }
             }
-            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-            saveRetailunit.click();
+            CommonUtility.clickElement(saveRetailunit);
         }
 
         new Actions(driver).moveToElement(saveRegion).perform();

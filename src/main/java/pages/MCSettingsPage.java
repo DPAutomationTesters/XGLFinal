@@ -3,6 +3,7 @@ package pages;
 import ORParcer.RespositoryParser;
 import base.BaseClass;
 import dataProvider.ConfigReader;
+import helper.CommonUtility;
 import helper.JavaScriptExecutor;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -99,22 +100,21 @@ public class MCSettingsPage extends BaseClass
     }
     public void resetSettings()
     {
-        addwait(mcsettingreset);
-        mcsettingreset.click();
+        CommonUtility.clickElement(mcsettingreset);
     }
     public void saveMcSettings()
     {
-        mcsettingsave.click();
+        CommonUtility.clickElement(mcsettingsave);
     }
     public void setMcsettingfirstvalue(String widgetValue)
     {
-        mcsettingfirstbtn.click();
+        CommonUtility.clickElement(mcsettingfirstbtn);
            List<WebElement> option=driver.findElements(By.xpath("//div[@class='dropDown']/div"));
             for (WebElement ele :option)
             {
                if(ele.getText().equalsIgnoreCase(widgetValue))
                 {
-                    ele.click();
+                    CommonUtility.clickElement(ele);
                     break;
                 }
             }

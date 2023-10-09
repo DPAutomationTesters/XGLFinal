@@ -85,7 +85,6 @@ public class CustomerPage extends BaseClass
             new Actions(driver).moveToElement(typedropdwn).perform();
             ac.click(typedropdwn);
         }
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         if(custtypevalue.isDisplayed()) {
             List<WebElement> ele = driver.findElements(By.xpath("//div[@id='customersProfile.type']/div[last()]/div/div"));
             if (type.equalsIgnoreCase("Agency"))
@@ -163,22 +162,22 @@ public class CustomerPage extends BaseClass
     }
     public void createStandardCustomer()
     {
-        menuOrders.click();
-        menuCustomers.click();
+        CommonUtility.clickElement(menuOrders);
+        CommonUtility.clickElement(menuCustomers);
         SoftAssert sa=new SoftAssert();
         sa.assertTrue(breadcrumvalue.getText().equalsIgnoreCase("Customers"));
-        addCustomers.click();
-        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+        CommonUtility.clickElement(addCustomers);
+        //driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         sa.assertTrue(selectCustType("Standard"));
         Utility ut= new Utility();
         String init=ut.randomAlphaNumeric(2);
-        custname.click();
-        custname.sendKeys(init);
-        salespersondrpdwn.click();
+        CommonUtility.clickElement(custname);
+        CommonUtility.sendKeys(custname,init);
+        CommonUtility.clickElement(salespersondrpdwn);
         sa.assertTrue(selectSalesperson());
-        commoditydrpdown.click();
+        CommonUtility.clickElement(commoditydrpdown);
         sa.assertTrue(selectcommodity());
-        savecustbtn.click();
+        CommonUtility.clickElement(savecustbtn);
         if(custbreadcrum.isDisplayed())
         {
             Assert.assertTrue(custbreadcrum.getText().contains("New Customer"));
@@ -188,24 +187,24 @@ public class CustomerPage extends BaseClass
     }
     public void createAgencyCustomer()
     {
-        menuOrders.click();
-        menuCustomers.click();
+        CommonUtility.clickElement(menuOrders);
+        CommonUtility.clickElement(menuCustomers);
         SoftAssert sa=new SoftAssert();
         sa.assertTrue(breadcrumvalue.getText().equalsIgnoreCase("Customers"));
-        addCustomers.click();
+        CommonUtility.clickElement(addCustomers);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         sa.assertTrue(selectCustType("Agency"));
         Assert.assertEquals(typeValue.getText(),"Agency");
         Utility ut= new Utility();
         String init=ut.randomAlphaNumeric(2);
-        custname.click();
-        custname.sendKeys(init);
+        CommonUtility.clickElement(custname);
+        CommonUtility.sendKeys(custname,init);
         System.out.println("Customer name is "+init);
-        salespersondrpdwn.click();
+        CommonUtility.clickElement(salespersondrpdwn);
         sa.assertTrue(selectSalesperson());
-        commoditydrpdown.click();
+        CommonUtility.clickElement(commoditydrpdown);
         sa.assertTrue(selectcommodity());
-        savecustbtn.click();
+        CommonUtility.clickElement(savecustbtn);
         if(custbreadcrum.isDisplayed())
         {
             Assert.assertTrue(custbreadcrum.getText().contains("New Customer"));
@@ -215,23 +214,23 @@ public class CustomerPage extends BaseClass
     }
     public void createRepCustomer()
     {
-        menuOrders.click();
-        menuCustomers.click();
+        CommonUtility.clickElement(menuOrders);
+        CommonUtility.clickElement(menuCustomers);
         SoftAssert sa=new SoftAssert();
         sa.assertTrue(breadcrumvalue.getText().equalsIgnoreCase("Customers"));
-        addCustomers.click();
+        CommonUtility.clickElement(addCustomers);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         sa.assertTrue(selectCustType("Rep"));
         Assert.assertEquals(typeValue.getText(),"Rep");
         Utility ut= new Utility();
         String init=ut.randomAlphaNumeric(2);
-        custname.click();
-        custname.sendKeys(init);
-        salespersondrpdwn.click();
+        CommonUtility.clickElement(custname);
+        CommonUtility.sendKeys(custname,init);
+        CommonUtility.clickElement(salespersondrpdwn);
         sa.assertTrue(selectSalesperson());
-        commoditydrpdown.click();
+        CommonUtility.clickElement(commoditydrpdown);
         sa.assertTrue(selectcommodity());
-        savecustbtn.click();
+        CommonUtility.clickElement(savecustbtn);
         if(custbreadcrum.isDisplayed())
         {
             Assert.assertTrue(custbreadcrum.getText().contains("New Customer"));

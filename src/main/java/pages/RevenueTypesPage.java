@@ -1,6 +1,7 @@
 package pages;
 
 import base.BaseClass;
+import helper.CommonUtility;
 import helper.SaveProjectData;
 import helper.Utility;
 import org.openqa.selenium.WebDriver;
@@ -54,25 +55,24 @@ public class RevenueTypesPage extends BaseClass
 
     public void Addrevenuetype()
     {
-        config.click();
-        orderSettings.click();
+        CommonUtility.clickElement(config);
+        CommonUtility.clickElement(orderSettings);
         SoftAssert sa=new SoftAssert();
         sa.assertTrue(breadcrumvalue.getText().equalsIgnoreCase("Order Settings"));
-        revenuetype.click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        addrevenuetype.click();
+        CommonUtility.clickElement(revenuetype);
+        CommonUtility.clickElement(addrevenuetype);
         Utility ut= new Utility();
         String init=ut.randomAlphaNumeric(2);
-        revenuetypeid.sendKeys(init);
+        CommonUtility.sendKeys(revenuetypeid,init);
         String sp_name=init+"revenue type";
-        revenuetypedesc.sendKeys(sp_name);
+        CommonUtility.sendKeys(revenuetypedesc,sp_name);
         waittillElementInteractable(driver,20,"//div[@id='revenueTypeProfile_revenueCategory']/div[@class='iconContainer']");
 
         new Actions(driver).moveToElement(revenueCategorydrpbutton).perform();
-        revenueCategorydrpbutton.click();
+        CommonUtility.clickElement(revenueCategorydrpbutton);
         SalesPersonPage sp= new SalesPersonPage(driver);
         sp.selectdropdownvalue();
-        rtSave.click();
+        CommonUtility.clickElement(rtSave);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         if(spbreadcrum.isDisplayed())
         {

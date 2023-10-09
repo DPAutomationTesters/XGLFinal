@@ -35,12 +35,12 @@ X
 java:S2696-"6Make the enclosing method "static" or remove this set.(æ£´ãıÿÿÿÿ8¢Æ½Ë¨1
 o	java:S1000"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô¹ıùÿÿÿÿ8¢Æ½Ë¨1
 R
-java:S22095"5Change this instance-reference to a static reference.(ƒêòŸ8£Æ½Ë¨1
+java:S22095"5Change this instance-reference to a static reference.(ƒêòŸ8œØ’ï¯1
 W
-java:S22096"5Change this instance-reference to a static reference.(ÒÖİìÿÿÿÿÿ8¤Æ½Ë¨1
+java:S22096"5Change this instance-reference to a static reference.(ÒÖİìÿÿÿÿÿ8œØ’ï¯1
 X
 java:S2696A"6Make the enclosing method "static" or remove this set.(¬Û‘ûÿÿÿÿ8¥Æ½Ë¨1
 W
-java:S2209A"5Change this instance-reference to a static reference.(¬Û‘ûÿÿÿÿ8¥Æ½Ë¨1
+java:S2209A"5Change this instance-reference to a static reference.(¬Û‘ûÿÿÿÿ8£Ø’ï¯1
 j	java:S100D"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê½·8¦Æ½Ë¨1
 U	java:S106d"9Replace this use of System.out or System.err by a logger.(´ƒ¨¶8«Æ½Ë¨1

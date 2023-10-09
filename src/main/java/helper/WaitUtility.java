@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.HttpURLConnection;
@@ -139,5 +140,59 @@ public class WaitUtility extends BaseClass
             e.printStackTrace();
         }
 
+    }
+    public static void waitTillElementVisible(WebDriver driver, long maxSecondsToWait,WebElement element)
+    {
+        try
+        {
+            WebDriverWait wait = new WebDriverWait(driver, maxSecondsToWait);
+            ExpectedCondition<Boolean> attributeProperty = new ExpectedCondition<Boolean>() {
+                @Override
+                public Boolean apply(WebDriver driver) {
+                    Boolean attributeValue = element.isDisplayed();
+                    return !attributeValue;
+                }
+            };
+            wait.until(attributeProperty);
+        }
+        catch(Exception e)
+        {
+            ExceptionHandling.handleException(e);
+            log.error("Element did not become visible within the specified time: " +e.getMessage());
+        }
+    }
+    public static void waitTillElementtobeClickable(WebDriver driver, long maxSecondsToWait,WebElement element)
+    {
+        try
+        {
+            WebDriverWait wait = new WebDriverWait(driver, maxSecondsToWait);
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+            element.click();
+        }
+        catch(Exception e)
+        {
+            ExceptionHandling.handleException(e);
+            log.error("Element did not become visible within the specified time: " +e.getMessage());
+        }
+    }
+    public static void waittillElementisNotEmpty(WebDriver driver, long maxSecondsToWait, WebElement element)
+    {
+        try
+        {
+            WebDriverWait wait = new WebDriverWait(driver, maxSecondsToWait);
+            ExpectedCondition<Boolean> attributeNotEmpty = new ExpectedCondition<Boolean>() {
+                @Override
+                public Boolean apply(WebDriver driver) {
+                    String attributeValue = element.getText();
+                    return !attributeValue.isEmpty();
+                }
+            };
+            wait.until(attributeNotEmpty);
+        }
+        catch (Exception e)
+        {
+            ExceptionHandling.handleException(e);
+            log.error("Element did not become visible within the specified time: " +e.getMessage());
+        }
     }
 }

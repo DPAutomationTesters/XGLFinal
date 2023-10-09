@@ -12,6 +12,7 @@ public class JavaScriptExecutor extends BaseClass
 
     public void clickElementByJS(WebElement ele)
     {
+        WaitUtility.waitTillElementVisible(driver,30,ele);
         js.executeScript("arguments[0].click();",ele);
 
     }
@@ -21,6 +22,7 @@ public class JavaScriptExecutor extends BaseClass
     }
     public void sendKeysByJS(By ele,String str)
     {
+        WaitUtility.waitTillElementVisible(driver,30,driver.findElement(ele));
         js.executeScript("arguments[0].setAttribute('value', '" + str +"')", ele);
     }
     public void scrolldownbyjs()
@@ -35,7 +37,6 @@ public class JavaScriptExecutor extends BaseClass
     {
         try {
             js.executeScript("arguments[0].style.border='"+style+"'", ele);
-            Thread.sleep(1000);
             js.executeScript("arguments[0].style.border=''", ele);
         }
         catch (Exception e)

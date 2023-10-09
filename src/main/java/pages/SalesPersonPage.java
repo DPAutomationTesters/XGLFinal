@@ -1,10 +1,7 @@
 package pages;
 
 import base.BaseClass;
-import helper.ExceptionHandling;
-import helper.JavaScriptExecutor;
-import helper.SaveProjectData;
-import helper.Utility;
+import helper.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -69,7 +66,7 @@ public class SalesPersonPage extends BaseClass
         WebElement ele=driver.findElement(By.xpath("//div[@class='dropDown']/div[1]"));
             try {
                 str = ele.getText();
-                ele.click();
+                CommonUtility.clickElement(ele);
                 Reporter.log("Value selected is " + str);
             }
             catch(Exception et)
@@ -81,25 +78,25 @@ public class SalesPersonPage extends BaseClass
 
     public void setAddSalesPeople()
     {
-        config.click();
-        orderSettings.click();
+        CommonUtility.clickElement(config);
+        CommonUtility.clickElement(orderSettings);
         SoftAssert sa=new SoftAssert();
         sa.assertTrue(breadcrumvalue.getText().equalsIgnoreCase("Order Settings"));
-        addSalesPeople.click();
+        CommonUtility.clickElement(addSalesPeople);
         Utility ut= new Utility();
         String init=ut.randomAlphaNumeric(3);
-        spinitial.sendKeys(init);
+        CommonUtility.sendKeys(spinitial,init);
         String sp_name=init+"salesperson";
-        spname.sendKeys(sp_name);
+        CommonUtility.sendKeys(spname,sp_name);
         waittillElementInteractable(driver,20,"//div[@id='salesOfficeProfile_officeVid']/div[@class='iconContainer']");
 
         new Actions(driver).moveToElement(spsalesofficedropdnbutton).perform();
-         spsalesofficedropdnbutton.click();
+        CommonUtility.clickElement(spsalesofficedropdnbutton);
         selectdropdownvalue();
         new Actions(driver).moveToElement(spcompanyentitybutton).perform();
-        spcompanyentitybutton.click();
+        CommonUtility.clickElement(spcompanyentitybutton);
         selectdropdownvalue();
-        spSave.click();
+        CommonUtility.clickElement(spSave);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         if(spbreadcrum.isDisplayed())
         {

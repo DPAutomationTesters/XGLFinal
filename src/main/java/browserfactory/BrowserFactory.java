@@ -34,6 +34,7 @@ public class BrowserFactory extends BaseClass
         if (browserName.contains("Chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver(handlingSSL);
+            //driver = new ChromeDriver();
 
         } else if (browserName.contains("Edge")) {
             WebDriverManager.edgedriver().setup();

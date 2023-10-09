@@ -1,6 +1,7 @@
 package pages;
 
 import base.BaseClass;
+import helper.CommonUtility;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -55,19 +56,15 @@ public class NetworkPage extends BaseClass
     public boolean search_network(String net)
     {
         boolean flag=true;
-        configuration.click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        subMenuScheduleSettings.click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        network.click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        search_network.click();
-        id_search.click();
+        CommonUtility.clickElement(configuration);
+        CommonUtility.clickElement(subMenuScheduleSettings);
+        CommonUtility.clickElement(network);
+        CommonUtility.clickElement(search_network);
+        CommonUtility.clickElement(id_search);
         search_box.clear();
-        search_button.click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        search_box.sendKeys(net);
-        search_button.click();
+        CommonUtility.clickElement(search_box);
+        CommonUtility.sendKeys(search_box,net);
+        CommonUtility.clickElement(search_button);
         try
         {
             NoDataMessage.isDisplayed();
@@ -81,11 +78,10 @@ public class NetworkPage extends BaseClass
     public boolean create_Network(String net)
     {
         String desc=net+"Automation network";
-        add_network.click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        network_id.sendKeys(net);
-        network_desc.sendKeys(desc);
-        network_save.click();
+        CommonUtility.clickElement(add_network);
+        CommonUtility.sendKeys(network_id,net);
+        CommonUtility.sendKeys(network_desc,desc);
+        CommonUtility.clickElement(network_save);
         Boolean result=network_label.getText().contains("New Network");
         return result;
     }

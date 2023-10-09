@@ -2,10 +2,7 @@ package pages;
 
 import ORParcer.RespositoryParser;
 import base.BaseClass;
-import helper.BrowserUtilities;
-import helper.ExceptionHandling;
-import helper.ScreenshotUtility;
-import helper.Utility;
+import helper.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -91,7 +88,7 @@ public class NetworkInstancePage extends BaseClass
         {
             if(e.getText().equalsIgnoreCase(radioOption))
             {
-                e.click();
+                CommonUtility.clickElement(e);
                 Reporter.log(" "+radioOption);
                 break;
             }
@@ -104,7 +101,7 @@ public class NetworkInstancePage extends BaseClass
         {
             if(!calender.isDisplayed())
             {
-                showCalender.click();
+                CommonUtility.clickElement(showCalender);
             }
         }
         catch (Exception e)
@@ -114,16 +111,16 @@ public class NetworkInstancePage extends BaseClass
         List<WebElement> ele= driver.findElements(By.xpath("//th[@class='next']"));
         for (WebElement e:ele)
         {
-            e.click();
+            CommonUtility.clickElement(e);
         }
     }
     public void selectDate()
     {
         List<WebElement> ele =driver.findElements(By.xpath("//tr[@ng-repeat='week in weeks'][3]/td[@ng-repeat='day in week'][1]"));
-        ele.get(0).click(); // Start date selected
+        CommonUtility.clickElement(ele.get(0));// Start date selected
         List<WebElement> ele1 =driver.findElements(By.xpath("//tr[@ng-repeat='week in weeks'][3]/td[@ng-repeat='day in week'][7]"));
-        ele1.get(1).click();// End date selected
-        save.click();
+        CommonUtility.clickElement(ele1.get(1));// end date selected
+        CommonUtility.clickElement(save);
     }
 
     public String getmcpendingallocationcount()
@@ -136,7 +133,7 @@ public class NetworkInstancePage extends BaseClass
     public String getactualpendingallocationcount()
     {
         waittillElementInteractable(driver,50,"//h1[contains(text(),'Pending Allocation')]/following-sibling::h1");
-        pendingallocation.click();
+        CommonUtility.clickElement(pendingallocation);
         BrowserUtilities bu= new BrowserUtilities();
         waittillElementNotZero(driver,50,"//h1[contains(text(),'Pending Allocation')]/following-sibling::h1");
         Reporter.log("Actual Pending Allocation count on page is "+actualPendingAllocationCount.getText());
@@ -167,7 +164,7 @@ public class NetworkInstancePage extends BaseClass
     }
     public String getactualpendingbuildcount()
     {
-        pendingbuild.click();
+        CommonUtility.clickElement(pendingbuild);
         BrowserUtilities bu= new BrowserUtilities();
         waittillElementNotZero(driver,50,"//h1[contains(text(),'PendingBuild')]/following-sibling::h1");
         Reporter.log("Actual Pending build count on page is "+actualPendingBuildCount.getText());

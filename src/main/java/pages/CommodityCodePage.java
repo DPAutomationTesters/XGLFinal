@@ -1,6 +1,7 @@
 package pages;
 
 import base.BaseClass;
+import helper.CommonUtility;
 import helper.SaveProjectData;
 import helper.Utility;
 import org.openqa.selenium.WebDriver;
@@ -72,30 +73,29 @@ public class CommodityCodePage extends BaseClass
 
     public void Addcommoditycode()
     {
-        config.click();
-        orderSettings.click();
+        CommonUtility.clickElement(config);
+        CommonUtility.clickElement(orderSettings);
         SoftAssert sa=new SoftAssert();
         sa.assertTrue(breadcrumvalue.getText().equalsIgnoreCase("Order Settings"));
-        commoditycode.click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        addcommoditycode.click();
+        CommonUtility.clickElement(commoditycode);
+        CommonUtility.clickElement(addcommoditycode);
         Utility ut= new Utility();
         String init=ut.randomAlphaNumeric(2);
-        commoditycodeid.sendKeys(init);
+        CommonUtility.sendKeys(commoditycodeid,init);
         String sp_name=init+"commodity code";
-        commoditycodedesc.sendKeys(sp_name);
-        addseccommodity.click();
+        CommonUtility.sendKeys(commoditycodedesc,sp_name);
+        CommonUtility.clickElement(addseccommodity);
         waittillElementInteractable(driver,20,"//div[@class='modal-content']");
         new Actions(driver).moveToElement(Seccode).perform();
          init=ut.randomAlphaNumeric(2);
-        Seccode.sendKeys(init);
+        CommonUtility.sendKeys(Seccode,init);
         sp_name=init+"sec code";
-        Secdesc.sendKeys(sp_name);
-        separationchckbx.click();
-        ok.click();
+        CommonUtility.sendKeys(Secdesc,sp_name);
+        CommonUtility.clickElement(separationchckbx);
+        CommonUtility.clickElement(ok);
         if(coSave.isDisplayed())
         {
-            coSave.click();
+            CommonUtility.clickElement(coSave);
         }
         Assert.assertTrue(cobreadcrum.getText().contains("New Commodity"));
         SaveProjectData sp=new SaveProjectData();

@@ -1,6 +1,7 @@
 import base.BaseClass;
 import dataProvider.ConfigReader;
 import helper.BrowserUtilities;
+import helper.CommonUtility;
 import helper.ScreenshotUtility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -45,8 +46,7 @@ public class XGLT_6688_Test extends BaseClass
         mc.addwait(mc.mcsettingbtn);
         np.PeriodSelection("Current Week");
         Assert.assertTrue(np.verifypendingallocationcount());
-        mc.missioncontrolHeader.click();
-
+        CommonUtility.clickElement(mc.missioncontrolHeader);
     }
     @Test(priority = 3,enabled = true)
     public void NetworkInstanceCurrentWeekPB()
@@ -61,15 +61,14 @@ public class XGLT_6688_Test extends BaseClass
     {
         MCSettingsPage mc= new MCSettingsPage(driver);
         NetworkInstancePage np=new NetworkInstancePage(driver);
-        mc.missioncontrolHeader.click();
+        CommonUtility.clickElement(mc.missioncontrolHeader);
         mc.addwait(mc.mcsettingbtn);
         np.PeriodSelection("Next 4 Weeks");
         np.PeriodSelection("Next 4 Weeks");
         //waitStatic(60);
         waittillElementNotEmpty(driver,40,"//div[contains(@ng-click,'PendingAllocation')]/div[@class='ng-binding']");
         Assert.assertTrue(np.verifypendingallocationcount());
-
-        mc.missioncontrolHeader.click();
+        CommonUtility.clickElement(mc.missioncontrolHeader);
 
        }
     @Test(priority = 5,enabled = true)
@@ -81,7 +80,7 @@ public class XGLT_6688_Test extends BaseClass
         np.PeriodSelection("Next 4 Weeks");
         waittillElementNotEmpty(driver,40,"//div[contains(@ng-click,'PendingBuild')]/div[@class='ng-binding']");
         Assert.assertTrue(np.verifypendingbuildcount());
-        mc.missioncontrolHeader.click();
+        CommonUtility.clickElement(mc.missioncontrolHeader);
     }
 
     @Test(priority = 6,enabled = true)
@@ -95,14 +94,14 @@ public class XGLT_6688_Test extends BaseClass
         np.selectMonth();
         np.selectDate();
         Assert.assertTrue(np.verifypendingallocationcount());
-        mc.missioncontrolHeader.click();
+        CommonUtility.clickElement(mc.missioncontrolHeader);
     }
     @Test(priority = 6,enabled = true)
     public void CustomDatePB()
     {
         MCSettingsPage mc= new MCSettingsPage(driver);
         NetworkInstancePage np=new NetworkInstancePage(driver);
-        mc.missioncontrolHeader.click();
+        CommonUtility.clickElement(mc.missioncontrolHeader);
         mc.addwait(mc.mcsettingbtn);
         np.PeriodSelection("Custom Dates");
         np.selectMonth();

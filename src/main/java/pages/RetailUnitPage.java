@@ -2,6 +2,7 @@ package pages;
 
 import base.BaseClass;
 import dataProvider.ConfigReader;
+import helper.CommonUtility;
 import helper.Read_write_Excel;
 import helper.SaveProjectData;
 import helper.Utility;
@@ -65,22 +66,20 @@ public class RetailUnitPage extends BaseClass
     }
     public void AddretailUnit()
     {
-
-        config.click();
-        scheduleSettings.click();
+        CommonUtility.clickElement(config);
+        CommonUtility.clickElement(scheduleSettings);
         SoftAssert sa=new SoftAssert();
         sa.assertTrue(breadcrumvalue.getText().equalsIgnoreCase("Schedule Settings"));
-        retailunits.click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        addretailunit.click();
+        CommonUtility.clickElement(retailunits);
+        CommonUtility.clickElement(addretailunit);
         Utility ut= new Utility();
         String init=ut.randomAlphaNumeric(2);
-        RUid.sendKeys(init);
+        CommonUtility.sendKeys(RUid,init);
         String sp_name=init+" retail unit";
-        RUdesc.sendKeys(sp_name);
-        RUsyscode.sendKeys(ConfigReader.getPropertyvalue("syscode"));
-        RUaddheadend.click();
-        addheadendchckbx.click();
+        CommonUtility.sendKeys(RUdesc,sp_name);
+        CommonUtility.sendKeys(RUsyscode,ConfigReader.getPropertyvalue("syscode"));
+        CommonUtility.clickElement(RUaddheadend);
+        CommonUtility.clickElement(addheadendchckbx);
         if(RUheadendpopup.isDisplayed())
         {
             new Actions(driver).moveToElement(addheadendchckbx).perform();
@@ -90,7 +89,7 @@ public class RetailUnitPage extends BaseClass
         }
         if(ruSave.isDisplayed())
         {
-            ruSave.click();
+            CommonUtility.clickElement(ruSave);
         }
         System.out.println("RO is "+cobreadcrum.getText());
         Assert.assertTrue(cobreadcrum.getText().contains("New Retail Unit"));

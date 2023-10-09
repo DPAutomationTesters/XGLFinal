@@ -2,6 +2,7 @@ package pages;
 
 import base.BaseClass;
 import dataProvider.ConfigReader;
+import helper.CommonUtility;
 import helper.JavaScriptExecutor;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -39,7 +40,7 @@ public class AboutPage extends BaseClass
        return profile;
     }
     public void clickAbout(){
-        profile.click();
+        CommonUtility.clickElement(profile);
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
     public String getVersion(){
@@ -63,6 +64,6 @@ public class AboutPage extends BaseClass
     }
     public void click_about_Ok()
     {
-        about_ok.click();
+        CommonUtility.clickElement(about_ok);
     }
 }
