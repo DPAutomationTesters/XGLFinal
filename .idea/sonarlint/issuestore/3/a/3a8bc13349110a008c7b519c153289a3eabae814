@@ -1,0 +1,11 @@
+
+r	java:S117U"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Îƒ€îüÿÿÿÿ8‘ÌÕ ±1
+s	java:S1161"RRename this field "Seccode" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ŸÒŠüÿÿÿÿ8™ÌÕ ±1
+s	java:S1164"RRename this field "Secdesc" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕşÇúÿÿÿÿ8™ÌÕ ±1
+R
+java:S3252F"5Use static access with "base.BaseClass" for "driver".(ÁÜÑ¥8ÌÕ ±1
+R
+java:S2209F"5Change this instance-reference to a static reference.(ÁÜÑ¥8ÌÕ ±1
+j	java:S100J"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”›âÒ8ÌÕ ±1
+W
+java:S1128":Remove this unused import 'java.util.concurrent.TimeUnit'.(Æ™ş8£ÌÕ ±1

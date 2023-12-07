@@ -25,7 +25,7 @@ public class XGLT_15177_Test extends BaseClass
         Assert.assertTrue(driver.getCurrentUrl().contains("MissionControl"),"Login failed");
     }*/
 
-    @Test(priority = 2,enabled = true)
+    @Test(priority = 2,enabled = true,groups = {"XG-LINEAR REGRESSION"})
     public void About()
     {
         AboutPage ap= new AboutPage(driver);

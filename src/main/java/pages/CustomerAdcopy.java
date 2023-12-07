@@ -2,6 +2,7 @@ package pages;
 
 import base.BaseClass;
 import helper.*;
+import org.codehaus.plexus.logging.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.Reporter;
 
 import java.awt.*;
 import java.awt.event.InputEvent;
@@ -71,13 +73,13 @@ public class CustomerAdcopy extends BaseClass
     @FindBy(xpath = "//div[@class='errorSubmitFrom']")
     WebElement errorsubmission;
 
-    public void createaddcopy()
+    public void createaddcopy(int len)
     {
         CustomerSearchPage csp=new CustomerSearchPage(driver);
         if(csp.openCustomerProfile())
         {
             CommonUtility.clickElement(adcopytab);
-            WaitUtility.waitTillElementtobeClickable(driver,30,addAdcopy);
+           WaitUtility.waitTillElementtobeClickable(driver,30,addAdcopy);
             Utility ut= new Utility();
             if(AdCopyId.getAttribute("placeholder").equalsIgnoreCase("Generated ID"))
             {
@@ -91,6 +93,22 @@ public class CustomerAdcopy extends BaseClass
             String date = dateObj.format(formatter);
             CommonUtility.sendKeys(inputRecieveddate,date);
             CommonUtility.clickElement(encodedchckbox);
+            String strLen=String.valueOf(len);
+            char[] digit=strLen.toCharArray();
+            try {
+                Robot robot=new Robot();
+                robot.keyPress(KeyEvent.VK_A);
+                robot.keyRelease(KeyEvent.VK_A);
+                robot.keyPress(KeyEvent.VK_A);
+                robot.keyRelease(KeyEvent.VK_A);
+                CommonUtility.sendKeys(length, String.valueOf(digit[1]));
+                CommonUtility.sendKeys(length,String.valueOf(digit[0]));
+            }
+            catch (AWTException e)
+            {
+                ExceptionHandling.handleException(e);
+            }
+
             WaitUtility.waittillElementisNotEmpty(driver,30,adcopycommodity);
             CommonUtility.clickElement(Save);
             try{
@@ -114,8 +132,6 @@ public class CustomerAdcopy extends BaseClass
                 SaveProjectData spd=new SaveProjectData();
                 spd.saveprojectData("Ad copy",init);
             }
-
         }
-
     }
 }

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Smoke Pack Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="listners.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="5" name="Maintainance Tests(failed)" verbose="0">
+    <parameter name="password" value="Abcd1234"/>
+    <parameter name="inventorytype" value="DEFAULT | Default (unallocated)Inventory"/>
+    <parameter name="Version" value="xGLinear 2.5.3"/>
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="URL" value="https://qa134.myimagine.com/xGLinear/login.html"/>
+    <parameter name="username" value="MCU"/>
+    <classes>
+      <class name="XGLT_6666_Test">
+        <methods>
+          <include name="setupLog4j"/>
+          <include name="login"/>
+          <include name="initOR"/>
+          <include name="name"/>
+          <include name="archive_old"/>
+          <include name="CreateNewStandardCust"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- XGLT_6666_Test -->
+      <class name="XGLT_6672_Test">
+        <methods>
+          <include name="setupLog4j"/>
+          <include name="CreateAdcopyoflen15"/>
+          <include name="login"/>
+          <include name="initOR"/>
+          <include name="name"/>
+          <include name="archive_old"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- XGLT_6672_Test -->
+      <class name="XGLT_6688_Test">
+        <methods>
+          <include name="setupLog4j"/>
+          <include name="login"/>
+          <include name="initOR"/>
+          <include name="NextfourDaysPB"/>
+          <include name="name"/>
+          <include name="CustomDatePA"/>
+          <include name="CustomDatePB"/>
+          <include name="NetworkInstanceCurrentWeekPA"/>
+          <include name="archive_old"/>
+          <include name="NetworkInstanceCurrentWeekPB"/>
+          <include name="closeBrowser"/>
+          <include name="NextfourDaysPA"/>
+        </methods>
+      </class> <!-- XGLT_6688_Test -->
+      <class name="XGLT_6992_Test">
+        <methods>
+          <include name="setupLog4j"/>
+          <include name="login"/>
+          <include name="initOR"/>
+          <include name="getMCUsercounts"/>
+          <include name="name"/>
+          <include name="archive_old"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- XGLT_6992_Test -->
+      <class name="XGLT_6752_Test">
+        <methods>
+          <include name="setupLog4j"/>
+          <include name="login"/>
+          <include name="CreateNewHardRegion"/>
+          <include name="initOR"/>
+          <include name="name"/>
+          <include name="archive_old"/>
+          <include name="CreateNewSoftRegion"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- XGLT_6752_Test -->
+    </classes>
+  </test> <!-- Maintainance Tests(failed) -->
+</suite> <!-- Failed suite [Smoke Pack Suite] -->

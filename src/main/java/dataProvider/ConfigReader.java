@@ -12,7 +12,6 @@ public class ConfigReader extends CaselessProperties
     {
 
         ConfigReader pro=new ConfigReader();
-
         try
         {
             pro.load(new FileInputStream(new File(System.getProperty("user.dir")+"/configs/config.properties")));
@@ -27,7 +26,6 @@ public class ConfigReader extends CaselessProperties
         String value= pro.getProperty(key);
 
         return value;
+
     }
-
-
 }

@@ -15,15 +15,15 @@ r	java:S117;"QRename this local variable to match the regular expression '^[a-
 m	java:S117@"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÏ˜8ö‘§¨1
 m	java:S117D"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤òÕë8ö‘§¨1
 v
-java:S22597"T"NullPointerException" will be thrown when invoking method "closeSQLdbConnection()".(·˜Ççÿÿÿÿÿ8Å’§¨1
-v
 java:S2259R"T"NullPointerException" will be thrown when invoking method "closeSQLdbConnection()".(·˜Ççÿÿÿÿÿ8Å’§¨1
+v
+java:S22597"T"NullPointerException" will be thrown when invoking method "closeSQLdbConnection()".(·˜Ççÿÿÿÿÿ8Å’§¨1
+d
+java:S2095D"GUse try-with-resources or close this "Statement" in a "finally" clause.(¤òÕë8Å’§¨1
 e
 java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(„ª«8Å’§¨1
 d
 java:S2095#"GUse try-with-resources or close this "Statement" in a "finally" clause.(¤òÕë8Å’§¨1
-d
-java:S2095D"GUse try-with-resources or close this "Statement" in a "finally" clause.(¤òÕë8Å’§¨1
 Y
 java:S2589"7Remove this expression which always evaluates to "true"(¬ÆÊ¾øÿÿÿÿ8Å’§¨1
 T	java:S106"9Replace this use of System.out or System.err by a logger.(àıÕ8É’§¨1

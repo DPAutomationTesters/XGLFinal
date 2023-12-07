@@ -1,0 +1,12 @@
+
+f	java:S117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ìÌË
+v	java:S116"\Rename this field "Schedule_settings" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïà¥“ùÿÿÿÿ
+t	java:S116"ZRename this field "Import_Schedule" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡çÌãüÿÿÿÿ
+t	java:S116"_Rename this field "Import_Schedule_Edit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀıÛ
+K
+java:S3252"5Use static access with "base.BaseClass" for "driver".(ÁÜÑ¥
+K
+java:S2209"5Change this instance-reference to a static reference.(ÁÜÑ¥
+c	java:S100$"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ìÌË
+J
+java:S1128"/Remove this unused import 'java.time.Duration'.(ëá¯‰üÿÿÿÿ

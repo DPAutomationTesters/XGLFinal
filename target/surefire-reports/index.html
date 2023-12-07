@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 7 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Smoke_Pack_Suite" class="navigator-link">
+              <span class="suite-name border-failed">Smoke Pack Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Smoke_Pack_Suite" class="navigator-link ">
+                    <span>D:\XGL Final\XGLFinal\Testng\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Smoke_Pack_Suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Smoke_Pack_Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Smoke_Pack_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Smoke_Pack_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Smoke_Pack_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Smoke_Pack_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">21 methods, 7 failed,   14 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Smoke_Pack_Suite" class="hide-methods failed suite-Smoke_Pack_Suite"> (hide)</a> <!-- hide-methods failed suite-Smoke_Pack_Suite -->
+                      <a href="#" panel-name="suite-Smoke_Pack_Suite" class="show-methods failed suite-Smoke_Pack_Suite"> (show)</a> <!-- show-methods failed suite-Smoke_Pack_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Smoke_Pack_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_6752_Test" class="method navigator-link" hash-for-method="CreateNewSoftRegion">CreateNewSoftRegion</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_6688_Test" class="method navigator-link" hash-for-method="CustomDatePA">CustomDatePA</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_6688_Test" class="method navigator-link" hash-for-method="CustomDatePB">CustomDatePB</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_6688_Test" class="method navigator-link" hash-for-method="NetworkInstanceCurrentWeekPA">NetworkInstanceCurrentWeekPA</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_6688_Test" class="method navigator-link" hash-for-method="NetworkInstanceCurrentWeekPB">NetworkInstanceCurrentWeekPB</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_6688_Test" class="method navigator-link" hash-for-method="NextfourDaysPA">NextfourDaysPA</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_6688_Test" class="method navigator-link" hash-for-method="NextfourDaysPB">NextfourDaysPB</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Smoke_Pack_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Smoke_Pack_Suite" class="hide-methods passed suite-Smoke_Pack_Suite"> (hide)</a> <!-- hide-methods passed suite-Smoke_Pack_Suite -->
+                      <a href="#" panel-name="suite-Smoke_Pack_Suite" class="show-methods passed suite-Smoke_Pack_Suite"> (show)</a> <!-- show-methods passed suite-Smoke_Pack_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Smoke_Pack_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_15177_Test" class="method navigator-link" hash-for-method="About">About</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_6672_Test" class="method navigator-link" hash-for-method="CreateAdcopyoflen15">CreateAdcopyoflen15</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_6753_Test" class="method navigator-link" hash-for-method="CreateCommodityCode">CreateCommodityCode</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_6752_Test" class="method navigator-link" hash-for-method="CreateNewHardRegion">CreateNewHardRegion</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_6751_Test" class="method navigator-link" hash-for-method="CreateNewRetailUnit">CreateNewRetailUnit</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_6748_Test" class="method navigator-link" hash-for-method="CreateNewSalesPerson">CreateNewSalesPerson</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_6749_Test" class="method navigator-link" hash-for-method="CreateNewSalesoffice">CreateNewSalesoffice</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_6666_Test" class="method navigator-link" hash-for-method="CreateNewStandardCust">CreateNewStandardCust</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_6150_Test" class="method navigator-link" hash-for-method="CreateNewrevenuType">CreateNewrevenuType</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_6992_Test" class="method navigator-link" hash-for-method="MCsetUser">MCsetUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_6693_Test" class="method navigator-link" hash-for-method="MissonControlReset">MissonControlReset</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="Create_Network" class="method navigator-link" hash-for-method="create_Network">create_Network</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="XGLT_6992_Test" class="method navigator-link" hash-for-method="getMCUsercounts">getMCUsercounts</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Smoke_Pack_Suite" title="Create_Network" class="method navigator-link" hash-for-method="search_Network">search_Network</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Smoke_Pack_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Smoke_Pack_Suite" class="panel Smoke_Pack_Suite">
+          <div class="suite-Smoke_Pack_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">XGLT_6752_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateNewSoftRegion">
+                  </a> <!-- CreateNewSoftRegion -->
+                  <span class="method-name">CreateNewSoftRegion</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div id=&quot;header.menuConfiguration&quot; ng-class=&quot;pressed&quot; class=&quot;defaultMenu headerMenu ecl-border-box headerMenuConfiguration&quot; data-cph=&quot;Iarrow&quot; ng-click=&quot;moveTo()&quot; ng-attr-url=&quot;{{menu.url}}&quot; ng-disabled=&quot;false&quot; main-menu-directive=&quot;&quot; ng-repeat=&quot;menu in headerMenus&quot; url=&quot;&quot;&gt;...&lt;/div&gt; is not clickable at point (760, 28). Other element would receive the click: &lt;div modal-render=&quot;true&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; class=&quot;modal fade ng-isolate-scope in&quot; uib-modal-animation-class=&quot;fade&quot; modal-in-class=&quot;in&quot; ng-style=&quot;{&apos;z-index&apos;: 1050 + index*10, display: &apos;block&apos;}&quot; uib-modal-window=&quot;modal-window&quot; window-class=&quot;fade&quot; size=&quot;popup&quot; index=&quot;1&quot; animate=&quot;animate&quot; modal-animation=&quot;true&quot; style=&quot;z-index: 1060; display: block;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=119.0.6045.160)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DPLAP166&apos;, ip: &apos;137.237.3.153&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\dP-PL\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53140}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cde423c5cf6127dc9fab6893887ffbd3
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at jdk.proxy2/jdk.proxy2.$Proxy30.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.click(Unknown Source)
+	at helper.CommonUtility.clickElement(CommonUtility.java:11)
+	at pages.RegionPage.addsoftregion(RegionPage.java:105)
+	at XGLT_6752_Test.CreateNewSoftRegion(XGLT_6752_Test.java:11)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Smoke_Pack_Suite-class-failed -->
+          <div class="suite-Smoke_Pack_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">XGLT_6688_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CustomDatePA">
+                  </a> <!-- CustomDatePA -->
+                  <span class="method-name">CustomDatePA</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[contains(text(),&apos;Pending Allocation&apos;)]/following-sibling::h1&quot;}
+  (Session info: chrome=119.0.6045.160)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DPLAP166&apos;, ip: &apos;137.237.3.153&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\dP-PL\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b291937f03dca0dde419c4b8b1c2e521
+*** Element info: {Using=xpath, value=//h1[contains(text(),&apos;Pending Allocation&apos;)]/following-sibling::h1}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.getText(Unknown Source)
+	at pages.NetworkInstancePage.getactualpendingallocationcount(NetworkInstancePage.java:139)
+	at pages.NetworkInstancePage.verifypendingallocationcount(NetworkInstancePage.java:149)
+	at XGLT_6688_Test.CustomDatePA(XGLT_6688_Test.java:96)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CustomDatePB">
+                  </a> <!-- CustomDatePB -->
+                  <span class="method-name">CustomDatePB</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[contains(text(),&apos;Pending Build&apos;)]/following-sibling::h1&quot;}
+  (Session info: chrome=119.0.6045.160)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DPLAP166&apos;, ip: &apos;137.237.3.153&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\dP-PL\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b291937f03dca0dde419c4b8b1c2e521
+*** Element info: {Using=xpath, value=//h1[contains(text(),&apos;Pending Build&apos;)]/following-sibling::h1}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.getText(Unknown Source)
+	at pages.NetworkInstancePage.getactualpendingbuildcount(NetworkInstancePage.java:170)
+	at pages.NetworkInstancePage.verifypendingbuildcount(NetworkInstancePage.java:180)
+	at XGLT_6688_Test.CustomDatePB(XGLT_6688_Test.java:109)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NetworkInstanceCurrentWeekPA">
+                  </a> <!-- NetworkInstanceCurrentWeekPA -->
+                  <span class="method-name">NetworkInstanceCurrentWeekPA</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[contains(text(),&apos;Pending Allocation&apos;)]/following-sibling::h1&quot;}
+  (Session info: chrome=119.0.6045.160)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DPLAP166&apos;, ip: &apos;137.237.3.153&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\dP-PL\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b291937f03dca0dde419c4b8b1c2e521
+*** Element info: {Using=xpath, value=//h1[contains(text(),&apos;Pending Allocation&apos;)]/following-sibling::h1}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.getText(Unknown Source)
+	at pages.NetworkInstancePage.getactualpendingallocationcount(NetworkInstancePage.java:139)
+	at pages.NetworkInstancePage.verifypendingallocationcount(NetworkInstancePage.java:149)
+	at XGLT_6688_Test.NetworkInstanceCurrentWeekPA(XGLT_6688_Test.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NetworkInstanceCurrentWeekPB">
+                  </a> <!-- NetworkInstanceCurrentWeekPB -->
+                  <span class="method-name">NetworkInstanceCurrentWeekPB</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[contains(text(),&apos;Pending Build&apos;)]/following-sibling::h1&quot;}
+  (Session info: chrome=119.0.6045.160)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DPLAP166&apos;, ip: &apos;137.237.3.153&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\dP-PL\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b291937f03dca0dde419c4b8b1c2e521
+*** Element info: {Using=xpath, value=//h1[contains(text(),&apos;Pending Build&apos;)]/following-sibling::h1}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.getText(Unknown Source)
+	at pages.NetworkInstancePage.getactualpendingbuildcount(NetworkInstancePage.java:170)
+	at pages.NetworkInstancePage.verifypendingbuildcount(NetworkInstancePage.java:180)
+	at XGLT_6688_Test.NetworkInstanceCurrentWeekPB(XGLT_6688_Test.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NextfourDaysPA">
+                  </a> <!-- NextfourDaysPA -->
+                  <span class="method-name">NextfourDaysPA</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[contains(text(),&apos;Pending Allocation&apos;)]/following-sibling::h1&quot;}
+  (Session info: chrome=119.0.6045.160)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DPLAP166&apos;, ip: &apos;137.237.3.153&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\dP-PL\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b291937f03dca0dde419c4b8b1c2e521
+*** Element info: {Using=xpath, value=//h1[contains(text(),&apos;Pending Allocation&apos;)]/following-sibling::h1}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.getText(Unknown Source)
+	at pages.NetworkInstancePage.getactualpendingallocationcount(NetworkInstancePage.java:139)
+	at pages.NetworkInstancePage.verifypendingallocationcount(NetworkInstancePage.java:149)
+	at XGLT_6688_Test.NextfourDaysPA(XGLT_6688_Test.java:70)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NextfourDaysPB">
+                  </a> <!-- NextfourDaysPB -->
+                  <span class="method-name">NextfourDaysPB</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[contains(text(),&apos;Pending Build&apos;)]/following-sibling::h1&quot;}
+  (Session info: chrome=119.0.6045.160)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DPLAP166&apos;, ip: &apos;137.237.3.153&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\dP-PL\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b291937f03dca0dde419c4b8b1c2e521
+*** Element info: {Using=xpath, value=//h1[contains(text(),&apos;Pending Build&apos;)]/following-sibling::h1}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.getText(Unknown Source)
+	at pages.NetworkInstancePage.getactualpendingbuildcount(NetworkInstancePage.java:170)
+	at pages.NetworkInstancePage.verifypendingbuildcount(NetworkInstancePage.java:180)
+	at XGLT_6688_Test.NextfourDaysPB(XGLT_6688_Test.java:82)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Smoke_Pack_Suite-class-failed -->
+          <div class="suite-Smoke_Pack_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">XGLT_6752_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateNewHardRegion">
+                  </a> <!-- CreateNewHardRegion -->
+                  <span class="method-name">CreateNewHardRegion</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Smoke_Pack_Suite-class-passed -->
+          <div class="suite-Smoke_Pack_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">XGLT_6753_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateCommodityCode">
+                  </a> <!-- CreateCommodityCode -->
+                  <span class="method-name">CreateCommodityCode</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Smoke_Pack_Suite-class-passed -->
+          <div class="suite-Smoke_Pack_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">XGLT_6749_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateNewSalesoffice">
+                  </a> <!-- CreateNewSalesoffice -->
+                  <span class="method-name">CreateNewSalesoffice</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Smoke_Pack_Suite-class-passed -->
+          <div class="suite-Smoke_Pack_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">XGLT_6748_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateNewSalesPerson">
+                  </a> <!-- CreateNewSalesPerson -->
+                  <span class="method-name">CreateNewSalesPerson</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Smoke_Pack_Suite-class-passed -->
+          <div class="suite-Smoke_Pack_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Create_Network</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="create_Network">
+                  </a> <!-- create_Network -->
+                  <span class="method-name">create_Network</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="search_Network">
+                  </a> <!-- search_Network -->
+                  <span class="method-name">search_Network</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Smoke_Pack_Suite-class-passed -->
+          <div class="suite-Smoke_Pack_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">XGLT_6666_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateNewStandardCust">
+                  </a> <!-- CreateNewStandardCust -->
+                  <span class="method-name">CreateNewStandardCust</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Smoke_Pack_Suite-class-passed -->
+          <div class="suite-Smoke_Pack_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">XGLT_6992_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="MCsetUser">
+                  </a> <!-- MCsetUser -->
+                  <span class="method-name">MCsetUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getMCUsercounts">
+                  </a> <!-- getMCUsercounts -->
+                  <span class="method-name">getMCUsercounts</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Smoke_Pack_Suite-class-passed -->
+          <div class="suite-Smoke_Pack_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">XGLT_6751_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateNewRetailUnit">
+                  </a> <!-- CreateNewRetailUnit -->
+                  <span class="method-name">CreateNewRetailUnit</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Smoke_Pack_Suite-class-passed -->
+          <div class="suite-Smoke_Pack_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">XGLT_6693_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="MissonControlReset">
+                  </a> <!-- MissonControlReset -->
+                  <span class="method-name">MissonControlReset</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Smoke_Pack_Suite-class-passed -->
+          <div class="suite-Smoke_Pack_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">XGLT_15177_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="About">
+                  </a> <!-- About -->
+                  <span class="method-name">About</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Smoke_Pack_Suite-class-passed -->
+          <div class="suite-Smoke_Pack_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">XGLT_6150_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateNewrevenuType">
+                  </a> <!-- CreateNewrevenuType -->
+                  <span class="method-name">CreateNewrevenuType</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Smoke_Pack_Suite-class-passed -->
+          <div class="suite-Smoke_Pack_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">XGLT_6672_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateAdcopyoflen15">
+                  </a> <!-- CreateAdcopyoflen15 -->
+                  <span class="method-name">CreateAdcopyoflen15</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Smoke_Pack_Suite-class-passed -->
+        </div> <!-- panel Smoke_Pack_Suite -->
+        <div panel-name="test-xml-Smoke_Pack_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\XGL Final\XGLFinal\Testng\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Smoke Pack Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;listners.ExtentReportListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Maintainance Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;password&quot; value=&quot;Abcd1234&quot;/&gt;
+    &lt;parameter name=&quot;inventorytype&quot; value=&quot;DEFAULT | Default (unallocated)Inventory&quot;/&gt;
+    &lt;parameter name=&quot;Version&quot; value=&quot;xGLinear 2.5.3&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
+    &lt;parameter name=&quot;URL&quot; value=&quot;https://qa134.myimagine.com/xGLinear/login.html&quot;/&gt;
+    &lt;parameter name=&quot;username&quot; value=&quot;MCU&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;XGLT_15177_Test&quot;/&gt;
+      &lt;class name=&quot;Create_Network&quot;/&gt;
+      &lt;class name=&quot;XGLT_6748_Test&quot;/&gt;
+      &lt;class name=&quot;XGLT_6693_Test&quot;/&gt;
+      &lt;class name=&quot;XGLT_6688_Test&quot;/&gt;
+      &lt;class name=&quot;XGLT_6992_Test&quot;/&gt;
+      &lt;class name=&quot;XGLT_6749_Test&quot;/&gt;
+      &lt;class name=&quot;XGLT_6150_Test&quot;/&gt;
+      &lt;class name=&quot;XGLT_6753_Test&quot;/&gt;
+      &lt;class name=&quot;XGLT_6751_Test&quot;/&gt;
+      &lt;class name=&quot;XGLT_6752_Test&quot;/&gt;
+      &lt;class name=&quot;XGLT_6666_Test&quot;/&gt;
+      &lt;class name=&quot;XGLT_6672_Test&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Maintainance Tests --&gt;
+&lt;/suite&gt; &lt;!-- Smoke Pack Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Smoke_Pack_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Smoke Pack Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Maintainance Tests (13 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Smoke_Pack_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Smoke Pack Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Smoke_Pack_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Smoke Pack Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Smoke_Pack_Suite');
+function tableData_Smoke_Pack_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(21);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'NetworkInstanceCurrentWeekPA')
+data.setCell(0, 2, 'XGLT_6688_Test')
+data.setCell(0, 3, 515773);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'CustomDatePB')
+data.setCell(1, 2, 'XGLT_6688_Test')
+data.setCell(1, 3, 433724);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'CreateNewHardRegion')
+data.setCell(2, 2, 'XGLT_6752_Test')
+data.setCell(2, 3, 366423);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'CustomDatePA')
+data.setCell(3, 2, 'XGLT_6688_Test')
+data.setCell(3, 3, 363397);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'NextfourDaysPA')
+data.setCell(4, 2, 'XGLT_6688_Test')
+data.setCell(4, 3, 332037);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'CreateNewStandardCust')
+data.setCell(5, 2, 'XGLT_6666_Test')
+data.setCell(5, 3, 274476);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'CreateNewSalesPerson')
+data.setCell(6, 2, 'XGLT_6748_Test')
+data.setCell(6, 3, 266744);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'CreateCommodityCode')
+data.setCell(7, 2, 'XGLT_6753_Test')
+data.setCell(7, 3, 265893);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'NextfourDaysPB')
+data.setCell(8, 2, 'XGLT_6688_Test')
+data.setCell(8, 3, 252391);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'MissonControlReset')
+data.setCell(9, 2, 'XGLT_6693_Test')
+data.setCell(9, 3, 245236);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'MCsetUser')
+data.setCell(10, 2, 'XGLT_6992_Test')
+data.setCell(10, 3, 244063);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'CreateNewrevenuType')
+data.setCell(11, 2, 'XGLT_6150_Test')
+data.setCell(11, 3, 233240);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'NetworkInstanceCurrentWeekPB')
+data.setCell(12, 2, 'XGLT_6688_Test')
+data.setCell(12, 3, 223000);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'CreateNewRetailUnit')
+data.setCell(13, 2, 'XGLT_6751_Test')
+data.setCell(13, 3, 213684);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'search_Network')
+data.setCell(14, 2, 'Create_Network')
+data.setCell(14, 3, 212810);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'CreateAdcopyoflen15')
+data.setCell(15, 2, 'XGLT_6672_Test')
+data.setCell(15, 3, 186518);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'CreateNewSalesoffice')
+data.setCell(16, 2, 'XGLT_6749_Test')
+data.setCell(16, 3, 154016);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'About')
+data.setCell(17, 2, 'XGLT_15177_Test')
+data.setCell(17, 3, 62301);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'create_Network')
+data.setCell(18, 2, 'Create_Network')
+data.setCell(18, 3, 61381);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'CreateNewSoftRegion')
+data.setCell(19, 2, 'XGLT_6752_Test')
+data.setCell(19, 3, 31670);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'getMCUsercounts')
+data.setCell(20, 2, 'XGLT_6992_Test')
+data.setCell(20, 3, 8787);
+window.suiteTableData['Smoke_Pack_Suite']= { tableData: data, tableDiv: 'times-div-Smoke_Pack_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 hours</span>
+              <div id="times-div-Smoke_Pack_Suite">
+              </div> <!-- times-div-Smoke_Pack_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Smoke_Pack_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Smoke Pack Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">getMCUsercounts</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">winActiveDir is 0</span>
+                <span class="reporter-method-output"> logged in users is 1</span>
+                <span class="reporter-method-output"> total xgl users 85</span>
+                <span class="reporter-method-output"> total number of users is 0</span>
+                <span class="reporter-method-output">Value in DB 85 and value on MC widget is 85</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">CreateNewSalesPerson</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Value selected is 5A | 5Asalesperson</span>
+                <span class="reporter-method-output">Value selected is 01 | Denver Interconnect</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">MissonControlReset</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Pass: Test XGLT-6693</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">CreateNewrevenuType</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Value selected is Digital | Digital</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">About</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">InstanceQA134-PS xGL DB</span>
+                <span class="reporter-method-output">InstanceQA134-PS xGL DBData Service10.7.30.164:1521/xgldb</span>
+                <span class="reporter-method-output">InstanceQA134-PS xGL DBData Service10.7.30.164:1521/xgldbChannel CountChannelCount: 560, HeadendCount=64</span>
+                <span class="reporter-method-output">InstanceQA134-PS xGL DBData Service10.7.30.164:1521/xgldbChannel CountChannelCount: 560, HeadendCount=64Build Infodevelop | ID=a5ee65f c9 @ 11/28/23 06:09 PM</span>
+                <span class="reporter-method-output">InstanceQA134-PS xGL DBData Service10.7.30.164:1521/xgldbChannel CountChannelCount: 560, HeadendCount=64Build Infodevelop | ID=a5ee65f c9 @ 11/28/23 06:09 PMPackage InfoxGLinear 2.6.0 Azure Build at 11/28/2023 18:14:24</span>
+                <span class="reporter-method-output">Pass: About information read</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">NextfourDaysPA</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"> Next 4 Weeks</span>
+                <span class="reporter-method-output"> Next 4 Weeks</span>
+                <span class="reporter-method-output">MC pending allocation count is 815</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">NextfourDaysPB</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"> Next 4 Weeks</span>
+                <span class="reporter-method-output"> Next 4 Weeks</span>
+                <span class="reporter-method-output">MC Pending build count is 249</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">CustomDatePB</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"> Custom Dates</span>
+                <span class="reporter-method-output">MC Pending build count is 18</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">NetworkInstanceCurrentWeekPA</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"> Current Week</span>
+                <span class="reporter-method-output">MC pending allocation count is 149</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">NetworkInstanceCurrentWeekPB</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"> Current Week</span>
+                <span class="reporter-method-output">MC Pending build count is 45</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">CustomDatePA</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"> Custom Dates</span>
+                <span class="reporter-method-output">MC pending allocation count is </span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Smoke_Pack_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">40 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">XGLT_6752_Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">initOR</span>
+                <br/>
+                <span class="ignored-method-name">setupLog4j</span>
+                <br/>
+                <span class="ignored-method-name">archive_old</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">XGLT_6753_Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">initOR</span>
+                <br/>
+                <span class="ignored-method-name">archive_old</span>
+                <br/>
+                <span class="ignored-method-name">setupLog4j</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">XGLT_6749_Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setupLog4j</span>
+                <br/>
+                <span class="ignored-method-name">archive_old</span>
+                <br/>
+                <span class="ignored-method-name">initOR</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">XGLT_6748_Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">initOR</span>
+                <br/>
+                <span class="ignored-method-name">archive_old</span>
+                <br/>
+                <span class="ignored-method-name">setupLog4j</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Create_Network</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setupLog4j</span>
+                <br/>
+                <span class="ignored-method-name">archive_old</span>
+                <br/>
+                <span class="ignored-method-name">initOR</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">XGLT_6666_Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">archive_old</span>
+                <br/>
+                <span class="ignored-method-name">setupLog4j</span>
+                <br/>
+                <span class="ignored-method-name">CreateNewRepCust</span>
+                <br/>
+                <span class="ignored-method-name">CreateNewAgencyCust</span>
+                <br/>
+                <span class="ignored-method-name">initOR</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">XGLT_6992_Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">initOR</span>
+                <br/>
+                <span class="ignored-method-name">archive_old</span>
+                <br/>
+                <span class="ignored-method-name">setupLog4j</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">XGLT_6751_Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">initOR</span>
+                <br/>
+                <span class="ignored-method-name">setupLog4j</span>
+                <br/>
+                <span class="ignored-method-name">archive_old</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">XGLT_6693_Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">initOR</span>
+                <br/>
+                <span class="ignored-method-name">archive_old</span>
+                <br/>
+                <span class="ignored-method-name">setupLog4j</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">XGLT_6688_Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setupLog4j</span>
+                <br/>
+                <span class="ignored-method-name">archive_old</span>
+                <br/>
+                <span class="ignored-method-name">initOR</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">XGLT_6150_Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">archive_old</span>
+                <br/>
+                <span class="ignored-method-name">setupLog4j</span>
+                <br/>
+                <span class="ignored-method-name">initOR</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">XGLT_6672_Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">initOR</span>
+                <br/>
+                <span class="ignored-method-name">setupLog4j</span>
+                <br/>
+                <span class="ignored-method-name">CreateAdcopyoflen30</span>
+                <br/>
+                <span class="ignored-method-name">CreateSecondAdcopyoflen15</span>
+                <br/>
+                <span class="ignored-method-name">archive_old</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Smoke_Pack_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">XGLT_15177_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">archive_old</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-suite before">
+                <span class="method-name">initOR</span>
+                <span class="method-start">454 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-suite before">
+                <span class="method-name">setupLog4j</span>
+                <span class="method-start">547 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-class before">
+                <span class="method-name">login</span>
+                <span class="method-start">600 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">83470 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">About</span>
+                <span class="method-start">83475 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">145980 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Create_Network</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">login</span>
+                <span class="method-start">146232 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">214923 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">search_Network</span>
+                <span class="method-start">214924 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">427905 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">create_Network</span>
+                <span class="method-start">427906 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">489467 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-class after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">490448 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">XGLT_6748_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">login</span>
+                <span class="method-start">490449 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">563448 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateNewSalesPerson</span>
+                <span class="method-start">563449 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">830334 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">XGLT_6693_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">login</span>
+                <span class="method-start">830732 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">MissonControlReset</span>
+                <span class="method-start">899915 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">899915 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-class after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">1145311 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">XGLT_6688_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">login</span>
+                <span class="method-start">1148813 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">1213789 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">NetworkInstanceCurrentWeekPA</span>
+                <span class="method-start">1213789 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">1729900 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">NetworkInstanceCurrentWeekPB</span>
+                <span class="method-start">1729902 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">1953078 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">NextfourDaysPA</span>
+                <span class="method-start">1953078 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">NextfourDaysPB</span>
+                <span class="method-start">2285279 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">2285279 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">2537851 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">CustomDatePA</span>
+                <span class="method-start">2537852 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">CustomDatePB</span>
+                <span class="method-start">2901391 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">2901391 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-class after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">3335269 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">XGLT_6992_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">login</span>
+                <span class="method-start">3336421 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">3412350 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">MCsetUser</span>
+                <span class="method-start">3412351 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">3656592 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">getMCUsercounts</span>
+                <span class="method-start">3656593 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">3665517 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">XGLT_6749_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">login</span>
+                <span class="method-start">3666469 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">3739037 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateNewSalesoffice</span>
+                <span class="method-start">3739038 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">3893193 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">XGLT_6150_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">login</span>
+                <span class="method-start">3893455 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">3962944 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateNewrevenuType</span>
+                <span class="method-start">3962945 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">4196329 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">XGLT_6753_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">login</span>
+                <span class="method-start">4197702 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">4262786 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateCommodityCode</span>
+                <span class="method-start">4262787 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">4529465 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">XGLT_6751_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">login</span>
+                <span class="method-start">4529839 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">4600152 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateNewRetailUnit</span>
+                <span class="method-start">4600153 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">4813972 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">XGLT_6752_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">login</span>
+                <span class="method-start">4814461 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">4880783 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateNewHardRegion</span>
+                <span class="method-start">4880784 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">5247352 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">CreateNewSoftRegion</span>
+                <span class="method-start">5247352 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">5279156 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">XGLT_6666_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">login</span>
+                <span class="method-start">5279974 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">5344165 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateNewStandardCust</span>
+                <span class="method-start">5344166 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">5618779 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">XGLT_6672_Test</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">login</span>
+                <span class="method-start">5619278 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">name(org.testng.TestRunner@ee0189d)</span>
+                <span class="method-start">5682419 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateAdcopyoflen15</span>
+                <span class="method-start">5682420 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">5869103 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

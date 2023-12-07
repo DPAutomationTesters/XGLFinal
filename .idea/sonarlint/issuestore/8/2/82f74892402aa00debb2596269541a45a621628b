@@ -1,0 +1,28 @@
+
+t
+java:S1488U"^Immediately return this expression instead of assigning it to the temporary variable "result".(•âÄœ
+m	java:S116"YRename this field "search_network" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·Ìü\
+n	java:S116 "TRename this field "id_search" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¤êšùÿÿÿÿ
+j	java:S116#"URename this field "search_box" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢í¿Œ
+m	java:S116%"XRename this field "search_button" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å°¶×
+m	java:S116'"XRename this field "NoDataMessage" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÈµ
+k	java:S116*"VRename this field "add_network" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·Ûß
+j	java:S116-"URename this field "network_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍšÚµ
+q	java:S1160"WRename this field "network_desc" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÖ…‰ûÿÿÿÿ
+l	java:S1163"WRename this field "network_save" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù‰Ó€
+r	java:S1166"XRename this field "network_label" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…Œ°öüÿÿÿÿ
+
+java:S1845"yRename field "network" to prevent any misunderstanding/clash with field "Network" defined in superclass "base.BaseClass".(ª®®Ê
+K
+java:S3252"5Use static access with "base.BaseClass" for "driver".(ÁÜÑ¥
+K
+java:S2209"5Change this instance-reference to a static reference.(ÁÜÑ¥
+c	java:S1008"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÜÈé
+c	java:S100N"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×åàï
+K
+java:S1128
+".Remove this unused import 'org.testng.Assert'.(Ø£ÿ§8”¹Ú¡±1
+Q
+java:S1128"/Remove this unused import 'java.time.Duration'.(ëá¯‰üÿÿÿÿ8•¹Ú¡±1
+W
+java:S1128":Remove this unused import 'java.util.concurrent.TimeUnit'.(Æ™ş8•¹Ú¡±1

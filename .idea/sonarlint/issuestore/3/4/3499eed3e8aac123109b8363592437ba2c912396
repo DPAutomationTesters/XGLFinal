@@ -1,0 +1,17 @@
+
+r	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âşÕëşÿÿÿÿ8Ø»Á ±1
+k	java:S116%"ORename this field "RUid" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş¹¬Š8â»Á ±1
+r	java:S116("QRename this field "RUdesc" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·éŸôıÿÿÿÿ8â»Á ±1
+u	java:S116+"TRename this field "RUsyscode" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€î¤øÿÿÿÿ8â»Á ±1
+x	java:S116."WRename this field "RUaddheadend" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ä›§×ÿÿÿÿÿ8â»Á ±1
+z	java:S1161"YRename this field "RUheadendpopup" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å—ÃÛûÿÿÿÿ8â»Á ±1
+R
+java:S3252@"5Use static access with "base.BaseClass" for "driver".(ÁÜÑ¥8æ»Á ±1
+R
+java:S2209@"5Change this instance-reference to a static reference.(ÁÜÑ¥8ç»Á ±1
+j	java:S100C"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å¬ü8ç»Á ±1
+U	java:S106^"9Replace this use of System.out or System.err by a logger.(ÔÉ¾¸8ì»Á ±1
+Q
+java:S1128"4Remove this unused import 'helper.Read_write_Excel'.(œ©à8í»Á ±1
+W
+java:S1128":Remove this unused import 'java.util.concurrent.TimeUnit'.(Æ™ş8í»Á ±1

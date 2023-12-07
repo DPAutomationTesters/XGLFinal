@@ -4,7 +4,7 @@
     <listeners>
         <listener class-name="listners.ExtentReportListener"></listener>
     </listeners>
-    <test name="About_network_test">
+    <test name="Maintainance Tests">
         <parameter name="username" value="MCU"></parameter>
         <parameter name="password" value="Abcd1234"></parameter>
         <parameter name="URL" value="https://qa134.myimagine.com/xGLinear/login.html"></parameter>
@@ -17,7 +17,7 @@
             <class name="XGLT_6748_Test"/>
             <class name="XGLT_6693_Test"/>
             <class name="XGLT_6688_Test"/>
-            <class name="XGLT_6992_Test"/>
+            <class name="XGLT_6692_Test"/>
             <class name="XGLT_6749_Test"/>
             <class name="XGLT_6150_Test"/>
             <class name="XGLT_6753_Test"/>

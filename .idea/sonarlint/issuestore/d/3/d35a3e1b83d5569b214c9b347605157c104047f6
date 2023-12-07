@@ -1,0 +1,31 @@
+
+R
+java:S3252P"5Use static access with "base.BaseClass" for "driver".(ÁÜÑ¥8úÑë §1
+R
+java:S2209P"5Change this instance-reference to a static reference.(ÁÜÑ¥8ûÑë §1
+j	java:S100S"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»êç’8•°Ú¢§1
+^	java:S125€"<This block of commented-out lines of code should be removed.(ŸÒ†ûÿÿÿÿ8š°Ú¢§1
+T
+java:S1854‰"6Remove this useless assignment to local variable "bu".(¿‡å˜8›°Ú¢§1
+E
+java:S1481‰"'Remove this unused "bu" local variable.(¿‡å˜8°Ú¢§1
+[	java:S106“"9Replace this use of System.out or System.err by a logger.(Ñœ‰õúÿÿÿÿ8°Ú¢§1
+V	java:S106–"9Replace this use of System.out or System.err by a logger.(¾‡ü‘8°Ú¢§1
+T
+java:S1854¨"6Remove this useless assignment to local variable "bu".(¿‡å˜8 °Ú¢§1
+E
+java:S1481¨"'Remove this unused "bu" local variable.(¿‡å˜8¡°Ú¢§1
+V	java:S106²"9Replace this use of System.out or System.err by a logger.(‹ú˜”8¤°Ú¢§1
+[	java:S106µ"9Replace this use of System.out or System.err by a logger.(­ÚÍÆûÿÿÿÿ8¤°Ú¢§1
+Y
+java:S1128"7Remove this unused import 'ORParcer.RespositoryParser'.(Â˜÷úÿÿÿÿ8ƒ±¡±1
+j
+java:S1128"MRemove this unused import 'org.openqa.selenium.support.ui.ExpectedCondition'.(Ü¥ö’8ƒ±¡±1
+p
+java:S1128"NRemove this unused import 'org.openqa.selenium.support.ui.ExpectedConditions'.(û€Èéúÿÿÿÿ8ƒ±¡±1
+W
+java:S1128":Remove this unused import 'java.util.concurrent.TimeUnit'.(Æ™ş8ƒ±¡±1
+f
+java:S1128"IRemove this unused import 'helper.Utility.waitForAllElementsToBePresent'.(Ù€Î8ƒ±¡±1
+_
+java:S1128"=Remove this unused import 'helper.Utility.waitforPagetoLoad'.(í±Ÿäúÿÿÿÿ8ƒ±¡±1
