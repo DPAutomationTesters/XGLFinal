@@ -8,14 +8,16 @@ SeleniumTest1.class
 XGLT_6150_Test.class
 XGLT_6753_Test.class
 XGLT_6688_Test.class
+XGLT_6692_Test.class
 XGLT_15177_Test.class
+XGLT_6685_Test.class
 XGLT_6749_Test.class
 XGLT_6752_Test.class
 Network_programbreakformat.class
 XglRotationGroup.class
 XGLT_6672_Test.class
-XGLT_6992_Test.class
 Test_DB.class
 BillingSubmission_Permission.class
 TestngRunner.class
+ReadApiResponseOnWebpageWithUI.class
 XGLT_6693_Test.class

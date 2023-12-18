@@ -148,7 +148,34 @@ public class MCSettingsPage extends BaseClass
         return flag;
 
     }
+    public boolean verifyforthmcvalueset(String mcValue)
+    {
+        Boolean flag=false;
+        WebElement ele = null;
+        String str=ConfigReader.getPropertyvalue("missioncontrolvalue");
+        if(str.equalsIgnoreCase("Ad Copy Handling")|| str.equalsIgnoreCase("Ad Copy Status")
+                || str.equalsIgnoreCase("Customers") || str.equalsIgnoreCase("Network Instance Status")
+                || str.equalsIgnoreCase("Users"))
+        {
+            ele=driver.findElement(By.xpath("//div[contains(@ng-if,'fourthQuadrantWidget.value')]/div/h2"));
+        }
+        else if (str.equalsIgnoreCase("Data Governance") || str.equalsIgnoreCase("Finance") ||
+                str.equalsIgnoreCase("Programming/Allocation Jobs") || str.equalsIgnoreCase("Reconciliation")
+                || str.equalsIgnoreCase("Scheduling Information"))
+        {
+            ele=driver.findElement(By.xpath("//div[contains(@ng-if,'fourthQuadrantWidget.value')]/div/div/h2"));
+        } else if (str.equalsIgnoreCase("Order Lines Overview"))
+        {
+            ele=driver.findElement(By.xpath("//div[contains(@ng-if,'fourthQuadrantWidget.value')]/div/div/div/div/div/h2"));
+        }
 
+        if(ele.getText().equalsIgnoreCase(mcValue))
+        {
+            flag=true;
+        }
+        return flag;
+
+    }
     public void addwait(WebElement ele)
     {
         Duration timeout = Duration.ofSeconds(50);

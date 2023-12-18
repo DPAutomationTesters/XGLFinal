@@ -16,9 +16,13 @@ public class JavaScriptExecutor extends BaseClass
         js.executeScript("arguments[0].click();",ele);
 
     }
-    public void setElementPropertyByJS(By ele, String height)
+    public void setElementPropertyByJS(WebElement ele, String height)
     {
         js.executeScript("arguments[0].style.height = '"+height+"';", ele);
+    }
+    public void setElementWidthPropertyByJS(WebElement ele, String width)
+    {
+        js.executeScript("arguments[0].style.width = '"+width+"';", ele);
     }
     public void sendKeysByJS(By ele,String str)
     {
@@ -27,7 +31,7 @@ public class JavaScriptExecutor extends BaseClass
     }
     public void scrolldownbyjs()
     {
-        js.executeScript("window.scrollBy(0,350)", "");
+        js.executeScript("window.scrollBy(0,500)", "");
     }
     public void scrolltobottombyJS()
     {
@@ -46,5 +50,12 @@ public class JavaScriptExecutor extends BaseClass
             Thread.currentThread().interrupt();
         }
 
+    }
+
+
+    public void setBrowserZoom(double zoomFactor) {
+
+        // Set the browser window zoom using JavaScript
+        js.executeScript("document.body.style.zoom = arguments[0];", zoomFactor);
     }
 }

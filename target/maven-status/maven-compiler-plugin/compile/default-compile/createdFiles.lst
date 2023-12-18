@@ -38,6 +38,7 @@ dataProvider\ConfigReader.class
 helper\WaitUtility$1.class
 pages\LoginPage.class
 listners\WebEventListener.class
+pages\MCCustomerWidgetPage.class
 pages\CustomerSearchPage.class
 pages\AboutPage.class
 ORParcer\XMLParserSAX.class
