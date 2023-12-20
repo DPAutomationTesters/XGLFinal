@@ -1,60 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[MC Customer with active revenue value is 35]]>
+      <![CDATA[MC Customer with active revenue value is 789]]>
     </line>
     <line>
-      <![CDATA[MC credit hold value is 48]]>
+      <![CDATA[Customer page count for active revenue is 789]]>
+    </line>
+    <line>
+      <![CDATA[MC Customer with inactive revenue value is 26]]>
+    </line>
+    <line>
+      <![CDATA[Customer page count for inactive revenue is 26]]>
+    </line>
+    <line>
+      <![CDATA[MC credit hold value is 75]]>
+    </line>
+    <line>
+      <![CDATA[Customer page count for credit hold is 75]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-12-18T22:43:26 IST" name="Smoke Pack Suite" finished-at="2023-12-18T22:52:14 IST" duration-ms="527180">
+  <suite started-at="2023-12-20T22:02:11 IST" name="Smoke Pack Suite" finished-at="2023-12-20T22:12:55 IST" duration-ms="644183">
     <groups>
       <group name="Mission Control - Customers">
-        <method signature="XGLT_6685_Test.MCActivewithRevenue()[pri:1, instance:XGLT_6685_Test@27f9e982]" name="MCActivewithRevenue" class="XGLT_6685_Test"/>
+        <method signature="XGLT_6685_Test.MCActivewithRevenue()[pri:1, instance:XGLT_6685_Test@30c0ccff]" name="MCActivewithRevenue" class="XGLT_6685_Test"/>
+        <method signature="XGLT_6685_Test.MCinactivewithrev()[pri:2, instance:XGLT_6685_Test@30c0ccff]" name="MCinactivewithrev" class="XGLT_6685_Test"/>
+        <method signature="XGLT_6685_Test.MCCredithold()[pri:3, instance:XGLT_6685_Test@30c0ccff]" name="MCCredithold" class="XGLT_6685_Test"/>
+        <method signature="XGLT_6685_Test.MCactivewithoutrev()[pri:3, instance:XGLT_6685_Test@30c0ccff]" name="MCactivewithoutrev" class="XGLT_6685_Test"/>
       </group> <!-- Mission Control - Customers -->
     </groups>
-    <test started-at="2023-12-18T22:43:26 IST" name="Maintainance Tests" finished-at="2023-12-18T22:52:14 IST" duration-ms="527180">
+    <test started-at="2023-12-20T22:02:11 IST" name="Maintainance Tests" finished-at="2023-12-20T22:12:55 IST" duration-ms="644183">
       <class name="XGLT_6685_Test">
-        <test-method is-config="true" signature="archive_old()[pri:0, instance:XGLT_6685_Test@27f9e982]" started-at="2023-12-18T22:43:26 IST" name="archive_old" finished-at="2023-12-18T22:43:26 IST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="archive_old()[pri:0, instance:XGLT_6685_Test@30c0ccff]" started-at="2023-12-20T22:02:11 IST" name="archive_old" finished-at="2023-12-20T22:02:11 IST" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- archive_old -->
-        <test-method is-config="true" signature="initOR()[pri:0, instance:XGLT_6685_Test@27f9e982]" started-at="2023-12-18T22:43:26 IST" name="initOR" finished-at="2023-12-18T22:43:26 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="initOR()[pri:0, instance:XGLT_6685_Test@30c0ccff]" started-at="2023-12-20T22:02:11 IST" name="initOR" finished-at="2023-12-20T22:02:11 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initOR -->
-        <test-method is-config="true" signature="setupLog4j()[pri:0, instance:XGLT_6685_Test@27f9e982]" started-at="2023-12-18T22:43:26 IST" name="setupLog4j" finished-at="2023-12-18T22:43:26 IST" duration-ms="14" status="PASS">
+        <test-method is-config="true" signature="setupLog4j()[pri:0, instance:XGLT_6685_Test@30c0ccff]" started-at="2023-12-20T22:02:11 IST" name="setupLog4j" finished-at="2023-12-20T22:02:11 IST" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupLog4j -->
-        <test-method is-config="true" signature="login()[pri:0, instance:XGLT_6685_Test@27f9e982]" started-at="2023-12-18T22:43:26 IST" name="login" finished-at="2023-12-18T22:44:37 IST" duration-ms="70669" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:XGLT_6685_Test@30c0ccff]" started-at="2023-12-20T22:02:11 IST" name="login" finished-at="2023-12-20T22:03:15 IST" duration-ms="63964" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="name(org.testng.ITestContext)[pri:0, instance:XGLT_6685_Test@27f9e982]" started-at="2023-12-18T22:44:37 IST" name="name" finished-at="2023-12-18T22:44:37 IST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="name(org.testng.ITestContext)[pri:0, instance:XGLT_6685_Test@30c0ccff]" started-at="2023-12-20T22:03:15 IST" name="name" finished-at="2023-12-20T22:03:15 IST" duration-ms="5" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@73c25e8]]>
+                <![CDATA[org.testng.TestRunner@6c5a347d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- name -->
-        <test-method signature="MCActivewithRevenue()[pri:1, instance:XGLT_6685_Test@27f9e982]" started-at="2023-12-18T22:44:37 IST" name="MCActivewithRevenue" finished-at="2023-12-18T22:52:13 IST" duration-ms="456089" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="MCActivewithRevenue()[pri:1, instance:XGLT_6685_Test@30c0ccff]" started-at="2023-12-20T22:03:15 IST" name="MCActivewithRevenue" finished-at="2023-12-20T22:07:49 IST" duration-ms="273974" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[MC Customer with active revenue value is 789]]>
+            </line>
+            <line>
+              <![CDATA[Customer page count for active revenue is 789]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- MCActivewithRevenue -->
+        <test-method is-config="true" signature="name(org.testng.ITestContext)[pri:0, instance:XGLT_6685_Test@30c0ccff]" started-at="2023-12-20T22:07:49 IST" name="name" finished-at="2023-12-20T22:07:49 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6c5a347d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- name -->
+        <test-method signature="MCinactivewithrev()[pri:2, instance:XGLT_6685_Test@30c0ccff]" started-at="2023-12-20T22:07:49 IST" name="MCinactivewithrev" finished-at="2023-12-20T22:09:52 IST" duration-ms="122619" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[MC Customer with inactive revenue value is 26]]>
+            </line>
+            <line>
+              <![CDATA[Customer page count for inactive revenue is 26]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- MCinactivewithrev -->
+        <test-method is-config="true" signature="name(org.testng.ITestContext)[pri:0, instance:XGLT_6685_Test@30c0ccff]" started-at="2023-12-20T22:09:52 IST" name="name" finished-at="2023-12-20T22:09:52 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6c5a347d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- name -->
+        <test-method signature="MCCredithold()[pri:3, instance:XGLT_6685_Test@30c0ccff]" started-at="2023-12-20T22:09:52 IST" name="MCCredithold" finished-at="2023-12-20T22:11:54 IST" duration-ms="122112" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[MC credit hold value is 75]]>
+            </line>
+            <line>
+              <![CDATA[Customer page count for credit hold is 75]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- MCCredithold -->
+        <test-method is-config="true" signature="name(org.testng.ITestContext)[pri:0, instance:XGLT_6685_Test@30c0ccff]" started-at="2023-12-20T22:11:54 IST" name="name" finished-at="2023-12-20T22:11:54 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6c5a347d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- name -->
+        <test-method signature="MCactivewithoutrev()[pri:3, instance:XGLT_6685_Test@30c0ccff]" started-at="2023-12-20T22:11:54 IST" name="MCactivewithoutrev" finished-at="2023-12-20T22:12:55 IST" duration-ms="60479" status="FAIL">
+          <exception class="java.lang.NumberFormatException">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[For input string: "9,887"]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1413)
-at org.testng.Assert.assertTrue(Assert.java:56)
-at org.testng.Assert.assertTrue(Assert.java:66)
-at XGLT_6685_Test.MCActivewithRevenue(XGLT_6685_Test.java:17)
+              <![CDATA[java.lang.NumberFormatException: For input string: "9,887"
+at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+at java.base/java.lang.Integer.parseInt(Integer.java:665)
+at java.base/java.lang.Integer.parseInt(Integer.java:781)
+at pages.MCCustomerWidgetPage.verifyactivewithoutrevcount(MCCustomerWidgetPage.java:176)
+at XGLT_6685_Test.MCactivewithoutrev(XGLT_6685_Test.java:35)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -87,16 +165,10 @@ at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.NumberFormatException -->
           <reporter-output>
-            <line>
-              <![CDATA[MC Customer with active revenue value is 35]]>
-            </line>
-            <line>
-              <![CDATA[MC credit hold value is 48]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- MCActivewithRevenue -->
+        </test-method> <!-- MCactivewithoutrev -->
       </class> <!-- XGLT_6685_Test -->
     </test> <!-- Maintainance Tests -->
   </suite> <!-- Smoke Pack Suite -->

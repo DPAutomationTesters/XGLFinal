@@ -37,6 +37,12 @@ public class JavaScriptExecutor extends BaseClass
     {
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
     }
+
+    // This method is specific to XGL pages getting scroll down, this is different from windows scroll down
+    public void scrolltoXGLpagesbottom()
+    {
+        js.executeScript("document.querySelector('.slick-viewport').scrollTop = 3000;");
+    }
     public void highlightElement(WebElement ele,String style)
     {
         try {

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Maintainance Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Dec 18 22:43:26 IST 2023</td>
+<td>Started on:</td><td>Wed Dec 20 22:02:11 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>527 seconds (527180 ms)</td>
+<tr><td>Total time:</td><td>644 seconds (644183 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,25 +76,21 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='XGLT_6685_Test.MCActivewithRevenue()'><b>MCActivewithRevenue</b><br>Test class: XGLT_6685_Test<br/>
-<a href="#Output-959786859" onClick='toggleBox("Output-959786859", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-959786859" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-959786859">
-MC Customer with active revenue value is 35<br/>
-MC credit hold value is 48<br/>
-</div>
-</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at XGLT_6685_Test.MCActivewithRevenue(XGLT_6685_Test.java:17)
+<td title='XGLT_6685_Test.MCactivewithoutrev()'><b>MCactivewithoutrev</b><br>Test class: XGLT_6685_Test</td>
+<td><div><pre>java.lang.NumberFormatException: For input string: &quot;9,887&quot;
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:665)
+	at java.base/java.lang.Integer.parseInt(Integer.java:781)
+	at pages.MCCustomerWidgetPage.verifyactivewithoutrevcount(MCCustomerWidgetPage.java:176)
+	at XGLT_6685_Test.MCactivewithoutrev(XGLT_6685_Test.java:35)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace959786859", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace959786859'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertTrue(Assert.java:56)
-	at org.testng.Assert.assertTrue(Assert.java:66)
-	at XGLT_6685_Test.MCActivewithRevenue(XGLT_6685_Test.java:17)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1590502119", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1590502119'><pre>java.lang.NumberFormatException: For input string: &quot;9,887&quot;
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:665)
+	at java.base/java.lang.Integer.parseInt(Integer.java:781)
+	at pages.MCCustomerWidgetPage.verifyactivewithoutrevcount(MCCustomerWidgetPage.java:176)
+	at XGLT_6685_Test.MCactivewithoutrev(XGLT_6685_Test.java:35)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -126,8 +122,56 @@ MC credit hold value is 48<br/>
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 </pre></div></td>
-<td>456</td>
-<td>XGLT_6685_Test@27f9e982</td></tr>
+<td>60</td>
+<td>XGLT_6685_Test@30c0ccff</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='XGLT_6685_Test.MCinactivewithrev()'><b>MCinactivewithrev</b><br>Test class: XGLT_6685_Test<br/>
+<a href="#Output-766539345" onClick='toggleBox("Output-766539345", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-766539345" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-766539345">
+MC Customer with inactive revenue value is 26<br/>
+Customer page count for inactive revenue is 26<br/>
+</div>
+</td>
+<td></td>
+<td>122</td>
+<td>XGLT_6685_Test@30c0ccff</td></tr>
+<tr>
+<td title='XGLT_6685_Test.MCCredithold()'><b>MCCredithold</b><br>Test class: XGLT_6685_Test<br/>
+<a href="#Output-2048052012" onClick='toggleBox("Output-2048052012", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2048052012" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2048052012">
+MC credit hold value is 75<br/>
+Customer page count for credit hold is 75<br/>
+</div>
+</td>
+<td></td>
+<td>122</td>
+<td>XGLT_6685_Test@30c0ccff</td></tr>
+<tr>
+<td title='XGLT_6685_Test.MCActivewithRevenue()'><b>MCActivewithRevenue</b><br>Test class: XGLT_6685_Test<br/>
+<a href="#Output-758348124" onClick='toggleBox("Output-758348124", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-758348124" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-758348124">
+MC Customer with active revenue value is 789<br/>
+Customer page count for active revenue is 789<br/>
+</div>
+</td>
+<td></td>
+<td>273</td>
+<td>XGLT_6685_Test@30c0ccff</td></tr>
 </table><p>
 </body>
 </html>

@@ -17,8 +17,8 @@
           <include name="setupLog4j"/>
           <include name="login"/>
           <include name="initOR"/>
+          <include name="MCactivewithoutrev"/>
           <include name="name"/>
-          <include name="MCActivewithRevenue"/>
           <include name="archive_old"/>
         </methods>
       </class> <!-- XGLT_6685_Test -->

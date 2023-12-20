@@ -53,6 +53,9 @@ public class MCCustomerWidgetPage extends BaseClass
 
     @FindBy(xpath = "//div[contains(@class,'nextPagesBtn')]/button[contains(@ng-click,'changeCurFastPages')]")
     WebElement next8pagebtn;
+
+    @FindBy(xpath = "//div[@class='grid-canvas']")
+    WebElement gridCanvas;
     public  MCCustomerWidgetPage(WebDriver driver)
     {
         this.driver=driver;
@@ -85,6 +88,10 @@ public class MCCustomerWidgetPage extends BaseClass
         while (next8pagebtn.isEnabled())
         {
             next8pagebtn.click();
+            if(driver.findElements(By.xpath("//div[@class='grid-canvas']/div[contains(@class,'ui-widget-content slick-row')]")).size()==0)
+            {
+                return totalRecords;
+            }
         }
         if(!next8pagebtn.isEnabled())
         {
@@ -102,14 +109,19 @@ public class MCCustomerWidgetPage extends BaseClass
                  WebElement lastpage = driver.findElement(By.xpath(xpath2));
                  cu.clickElement(lastpage);
                  WaitUtility.waitTillElementVisible(driver,30,row);
+                 js.scrolltobottombyJS();
+                 js.scrolltoXGLpagesbottom();
              }
              else if (i==1)
              {
                  //do nothing
              }
-
+            int ht=gridCanvas.getSize().getHeight();
+            System.out.println("Height is "+ht);
             List<WebElement> recordsOnPage = driver.findElements(By.xpath("//div[@class='grid-canvas']/div[contains(@class,'ui-widget-content slick-row')]"));
-            totalRecords=totalRecords+recordsOnPage.size();
+            if(recordsOnPage.size()>0) {
+                totalRecords = totalRecords + (ht / 30);
+            }
         }
         return totalRecords;
     }
@@ -124,6 +136,7 @@ public class MCCustomerWidgetPage extends BaseClass
         WaitUtility.waitTillElementVisible(driver,30,row);
         Assert.assertTrue(driver.getCurrentUrl().contains("Customers"));
         System.out.println("Customer page count for active revenue is "+getrecordcountoflastpage());
+        Reporter.log("Customer page count for active revenue is "+getrecordcountoflastpage());
         if(number==getrecordcountoflastpage())
         {
             flag=true;
@@ -145,6 +158,7 @@ public class MCCustomerWidgetPage extends BaseClass
         WaitUtility.waitTillElementVisible(driver,30,row);
         Assert.assertTrue(driver.getCurrentUrl().contains("Customers"));
         System.out.println("Customer page count for inactive revenue is "+getrecordcountoflastpage());
+        Reporter.log("Customer page count for inactive revenue is "+getrecordcountoflastpage());
         if(number==getrecordcountoflastpage())
         {
             flag=true;
@@ -166,6 +180,7 @@ public class MCCustomerWidgetPage extends BaseClass
         WaitUtility.waitTillElementVisible(driver,30,row);
         Assert.assertTrue(driver.getCurrentUrl().contains("Customers"));
         System.out.println("Customer page count for active without revenue is "+getrecordcountoflastpage());
+        Reporter.log("Customer page count for active without revenue is "+getrecordcountoflastpage());
         if(number==getrecordcountoflastpage())
         {
             flag=true;
@@ -187,6 +202,7 @@ public class MCCustomerWidgetPage extends BaseClass
         WaitUtility.waitTillElementVisible(driver,30,row);
         Assert.assertTrue(driver.getCurrentUrl().contains("Customers"));
         System.out.println("Customer page count for credit hold is "+getrecordcountoflastpage());
+        Reporter.log("Customer page count for credit hold is "+getrecordcountoflastpage());
         if(number==getrecordcountoflastpage())
         {
             flag=true;

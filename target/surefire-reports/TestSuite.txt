@@ -1,14 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 530.507 s <<< FAILURE! - in TestSuite
-XGLT_6685_Test.MCActivewithRevenue  Time elapsed: 456.446 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertTrue(Assert.java:56)
-	at org.testng.Assert.assertTrue(Assert.java:66)
-	at XGLT_6685_Test.MCActivewithRevenue(XGLT_6685_Test.java:17)
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 646.094 s <<< FAILURE! - in TestSuite
+XGLT_6685_Test.MCactivewithoutrev  Time elapsed: 60.72 s  <<< FAILURE!
+java.lang.NumberFormatException: For input string: "9,887"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:665)
+	at java.base/java.lang.Integer.parseInt(Integer.java:781)
+	at pages.MCCustomerWidgetPage.verifyactivewithoutrevcount(MCCustomerWidgetPage.java:176)
+	at XGLT_6685_Test.MCactivewithoutrev(XGLT_6685_Test.java:35)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
