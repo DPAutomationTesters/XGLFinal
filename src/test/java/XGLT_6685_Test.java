@@ -12,7 +12,7 @@ public class XGLT_6685_Test extends BaseClass
     public void MCActivewithRevenue()
     {
         MCCustomerWidgetPage mcw=new MCCustomerWidgetPage(driver);
-       // Assert.assertTrue(mcw.setMCCustomer());
+        Assert.assertTrue(mcw.setMCCustomer());
         Assert.assertTrue(mcw.verifyactivewithrevcount());
     }
     @Test(priority = 2,enabled = true,groups = {"Mission Control - Customers"})
@@ -21,7 +21,7 @@ public class XGLT_6685_Test extends BaseClass
         MCCustomerWidgetPage mcw=new MCCustomerWidgetPage(driver);
         Assert.assertTrue(mcw.verifyinactivewithrevcount());
     }
-    @Test(priority = 3,groups = {"Mission Control - Customers"})
+    @Test(priority = 3,groups = {"Mission Control - Customers"},enabled = true)
     public void MCCredithold()
     {
         MCCustomerWidgetPage mcw=new MCCustomerWidgetPage(driver);

@@ -23,6 +23,7 @@ helper\JiraCreateIssue.class
 helper\StringEncrypter$EncryptionException.class
 helper\DataBaseUtility.class
 ORParcer\RespositoryParser.class
+pages\MCFinanceWidgetPage.class
 helper\CommonUtility.class
 helper\WaitUtility.class
 dataProvider\ExcelReader.class

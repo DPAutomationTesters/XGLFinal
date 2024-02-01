@@ -28,19 +28,19 @@ public class XGLT_6688_Test extends BaseClass
         MCSettingsPage mc= new MCSettingsPage(driver);
         mc.addwait(mc.mcsettingbtn);
         BrowserUtilities bu= new BrowserUtilities();
-        if(!mc.verifymcvalueset(ConfigReader.getPropertyvalue("XGLT6688value")))
-        {
+//        if(!mc.verifymcvalueset("Network Instance Status"))
+     //   {
             mc.openMcSettings();
             mc.resetSettings();
             mc.addwait(mc.mcsettingbtn);
             bu.refreshbrowser();
             mc.openMcSettings();
-            mc.setMcsettingfirstvalue(ConfigReader.getPropertyvalue("XGLT6688value"));
+            mc.setMcsettingfirstvalue("Network Instance Status");
             mc.addwait(mc.mcsettingPopup);
             mc.saveMcSettings();
             mc.addwait(mc.mcsettingbtn);
-            Assert.assertTrue(mc.verifymcvalueset(ConfigReader.getPropertyvalue("XGLT6688value")));
-        }
+            Assert.assertTrue(mc.verifymcvalueset("Network Instance Status"));
+      //  }
         NetworkInstancePage np=new NetworkInstancePage(driver);
         waitStatic(50);
         mc.addwait(mc.mcsettingbtn);

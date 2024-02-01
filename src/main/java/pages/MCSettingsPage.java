@@ -118,25 +118,55 @@ public class MCSettingsPage extends BaseClass
                     break;
                 }
             }
+        CommonUtility.clickElement(mcsettingsecondbtn);
+        List<WebElement> option1=driver.findElements(By.xpath("//div[@class='dropDown']/div"));
+        for (WebElement ele :option1)
+        {
+            if(ele.getText().equalsIgnoreCase("None"))
+            {
+                CommonUtility.clickElement(ele);
+                break;
+            }
+        }
+        CommonUtility.clickElement(mcsettingthirdbtn);
+        List<WebElement> option2=driver.findElements(By.xpath("//div[@class='dropDown']/div"));
+        for (WebElement ele :option2)
+        {
+            if(ele.getText().equalsIgnoreCase("None"))
+            {
+                CommonUtility.clickElement(ele);
+                break;
+            }
+        }
+        CommonUtility.clickElement(mcsettingforthbtn);
+        List<WebElement> option3=driver.findElements(By.xpath("//div[@class='dropDown']/div"));
+        for (WebElement ele :option3)
+        {
+            if(ele.getText().equalsIgnoreCase("None"))
+            {
+                CommonUtility.clickElement(ele);
+                break;
+            }
+        }
     }
 
     public boolean verifymcvalueset(String mcValue)
     {
         Boolean flag=false;
         WebElement ele = null;
-        String str=ConfigReader.getPropertyvalue("missioncontrolvalue");
-        if(str.equalsIgnoreCase("Ad Copy Handling")|| str.equalsIgnoreCase("Ad Copy Status")
-        || str.equalsIgnoreCase("Customers") || str.equalsIgnoreCase("Network Instance Status")
-        || str.equalsIgnoreCase("Users"))
+        //String str=ConfigReader.getPropertyvalue("missioncontrolvalue");
+        if(mcValue.equalsIgnoreCase("Ad Copy Handling")|| mcValue.equalsIgnoreCase("Ad Copy Status")
+        || mcValue.equalsIgnoreCase("Customers") || mcValue.equalsIgnoreCase("Network Instance Status")
+        || mcValue.equalsIgnoreCase("Users"))
         {
              ele=driver.findElement(By.xpath("//div[contains(@ng-if,'firstQuadrantWidget.value')]/div/h2"));
         } 
-        else if (str.equalsIgnoreCase("Data Governance") || str.equalsIgnoreCase("Finance") ||
-        str.equalsIgnoreCase("Programming/Allocation Jobs") || str.equalsIgnoreCase("Reconciliation")
-                || str.equalsIgnoreCase("Scheduling Information"))
+        else if (mcValue.equalsIgnoreCase("Data Governance") || mcValue.equalsIgnoreCase("Finance") ||
+                mcValue.equalsIgnoreCase("Programming/Allocation Jobs") || mcValue.equalsIgnoreCase("Reconciliation")
+                || mcValue.equalsIgnoreCase("Scheduling Information"))
         {
              ele=driver.findElement(By.xpath("//div[contains(@ng-if,'firstQuadrantWidget.value')]/div/div/h2"));
-        } else if (str.equalsIgnoreCase("Order Lines Overview"))
+        } else if (mcValue.equalsIgnoreCase("Order Lines Overview"))
         {
             ele=driver.findElement(By.xpath("//div[contains(@ng-if,'firstQuadrantWidget.value')]/div/div/div/div/div/h2"));
         } 
@@ -176,6 +206,7 @@ public class MCSettingsPage extends BaseClass
         return flag;
 
     }
+
     public void addwait(WebElement ele)
     {
         Duration timeout = Duration.ofSeconds(50);

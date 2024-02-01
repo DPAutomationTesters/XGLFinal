@@ -1,7 +1,7 @@
 package pages;
 
 import base.BaseClass;
-import dataProvider.ConfigReader;
+//import dataProvider.ConfigReader;
 import helper.BrowserUtilities;
 import helper.CommonUtility;
 import helper.JavaScriptExecutor;
@@ -70,8 +70,11 @@ public class MCCustomerWidgetPage extends BaseClass
             mc.openMcSettings();
             mc.resetSettings();
             mc.addwait(mc.mcsettingbtn);
+            mc.openMcSettings();
+            mc.setMcsettingfirstvalue("Customers");
+            mc.saveMcSettings();
             bu.refreshbrowser();
-            Assert.assertTrue(mc.verifyforthmcvalueset("Customers"));
+            Assert.assertTrue(mc.verifymcvalueset("Customers"));
             flag=true;
         return flag;
     }
@@ -119,8 +122,11 @@ public class MCCustomerWidgetPage extends BaseClass
             int ht=gridCanvas.getSize().getHeight();
             System.out.println("Height is "+ht);
             List<WebElement> recordsOnPage = driver.findElements(By.xpath("//div[@class='grid-canvas']/div[contains(@class,'ui-widget-content slick-row')]"));
-            if(recordsOnPage.size()>0) {
+            if(ht>516) {
                 totalRecords = totalRecords + (ht / 30);
+            } else if(ht<=516)
+            {
+                totalRecords = totalRecords + recordsOnPage.size();
             }
         }
         return totalRecords;
@@ -170,7 +176,7 @@ public class MCCustomerWidgetPage extends BaseClass
     {
         BrowserUtilities bu=new BrowserUtilities();
         bu.backfromBrowser();
-        WaitUtility.waitTillElementVisible(driver,30,activewithoutrev);
+         WaitUtility.waitTillElementVisible(driver,30,activewithoutrev);
         Boolean flag=false;
         CommonUtility cu=new CommonUtility();
         int number = Integer.parseInt(getactiverevcount(activewithoutrevvalue));
@@ -191,8 +197,8 @@ public class MCCustomerWidgetPage extends BaseClass
     public Boolean verifycreditholdcount()
     {
         BrowserUtilities bu=new BrowserUtilities();
-        bu.backfromBrowser();
-        WaitUtility.waitTillElementVisible(driver,30,creditHold);
+       bu.backfromBrowser();
+       WaitUtility.waitTillElementVisible(driver,30,creditHold);
         Boolean flag=false;
         CommonUtility cu=new CommonUtility();
         int number = Integer.parseInt(getactiverevcount(creditholdvalue));

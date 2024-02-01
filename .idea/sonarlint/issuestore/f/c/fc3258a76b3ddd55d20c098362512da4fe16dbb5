@@ -4,5 +4,3 @@ java:S1488"]Immediately return this expression instead of assigning it to the 
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(îÇ¤™8à´¸é¾1
 Z	java:S106"9Replace this use of System.out or System.err by a logger.(ºùúÄúÿÿÿÿ8í´¸é¾1
 Z	java:S106"9Replace this use of System.out or System.err by a logger.(—Î‰Øúÿÿÿÿ8î´¸é¾1
-N
-java:S1128"1Remove this unused import 'java.util.Properties'.(¬µŽ²8ð´¸é¾1

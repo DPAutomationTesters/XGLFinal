@@ -24,23 +24,15 @@ public class XGLT_6692_Test  extends BaseClass
         MCSettingsPage mc= new MCSettingsPage(driver);
         mc.addwait(mc.mcsettingbtn);
         BrowserUtilities bu= new BrowserUtilities();
-        if(!mc.verifymcvalueset(ConfigReader.getPropertyvalue("missioncontrolvalue")))
-        {
             mc.openMcSettings();
             mc.resetSettings();
-            mc.addwait(mc.mcsettingbtn);
-            bu.refreshbrowser();
             mc.openMcSettings();
-            mc.setMcsettingfirstvalue(ConfigReader.getPropertyvalue("missioncontrolvalue"));
-            mc.addwait(mc.mcsettingPopup);
+            mc.setMcsettingfirstvalue("Users");
             mc.saveMcSettings();
-            mc.addwait(mc.mcsettingbtn);
-            Assert.assertTrue(mc.verifymcvalueset(ConfigReader.getPropertyvalue("missioncontrolvalue")));
-        }
-        else {
-        Assert.assertTrue(mc.verifymcvalueset(ConfigReader.getPropertyvalue("missioncontrolvalue")));
-        }
+            bu.refreshbrowser();
+            Assert.assertTrue(mc.verifymcvalueset("Users"));
     }
+
 
     @Test(priority = 2,enabled = true,dependsOnMethods = "MCsetUser",groups = {"Mission-Control-Users"})
     public void getMCUsercounts()  {

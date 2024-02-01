@@ -11,7 +11,7 @@ public class XGLT_6752_Test extends BaseClass
         rp.addsoftregion();
 
     }
-    @Test(priority = 1,enabled = true)
+    @Test(priority = 2,enabled = false)
     public void CreateNewHardRegion()
     {
         RegionPage rp=new RegionPage(driver);

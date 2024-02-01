@@ -1,0 +1,47 @@
+
+l
+java:S1192J"JDefine a constant instead of duplicating this literal "Customers" 6 times.(£Ü• ÿÿÿÿÿ8¾˜¥¹Ó1
+x
+java:S1488T"[Immediately return this expression instead of assigning it to the temporary variable "str".(œ…’ 8¿˜¥¹Ó1
+X	java:S125"<This block of commented-out lines of code should be removed.(«‰ÂÖ8Ú˜¥¹Ó1
+R
+java:S3252="5Use static access with "base.BaseClass" for "driver".(ÁÜÑ¥8Ş˜¥¹Ó1
+R
+java:S2209="5Change this instance-reference to a static reference.(ÁÜÑ¥8Ş˜¥¹Ó1
+`
+java:S1155^">Use isEmpty() to check whether the collection is empty or not.(­ƒĞ‘üÿÿÿÿ8â˜¥¹Ó1
+L
+java:S1197g"*Move the array designators [] to the type.(½àËÒúÿÿÿÿ8ã˜¥¹Ó1
+Z	java:S106j"9Replace this use of System.out or System.err by a logger.(Áä€­ıÿÿÿÿ8ä˜¥¹Ó1
+W
+java:S2209q"5Change this instance-reference to a static reference.(ÁÚÏßüÿÿÿÿ8å˜¥¹Ó1
+Z	java:S106{"9Replace this use of System.out or System.err by a logger.(¯˜Ñ»ıÿÿÿÿ8å˜¥¹Ó1
+[	java:S106‹"9Replace this use of System.out or System.err by a logger.(‡¼Ö‘ÿÿÿÿÿ8ç˜¥¹Ó1
+S
+java:S2209"5Change this instance-reference to a static reference.(±¤ûİ8ç˜¥¹Ó1
+[	java:S106"9Replace this use of System.out or System.err by a logger.(Â°õ½úÿÿÿÿ8ç˜¥¹Ó1
+S
+java:S2209œ"5Change this instance-reference to a static reference.(Ò™®İ8é˜¥¹Ó1
+[	java:S106¡"9Replace this use of System.out or System.err by a logger.(îšµåÿÿÿÿÿ8é˜¥¹Ó1
+X
+java:S2209£"5Change this instance-reference to a static reference.(Æõ­ùÿÿÿÿ8é˜¥¹Ó1
+V	java:S106¦"9Replace this use of System.out or System.err by a logger.(©å”è8ë˜¥¹Ó1
+S
+java:S2209²"5Change this instance-reference to a static reference.(Ò™®İ8î˜¥¹Ó1
+[	java:S106·"9Replace this use of System.out or System.err by a logger.(ÃÖ½¨ùÿÿÿÿ8ì˜¥¹Ó1
+X
+java:S2209¹"5Change this instance-reference to a static reference.(—ÆÑÿÿÿÿÿ8ì˜¥¹Ó1
+[	java:S106¼"9Replace this use of System.out or System.err by a logger.(¾ÏÃŞúÿÿÿÿ8í˜¥¹Ó1
+S
+java:S2209È"5Change this instance-reference to a static reference.(Ò™®İ8ÍáÀ¹Ó1
+V	java:S106Í"9Replace this use of System.out or System.err by a logger.(½¤›8î˜¥¹Ó1
+S
+java:S2209Ï"5Change this instance-reference to a static reference.(Èß÷®8ï˜¥¹Ó1
+[	java:S106Ò"9Replace this use of System.out or System.err by a logger.(®„³ïşÿÿÿÿ8ï˜¥¹Ó1
+b
+java:S1128
+"ERemove this unused import 'org.openqa.selenium.interactions.Actions'.(ÅÑÃ8ğ˜¥¹Ó1
+p
+java:S1128"NRemove this unused import 'org.openqa.selenium.support.ui.ExpectedConditions'.(û€Èéúÿÿÿÿ8ğ˜¥¹Ó1
+e
+java:S1128"CRemove this unused import 'javax.security.auth.x500.X500Principal'.(ì–¦ªûÿÿÿÿ8ğ˜¥¹Ó1

@@ -20,18 +20,15 @@ public class XGLT_6693_Test extends BaseClass
     public void MissonControlReset()
     {
         MCSettingsPage mc= new MCSettingsPage(driver);
-        mc.addwait(mc.mcsettingbtn);
         mc.openMcSettings();
         mc.resetSettings();
-        mc.addwait(mc.mcsettingbtn);
         BrowserUtilities bu= new BrowserUtilities();
         bu.refreshbrowser();
         mc.openMcSettings();
-        mc.setMcsettingfirstvalue(ConfigReader.getPropertyvalue("missioncontrolvalue"));
+        mc.setMcsettingfirstvalue("Users");
         mc.addwait(mc.mcsettingPopup);
         mc.saveMcSettings();
-        mc.addwait(mc.mcsettingbtn);
-        Assert.assertTrue(mc.verifymcvalueset(ConfigReader.getPropertyvalue("missioncontrolvalue")));
+        Assert.assertTrue(mc.verifymcvalueset("Users"));
         Reporter.log("Pass: Test XGLT-6693");
     }
 
