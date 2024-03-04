@@ -82,8 +82,14 @@ public class MCCustomerWidgetPage extends BaseClass
     {
         WaitUtility.waitTillElementVisible(driver,30,ele);
         String str=ele.getText();
-        return str;
-    }
+        if(str.contains(","))
+        {
+            String stringWithoutComma = str.replace(",", "");
+            return stringWithoutComma;
+        }
+       else {
+            return str;
+        }}
     public int getrecordcountoflastpage()
     {
         CommonUtility cu=new CommonUtility();

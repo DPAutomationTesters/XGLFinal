@@ -46,6 +46,7 @@ ORParcer\XMLParserSAX.class
 pages\RevenueTypesPage.class
 listners\ExtentManager.class
 listners\ExtentReportListener.class
+pages\UserRolePage.class
 helper\WaitUtility$5.class
 helper\ExceptionHandling.class
 pages\NetworkInstancePage.class

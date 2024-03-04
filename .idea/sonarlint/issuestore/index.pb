@@ -121,26 +121,18 @@ Y
 LearnMaven.iml,2\d\2deb4d70db04a3558b5ae83a61c58371fd71c570
 F
 configs/log4j/logs.log,e\7\e7feab0017b6f4c1b5ee16c92b49463e2d4e9064
-Q
-!src/test/java/XGLT_6751_Test.java,6\e\6e88e7ecbc4d4de16392baeb16036e95112a00b5
 Z
 *src/main/java/pages/CommodityCodePage.java,3\a\3a8bc13349110a008c7b519c153289a3eabae814
 Q
 !src/test/java/XGLT_6749_Test.java,1\6\16187bbc496c9fd44213f724a30284670631e9d0
 Q
 !src/test/java/XGLT_6748_Test.java,4\a\4a7348128793891b57a28c74b9e1d1765597e21a
-X
-(src/main/java/pages/SalesOfficePage.java,b\1\b1df1c63adf06e58f172192c9ada05053fc95d68
 M
 test-output/testng-failed.xml,0\4\048fa78c1f3865f6ecbb70ea771ac93607d18885
 5
 Rules,b\b\bb11a8e3f8712e36e7cd9d1c615a4e3dbb03336a
 `
 0test-output/Command line suite/testng-failed.xml,a\1\a1b21eda41ddee7ce416532877773fb740546c6d
-Q
-!src/test/java/XGLT_6666_Test.java,4\a\4aa1f22b05ebbd5407b1506cdd506c6f1287285a
-U
-%src/main/java/pages/CustomerPage.java,a\5\a528c0fc85c8024a4219ac4846a49c764c028be5
 W
 'src/main/java/pages/CustomerAdcopy.java,3\a\3a8cdd59823713a7fdc53430af9975df6c52facc
 [
@@ -149,8 +141,6 @@ N
 test-output/testng-results.xml,0\0\00e0b2ae7f44da7a9e12fd1418e328ac78839661
 Y
 )src/main/java/pages/RevenueTypesPage.java,b\1\b1e533d4b997c624e3c264d7cd556b58302acc83
-`
-0src/main/java/browserfactory/BrowserFactory.java,b\f\bfdd9742c0a8ba7a848518a372bb21a7e823b88a
 [
 +src/main/java/dataProvider/ExcelReader.java,0\7\07a1f55c3c640887244bb95ce48bab68004c8d12
 W
@@ -161,8 +151,6 @@ b
 2src/main/java/dataProvider/CaselessProperties.java,5\6\56c3c18cefb1e5846038d504c217ca54f6bd26cc
 [
 +src/main/java/wrapper/WebDriverWrapper.java,4\c\4c42e878c6cd17e7be6af7c0a2b50a3972f89205
-Z
-*src/main/java/helper/Read_write_Excel.java,6\9\69dc6121d3f9700ecf0c1eaee68c7ebea2fbb3e5
 Y
 )src/main/java/helper/StringEncrypter.java,0\8\08de03433b61ce7428490efb98f2280bba9d5445
 [
@@ -173,10 +161,6 @@ Q
 !src/main/java/helper/Utility.java,4\f\4f8cf464663769db8d99c52a7d43ab38b154c39d
 U
 %src/main/java/helper/DateUtility.java,3\b\3b794890ebfb2331f2472b9c1fbe951d2b97df8d
-Q
-!src/test/java/Create_Network.java,8\8\8869ebe6fbb3993774f196dafce9ae63a0f61d9b
-Q
-!src/test/java/XGLT_6672_Test.java,7\0\702287b8284e63df8c2239a9992f87c64338d011
 S
 #src/test/java/Import_Schedules.java,e\a\ea5d0cde2c8c67ebcc72388291f9d634d73bcb7d
 9
@@ -193,8 +177,6 @@ U
 %src/main/java/helper/WaitUtility.java,0\a\0a26559a4e416992f4a77d91a6f9f24954597773
 R
 "src/main/java/pages/LoginPage.java,4\b\4bdc7fe650a4170fd3332cdfc4dca51f7507f98b
-R
-"src/main/java/pages/AboutPage.java,7\1\71515e2d2e6763e875779ebac6d2e980a64d511a
 Z
 *src/main/java/helper/BrowserUtilities.java,7\b\7b0e637bbdbdb8f764d1cd4749857a9a9efc00ab
 \
@@ -218,20 +200,20 @@ Q
 \
 ,src/main/java/dataProvider/ConfigReader.java,f\c\fc3258a76b3ddd55d20c098362512da4fe16dbb5
 Q
-!src/test/java/XGLT_6685_Test.java,e\8\e81fdd2625e9bbee09a1829a722e65995935203c
-]
--src/main/java/pages/MCCustomerWidgetPage.java,8\d\8df16c0f72284b0249b5177d7579b5a940d4d811
-Q
 !src/test/java/XGLT_6687_Test.java,0\c\0c89d77b3ad004d5cbd0404ccae05f5eb088eaf8
-\
-,src/main/java/pages/MCFinanceWidgetPage.java,8\7\87b304f558c13d811c2008e3ab6064d5d075a26c
 Z
 *src/main/java/pages/MCUsersWidgetPage.java,8\9\8940148d63550827c0b498d85223c8a40f27280d
 Q
 !src/test/java/XGLT_6752_Test.java,6\6\66f6ff3a1f4c16f8f7d8b76b0f9fd88c18be2b0b
-Y
-)src/main/java/helper/SaveProjectData.java,a\f\af1535f06c0533aaa4e6ff5e9d402643bfb5f9a5
 S
 #src/main/java/pages/RegionPage.java,7\b\7bfd41930f4a7b1af17471f32db45d20229c5623
 W
 'src/main/java/pages/RetailUnitPage.java,3\4\3499eed3e8aac123109b8363592437ba2c912396
+X
+(src/main/java/pages/SalesPersonPage.java,c\a\ca10984bfc3181f36f6cb9fc03bdefab7a384565
+Q
+!src/test/java/XGLT_6692_Test.java,c\f\cf802b826579d32cdf8f1fd4450b12bd2d50d94f
+W
+'src/main/java/pages/MCSettingsPage.java,a\6\a68e840db653fed941edc042fed3c512cc8c48b1
+Q
+!src/test/java/XGLT_6693_Test.java,a\e\ae2424b8a0ba8611636ac174ff933dbcbe0f20bb

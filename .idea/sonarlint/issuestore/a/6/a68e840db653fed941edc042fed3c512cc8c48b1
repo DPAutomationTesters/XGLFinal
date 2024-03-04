@@ -1,0 +1,20 @@
+
+
+java:S1192p"]Define a constant instead of duplicating this literal "//div[@class='dropDown']/div" 4 times.(İï‹„øÿÿÿÿ8ÌãŠ‹Ó1
+s	java:S117Ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½ßÿ”üÿÿÿÿ8×ĞßŠÓ1
+_
+java:S2259®"AA "NullPointerException" could be thrown; "ele" is nullable here.(¬ à‚8ÑßŠÓ1
+_
+java:S2259Ê"AA "NullPointerException" could be thrown; "ele" is nullable here.(¬ à‚8ÑßŠÓ1
+R
+java:S3252F"5Use static access with "base.BaseClass" for "driver".(ÁÜÑ¥8˜ÑßŠÓ1
+R
+java:S2209F"5Change this instance-reference to a static reference.(ÁÜÑ¥8˜ÑßŠÓ1
+O
+java:S1172I"-Remove this unused method parameter "parser".(ˆƒÔùÿÿÿÿ8šÑßŠÓ1
+R
+java:S3252K"5Use static access with "base.BaseClass" for "driver".(ÁÜÑ¥8šÑßŠÓ1
+R
+java:S2209K"5Change this instance-reference to a static reference.(ÁÜÑ¥8šÑßŠÓ1
+]	java:S125O"<This block of commented-out lines of code should be removed.(ú‡Úÿÿÿÿÿ8›ÑßŠÓ1
+^	java:S125"<This block of commented-out lines of code should be removed.(œÚŞ¨ûÿÿÿÿ8£ÑßŠÓ1
