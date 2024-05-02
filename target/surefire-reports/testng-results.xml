@@ -1,67 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-04T21:31:17 IST" name="Smoke Pack Suite" finished-at="2024-03-04T21:39:26 IST" duration-ms="488942">
+  <suite started-at="2024-04-17T17:43:35 IST" name="Smoke Pack Suite" finished-at="2024-04-17T19:55:43 IST" duration-ms="7928145">
     <groups>
-      <group name="User settings">
-        <method signature="XGLT_6756_Test.search_user_role()[pri:1, instance:XGLT_6756_Test@37d3d232]" name="search_user_role" class="XGLT_6756_Test"/>
-        <method signature="XGLT_6756_Test.create_user_role()[pri:2, instance:XGLT_6756_Test@37d3d232]" name="create_user_role" class="XGLT_6756_Test"/>
-      </group> <!-- User settings -->
     </groups>
-    <test started-at="2024-03-04T21:31:17 IST" name="Maintainance Tests" finished-at="2024-03-04T21:39:26 IST" duration-ms="488942">
-      <class name="XGLT_6756_Test">
-        <test-method is-config="true" signature="archive_old()[pri:0, instance:XGLT_6756_Test@37d3d232]" started-at="2024-03-04T21:31:17 IST" name="archive_old" finished-at="2024-03-04T21:31:17 IST" duration-ms="348" status="PASS">
+    <test started-at="2024-04-17T17:43:35 IST" name="Maintainance Tests" finished-at="2024-04-17T19:55:43 IST" duration-ms="7928145">
+      <class name="RotationCopy_test">
+        <test-method is-config="true" signature="archive_old()[pri:0, instance:RotationCopy_test@2d35442b]" started-at="2024-04-17T17:43:35 IST" name="archive_old" finished-at="2024-04-17T17:43:35 IST" duration-ms="26" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- archive_old -->
-        <test-method is-config="true" signature="initOR()[pri:0, instance:XGLT_6756_Test@37d3d232]" started-at="2024-03-04T21:31:17 IST" name="initOR" finished-at="2024-03-04T21:31:17 IST" duration-ms="32" status="PASS">
+        <test-method is-config="true" signature="initOR()[pri:0, instance:RotationCopy_test@2d35442b]" started-at="2024-04-17T17:43:35 IST" name="initOR" finished-at="2024-04-17T17:43:35 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initOR -->
-        <test-method is-config="true" signature="setupLog4j()[pri:0, instance:XGLT_6756_Test@37d3d232]" started-at="2024-03-04T21:31:17 IST" name="setupLog4j" finished-at="2024-03-04T21:31:17 IST" duration-ms="21" status="PASS">
+        <test-method is-config="true" signature="setupLog4j()[pri:0, instance:RotationCopy_test@2d35442b]" started-at="2024-04-17T17:43:35 IST" name="setupLog4j" finished-at="2024-04-17T17:43:35 IST" duration-ms="18" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupLog4j -->
-        <test-method is-config="true" signature="login()[pri:0, instance:XGLT_6756_Test@37d3d232]" started-at="2024-03-04T21:31:17 IST" name="login" finished-at="2024-03-04T21:32:47 IST" duration-ms="90287" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:RotationCopy_test@2d35442b]" started-at="2024-04-17T17:43:35 IST" name="login" finished-at="2024-04-17T17:44:44 IST" duration-ms="68710" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="name(org.testng.ITestContext)[pri:0, instance:XGLT_6756_Test@37d3d232]" started-at="2024-03-04T21:32:48 IST" name="name" finished-at="2024-03-04T21:32:48 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="name(org.testng.ITestContext)[pri:0, instance:RotationCopy_test@2d35442b]" started-at="2024-04-17T17:44:44 IST" name="name" finished-at="2024-04-17T17:44:44 IST" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7e1b96a7]]>
+                <![CDATA[org.testng.TestRunner@6d262422]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- name -->
-        <test-method signature="search_user_role()[pri:1, instance:XGLT_6756_Test@37d3d232]" started-at="2024-03-04T21:32:48 IST" name="search_user_role" finished-at="2024-03-04T21:36:20 IST" duration-ms="212719" status="PASS">
+        <test-method signature="CopyRotaionGroup()[pri:1, instance:RotationCopy_test@2d35442b]" started-at="2024-04-17T17:44:44 IST" name="CopyRotaionGroup" finished-at="2024-04-17T19:55:39 IST" duration-ms="7855453" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'ui-widget-content')][1]//div[@class='actionMenuButton']/i"}
+  (Session info: chrome=123.0.6312.123)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DPLAP166', ip: '137.237.2.236', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 123.0.6312.123, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\dP-PL\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51256}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a59c4df4811f82049fe754efe723d3c1
+*** Element info: {Using=xpath, value=//div[contains(@class,'ui-widget-content')][1]//div[@class='actionMenuButton']/i}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'ui-widget-content')][1]//div[@class='actionMenuButton']/i"}
+  (Session info: chrome=123.0.6312.123)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DPLAP166', ip: '137.237.2.236', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 123.0.6312.123, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\dP-PL\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51256}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a59c4df4811f82049fe754efe723d3c1
+*** Element info: {Using=xpath, value=//div[contains(@class,'ui-widget-content')][1]//div[@class='actionMenuButton']/i}
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
+at jdk.proxy2/jdk.proxy2.$Proxy25.findElement(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy28.click(Unknown Source)
+at helper.CommonUtility.clickElement(CommonUtility.java:11)
+at pages.Rotationgroup_copy.copy_group(Rotationgroup_copy.java:57)
+at RotationCopy_test.CopyRotaionGroup(RotationCopy_test.java:11)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- search_user_role -->
-        <test-method is-config="true" signature="name(org.testng.ITestContext)[pri:0, instance:XGLT_6756_Test@37d3d232]" started-at="2024-03-04T21:36:21 IST" name="name" finished-at="2024-03-04T21:36:21 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@7e1b96a7]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- name -->
-        <test-method signature="create_user_role()[pri:2, instance:XGLT_6756_Test@37d3d232]" started-at="2024-03-04T21:36:21 IST" name="create_user_role" finished-at="2024-03-04T21:39:26 IST" depends-on-methods="XGLT_6756_Test.search_user_role" duration-ms="184983" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- create_user_role -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:XGLT_6756_Test@37d3d232]" started-at="2024-03-04T21:39:26 IST" name="closeBrowser" finished-at="2024-03-04T21:39:26 IST" duration-ms="403" status="PASS">
+        </test-method> <!-- CopyRotaionGroup -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:RotationCopy_test@2d35442b]" started-at="2024-04-17T19:55:40 IST" name="closeBrowser" finished-at="2024-04-17T19:55:43 IST" duration-ms="3304" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- XGLT_6756_Test -->
+      </class> <!-- RotationCopy_test -->
     </test> <!-- Maintainance Tests -->
   </suite> <!-- Smoke Pack Suite -->
 </testng-results>

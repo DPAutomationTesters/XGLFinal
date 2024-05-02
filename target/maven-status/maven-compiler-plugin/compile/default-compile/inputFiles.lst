@@ -1,6 +1,7 @@
 D:\XGL Final\XGLFinal\src\main\java\pages\NetworkInstancePage.java
 D:\XGL Final\XGLFinal\src\main\java\pages\SalesPersonPage.java
 D:\XGL Final\XGLFinal\src\main\java\helper\JiraCreateIssue.java
+D:\XGL Final\XGLFinal\src\main\java\pages\UserRolePage.java
 D:\XGL Final\XGLFinal\src\main\java\helper\Utility.java
 D:\XGL Final\XGLFinal\src\main\java\helper\DateUtility.java
 D:\XGL Final\XGLFinal\src\main\java\helper\DataBaseUtility.java
@@ -22,12 +23,14 @@ D:\XGL Final\XGLFinal\src\main\java\pages\SalesOfficePage.java
 D:\XGL Final\XGLFinal\src\main\java\helper\ExceptionHandling.java
 D:\XGL Final\XGLFinal\src\main\java\pages\MCFinanceWidgetPage.java
 D:\XGL Final\XGLFinal\src\main\java\pages\AboutPage.java
+D:\XGL Final\XGLFinal\src\main\java\pages\UserSecurityPage.java
 D:\XGL Final\XGLFinal\src\main\java\pages\MCSettingsPage.java
 D:\XGL Final\XGLFinal\src\main\java\pages\CustomerAdcopy.java
 D:\XGL Final\XGLFinal\src\main\java\pages\RegionPage.java
 D:\XGL Final\XGLFinal\src\main\java\helper\Read_write_Excel.java
 D:\XGL Final\XGLFinal\src\main\java\helper\StringEncrypter.java
 D:\XGL Final\XGLFinal\src\main\java\pages\NetworkPage.java
+D:\XGL Final\XGLFinal\src\main\java\pages\Rotationgroup_copy.java
 D:\XGL Final\XGLFinal\src\main\java\ORParcer\RespositoryParser.java
 D:\XGL Final\XGLFinal\src\main\java\wrapper\WebDriverWrapper.java
 D:\XGL Final\XGLFinal\src\main\java\helper\File_Archieve.java

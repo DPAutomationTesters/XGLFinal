@@ -12,20 +12,17 @@
     <parameter name="URL" value="https://qa134.myimagine.com/xGLinear/login.html"/>
     <parameter name="username" value="MCU"/>
     <classes>
-      <class name="XGLT_6685_Test">
+      <class name="RotationCopy_test">
         <methods>
           <include name="setupLog4j"/>
           <include name="login"/>
           <include name="initOR"/>
-          <include name="MCactivewithoutrev"/>
-          <include name="MCinactivewithrev"/>
           <include name="name"/>
-          <include name="MCActivewithRevenue"/>
           <include name="archive_old"/>
-          <include name="MCCredithold"/>
+          <include name="CopyRotaionGroup"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- XGLT_6685_Test -->
+      </class> <!-- RotationCopy_test -->
     </classes>
   </test> <!-- Maintainance Tests(failed) -->
 </suite> <!-- Failed suite [Smoke Pack Suite] -->

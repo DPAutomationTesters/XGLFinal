@@ -2,6 +2,7 @@ helper\WaitUtility$6.class
 helper\Read_write_Excel.class
 helper\StringEncrypter.class
 pages\CustomerAdcopy.class
+pages\UserSecurityPage.class
 helper\Utility.class
 pages\ImportSchedulePage.class
 browserfactory\BrowserFactory.class
@@ -42,6 +43,7 @@ listners\WebEventListener.class
 pages\MCCustomerWidgetPage.class
 pages\CustomerSearchPage.class
 pages\AboutPage.class
+pages\Rotationgroup_copy.class
 ORParcer\XMLParserSAX.class
 pages\RevenueTypesPage.class
 listners\ExtentManager.class

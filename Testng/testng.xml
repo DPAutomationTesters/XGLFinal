@@ -27,8 +27,9 @@
             <class name="XGLT_6672_Test"/>
             <class name="XGLT_6685_Test"/>
             <class name="XGLT_6687_Test"/>
-            <class name="pingTest"/-->
-            <class name="XGLT_6756_Test"/>
+            <class name="pingTest"/>
+            <class name="XGLT_6756_Test"/-->
+            <class name="RotationCopy_test"/>
         </classes>
     </test>
 </suite>
