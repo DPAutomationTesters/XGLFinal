@@ -41,8 +41,6 @@ G.idea/sonarlint/issuestore/7/2/72fc4d88b9810bd8054a9fd0d4c9fdbb529cdbc2,6\0\60
 Q.idea/sonarlint/securityhotspotstore/4/c/4c42e878c6cd17e7be6af7c0a2b50a3972f89205,d\8\d80b17299c82217a1a1d18ce8a7a54ca81661a62
 
 Q.idea/sonarlint/securityhotspotstore/3/f/3fc0ed1a2bf514e5a3c0ecca6dfe9d642394cc0c,3\4\34b76a8d509238ca1f28774f8b2fa025aed3f1d3
-t
-D.idea/libraries/Maven__com_oracle_database_jdbc_ojdbc11_23_2_0_0.xml,9\a\9acb315555ba6eda1e33d1847902769520946a65
 O
 src/test/java/TestngRunner.java,f\1\f198001667b28cc9218f028853d578bc533a3a4f
 w
@@ -65,8 +63,6 @@ P
 Q.idea/sonarlint/securityhotspotstore/b/5/b5069ba2affe6693b2baec4db29ca77866332eaa,d\7\d744e038bae88724eb68b1faea51751990149d15
 
 Q.idea/sonarlint/securityhotspotstore/e/5/e5b99b8bc16f938bd7e7116b74d5e857f8b533e9,3\c\3c68dc436f064314250549d96cfa307b41bcdddc
-z
-J.idea/libraries/Maven__com_microsoft_sqlserver_mssql_jdbc_12_4_0_jre11.xml,5\1\5142e9b7c0cf30e354d50fb6770c68d983f6f59b
 [
 +test-output/old/Command line suite/toc.html,0\d\0dea9165d4629e7cfc2c3eb23f1fb161723bece1
 
@@ -111,8 +107,6 @@ Y
 )src/main/java/helper/JiraCreateIssue.java,d\6\d61b5b243fbf55dfe4c16cedc0766d0ada9c9c8f
 ]
 -src/main/java/helper/JiraServiceProvider.java,e\6\e65140660d261a99fcc7acb26cb2c58f2ff50775
->
-LearnMaven.iml,2\d\2deb4d70db04a3558b5ae83a61c58371fd71c570
 F
 configs/log4j/logs.log,e\7\e7feab0017b6f4c1b5ee16c92b49463e2d4e9064
 Z
@@ -157,8 +151,6 @@ U
 %src/main/java/helper/DateUtility.java,3\b\3b794890ebfb2331f2472b9c1fbe951d2b97df8d
 S
 #src/test/java/Import_Schedules.java,e\a\ea5d0cde2c8c67ebcc72388291f9d634d73bcb7d
-9
-	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 Y
 )src/main/java/listners/ExtentManager.java,e\5\e5b99b8bc16f938bd7e7116b74d5e857f8b533e9
 W
@@ -169,14 +161,10 @@ U
 %src/main/java/helper/WaitUtility.java,0\a\0a26559a4e416992f4a77d91a6f9f24954597773
 R
 "src/main/java/pages/LoginPage.java,4\b\4bdc7fe650a4170fd3332cdfc4dca51f7507f98b
-Z
-*src/main/java/helper/BrowserUtilities.java,7\b\7b0e637bbdbdb8f764d1cd4749857a9a9efc00ab
 \
 ,src/main/java/helper/JavaScriptExecutor.java,d\1\d11652c308c81b2d46e574cab3e3e6a0b73978ac
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-[
-+src/main/java/helper/ExceptionHandling.java,2\c\2cf68ab3135dcf92cc1d49a5c8e6efefd71a95bf
 K
 src/test/java/pingTest.java,c\e\cec412d1cc4572424d2a4a6170f653831d8d7451
 Q
@@ -209,12 +197,8 @@ W
 'src/main/java/pages/MCSettingsPage.java,a\6\a68e840db653fed941edc042fed3c512cc8c48b1
 Q
 !src/test/java/XGLT_6693_Test.java,a\e\ae2424b8a0ba8611636ac174ff933dbcbe0f20bb
-U
-%src/main/java/pages/CustomerPage.java,a\5\a528c0fc85c8024a4219ac4846a49c764c028be5
 `
 0src/main/java/browserfactory/BrowserFactory.java,b\f\bfdd9742c0a8ba7a848518a372bb21a7e823b88a
-]
--src/main/java/pages/MCCustomerWidgetPage.java,8\d\8df16c0f72284b0249b5177d7579b5a940d4d811
 \
 ,src/main/java/pages/MCFinanceWidgetPage.java,8\7\87b304f558c13d811c2008e3ab6064d5d075a26c
 Q
