@@ -1,4 +1,0 @@
-# Created at 2024-01-24T15:10:55.251
-
-XGLT_6692_Test.getMCUsercounts() is depending on method public void XGLT_6692_Test.MCsetUser(), which is not annotated with @Test or not included.
-

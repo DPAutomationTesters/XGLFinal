@@ -23,5 +23,6 @@ pingTest.class
 Test_DB.class
 TestngRunner.class
 ReadApiResponseOnWebpageWithUI.class
+XGL_CustomerCSVexport.class
 XGLT_6687_Test.class
 XGLT_6693_Test.class

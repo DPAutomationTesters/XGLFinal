@@ -29,7 +29,7 @@
             <class name="XGLT_6687_Test"/>
             <class name="pingTest"/>
             <class name="XGLT_6756_Test"/-->
-            <class name="RotationCopy_test"/>
+            <class name="XGL_CustomerCSVexport"/>
         </classes>
     </test>
 </suite>

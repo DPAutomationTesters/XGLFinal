@@ -9,22 +9,19 @@ import java.util.List;
 
 public class XGL_CountRecordOnScreen extends BaseClass
 {
-    @FindBy(xpath="//div[@class='grid-canvas']/div[contains(@class,'ui-widget-content slick-row')]")
-    WebElement row;
+    WebElement row=driver.findElement(By.xpath("//div[@class='grid-canvas']/div[contains(@class,'ui-widget-content slick-row')]"));
 
-    @FindBy(xpath = "//div[contains(@class,'nextPagesBtn')]/button[contains(@ng-click,'changeCurFastPages')]")
-    WebElement next8pagebtn;
+     WebElement next8pagebtn=driver.findElement(By.xpath("//div[contains(@class,'nextPagesBtn')]/button[contains(@ng-click,'changeCurFastPages')]"));
 
-    @FindBy(xpath = "//div[@class='pagesOf']/span[@class='ng-binding']")
-    WebElement pageof;
+     WebElement pageof=driver.findElement(By.xpath("//div[@class='pagesOf']/span[@class='ng-binding']"));
 
-    @FindBy(xpath = "//div[@class='grid-canvas']")
-    WebElement gridCanvas;
+    WebElement gridCanvas= driver.findElement(By.xpath("//div[@class='grid-canvas']"));
 
     public int getrecordcountoflastpage()
     {
         CommonUtility cu=new CommonUtility();
         int totalRecords = 0;
+        WaitUtility.waitTillElementtobeClickable(driver,20,next8pagebtn);
         while (next8pagebtn.isEnabled())
         {
             next8pagebtn.click();

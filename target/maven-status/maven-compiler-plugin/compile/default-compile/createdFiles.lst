@@ -11,6 +11,7 @@ pages\MCSettingsPage.class
 helper\WaitUtility$3.class
 helper\File_Archieve.class
 helper\UploadFileExample.class
+helper\CSVUtilities.class
 pages\MCUsersWidgetPage.class
 pages\NetworkInstanceSummaryPage.class
 pages\Prebilling_processing.class
@@ -46,6 +47,7 @@ pages\AboutPage.class
 pages\Rotationgroup_copy.class
 ORParcer\XMLParserSAX.class
 pages\RevenueTypesPage.class
+helper\XGL_CountRecordOnScreen.class
 listners\ExtentManager.class
 listners\ExtentReportListener.class
 pages\UserRolePage.class

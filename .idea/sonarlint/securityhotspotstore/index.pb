@@ -123,8 +123,6 @@ M
 0test-output/Command line suite/testng-failed.xml,a\1\a1b21eda41ddee7ce416532877773fb740546c6d
 W
 'src/main/java/pages/CustomerAdcopy.java,3\a\3a8cdd59823713a7fdc53430af9975df6c52facc
-[
-+src/main/java/pages/CustomerSearchPage.java,b\9\b98badac1d4f554cfc15c1b91316981eba652772
 N
 test-output/testng-results.xml,0\0\00e0b2ae7f44da7a9e12fd1418e328ac78839661
 Y
@@ -153,18 +151,12 @@ S
 #src/test/java/Import_Schedules.java,e\a\ea5d0cde2c8c67ebcc72388291f9d634d73bcb7d
 Y
 )src/main/java/listners/ExtentManager.java,e\5\e5b99b8bc16f938bd7e7116b74d5e857f8b533e9
-W
-'src/main/java/helper/CommonUtility.java,e\9\e905315ff89d6f8e1d81c7b8a7d2356c51d195b8
 g
 7src/main/java/pages/Network_programbreakformatPage.java,2\3\235a7b015949b57db55a34e9fd481bda167f4423
 U
 %src/main/java/helper/WaitUtility.java,0\a\0a26559a4e416992f4a77d91a6f9f24954597773
 R
 "src/main/java/pages/LoginPage.java,4\b\4bdc7fe650a4170fd3332cdfc4dca51f7507f98b
-\
-,src/main/java/helper/JavaScriptExecutor.java,d\1\d11652c308c81b2d46e574cab3e3e6a0b73978ac
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 K
 src/test/java/pingTest.java,c\e\cec412d1cc4572424d2a4a6170f653831d8d7451
 Q
@@ -207,8 +199,6 @@ Q
 !src/test/java/XGLT_6666_Test.java,4\a\4aa1f22b05ebbd5407b1506cdd506c6f1287285a
 R
 "src/main/java/pages/AboutPage.java,7\1\71515e2d2e6763e875779ebac6d2e980a64d511a
-Q
-!src/main/java/base/BaseClass.java,a\2\a2ecdf21ff1153ba24b05ac2f5487a082ef289e7
 Y
 )src/main/java/helper/SaveProjectData.java,a\f\af1535f06c0533aaa4e6ff5e9d402643bfb5f9a5
 Z
@@ -217,7 +207,5 @@ Q
 !src/test/java/Create_Network.java,8\8\8869ebe6fbb3993774f196dafce9ae63a0f61d9b
 Q
 !src/test/java/XGLT_6672_Test.java,7\0\702287b8284e63df8c2239a9992f87c64338d011
-Q
-!src/test/java/XGLT_6756_Test.java,3\3\33d5f7333e2d787c668c1789c6fc6bca7e0e54fe
 X
 (src/main/java/pages/SalesOfficePage.java,b\1\b1df1c63adf06e58f172192c9ada05053fc95d68
