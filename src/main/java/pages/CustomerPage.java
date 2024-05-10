@@ -20,13 +20,20 @@ import java.util.concurrent.TimeUnit;
 public class CustomerPage extends BaseClass
 {
     @FindBy(id="header.menuOrders")
+    public
     WebElement menuOrders;
 
     @FindBy(id="header.subMenuCustomers")
+    public
     WebElement menuCustomers;
 
     @FindBy(xpath = "//div[contains(@id,'breadCrumbs')]")
+    public
     WebElement breadcrumvalue;
+
+    @FindBy(xpath = "//div[@class='sepV']//button[@id='customersGridDrtv.csv']")
+    public
+    WebElement exportCSV;
 
     @FindBy(xpath = "//button[@id='customersGrid.add']")
     WebElement addCustomers;

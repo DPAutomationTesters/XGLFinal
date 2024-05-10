@@ -1,5 +1,0 @@
-# Created at 2024-01-24T12:00:12.194
-Boot Manifest-JAR contains absolute paths in classpath 'D:\XGL Final\XGLFinal\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-'other' has different root
-
