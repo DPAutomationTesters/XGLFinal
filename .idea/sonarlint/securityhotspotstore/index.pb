@@ -189,8 +189,6 @@ W
 'src/main/java/pages/MCSettingsPage.java,a\6\a68e840db653fed941edc042fed3c512cc8c48b1
 Q
 !src/test/java/XGLT_6693_Test.java,a\e\ae2424b8a0ba8611636ac174ff933dbcbe0f20bb
-`
-0src/main/java/browserfactory/BrowserFactory.java,b\f\bfdd9742c0a8ba7a848518a372bb21a7e823b88a
 \
 ,src/main/java/pages/MCFinanceWidgetPage.java,8\7\87b304f558c13d811c2008e3ab6064d5d075a26c
 Q
@@ -209,3 +207,15 @@ Q
 !src/test/java/XGLT_6672_Test.java,7\0\702287b8284e63df8c2239a9992f87c64338d011
 X
 (src/main/java/pages/SalesOfficePage.java,b\1\b1df1c63adf06e58f172192c9ada05053fc95d68
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+[
++src/main/java/helper/ExceptionHandling.java,2\c\2cf68ab3135dcf92cc1d49a5c8e6efefd71a95bf
+Q
+!src/test/java/XGLT_6150_Test.java,4\7\47d929131dacfd526801d6737c709d2840d316b3
+U
+%src/main/java/pages/CustomerPage.java,a\5\a528c0fc85c8024a4219ac4846a49c764c028be5
+Q
+!src/test/java/XGLT_6756_Test.java,3\3\33d5f7333e2d787c668c1789c6fc6bca7e0e54fe
+Z
+*src/main/java/helper/BrowserUtilities.java,7\b\7b0e637bbdbdb8f764d1cd4749857a9a9efc00ab

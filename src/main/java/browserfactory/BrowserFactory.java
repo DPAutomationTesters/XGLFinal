@@ -27,13 +27,15 @@ public class BrowserFactory extends BaseClass
     {
         System.setProperty("webdriver.http.factory", "jdk-http-client");
         //Create instance of ChromeOptions Class
-        ChromeOptions handlingSSL = new ChromeOptions();
+        ChromeOptions options  = new ChromeOptions();
         //Using the accept insecure cert method with true as parameter to accept the untrusted certificate
-        handlingSSL.setAcceptInsecureCerts(true);
+        options .setAcceptInsecureCerts(true);
+
+        options.addArguments("download.default_directory=" + ConfigReader.getPropertyvalue("Downloadfolder"));
 
         if (browserName.contains("Chrome")) {
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver(handlingSSL);
+            driver = new ChromeDriver(options );
             //driver = new ChromeDriver();
 
         } else if (browserName.contains("Edge")) {

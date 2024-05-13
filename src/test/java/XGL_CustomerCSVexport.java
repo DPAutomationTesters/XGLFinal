@@ -1,9 +1,7 @@
 import base.BaseClass;
 import dataProvider.ConfigReader;
-import helper.CommonUtility;
-import helper.ExceptionHandling;
-import helper.JavaScriptExecutor;
-import helper.XGL_CountRecordOnScreen;
+import helper.*;
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -12,6 +10,8 @@ import pages.CustomerPage;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.File;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.logging.Logger;
 
 
@@ -26,40 +26,30 @@ public class XGL_CustomerCSVexport extends BaseClass
         cp.menuCustomers.click();
         SoftAssert sa=new SoftAssert();
         sa.assertTrue(cp.breadcrumvalue.getText().equalsIgnoreCase("Customers"));
-        String relativeDownloadDir = "\\Downloads";
-        String downloadDir = ConfigReader.getPropertyvalue("Downloadfolder")+relativeDownloadDir;
-        System.out.println("Folder name is "+downloadDir);
-        File dir = new File(downloadDir);
-        int initialFileCount = dir.listFiles().length;
+        //Download file
+        String downloadDir = ConfigReader.getPropertyvalue("Downloadfolder");
+        System.out.println("Download file path is "+downloadDir);
+
         XGL_CountRecordOnScreen crs= new XGL_CountRecordOnScreen();
         JavaScriptExecutor jse= new JavaScriptExecutor();
         jse.scrolltobottombyJS();
         if(crs.getrecordcountoflastpage()>0)
         {
             CommonUtility.clickElement(cp.exportCSV);
-            try {
-                Robot robot = new Robot();
-                robot.keyPress(KeyEvent.VK_ENTER);
-                robot.keyRelease(KeyEvent.VK_ENTER);
-            }
-            catch(Exception e)
-            {
-                ExceptionHandling.handleException(e);
-            }
-            File[] files = dir.listFiles();
-            long newestFileTime = 0;
-            File newestFile = null;
-            for (File file : files) {
-                if (file.isFile() && file.lastModified() > newestFileTime) {
-                    newestFileTime = file.lastModified();
-                    newestFile = file;
-                }
-            }
+            WaitUtility.waitStatic(20);
 
-            String fileName = newestFile.getName();
+            // Find the latest downloaded file of a specific type (e.g., .pdf)
+            FileUtility fu=new FileUtility();
 
-            // Print the file name
-            System.out.println("System-generated CSV file name: " + fileName);
+            System.out.println("Latest downloaded file: " + fu.getvisbilefilecount(downloadDir));
+
+            XGL_CountRecordOnScreen xcs=new XGL_CountRecordOnScreen();
+            int pagecount=xcs.getrecordcountoflastpage();
+            System.out.println("Page count is "+pagecount);
+            CSVUtilities cu=new CSVUtilities();
+            int CSVcount=cu.countCSVRecords(fu.getvisbilefilecount(downloadDir))-1;
+            System.out.println("File count is "+CSVcount);
+            Assert.assertEquals(pagecount,CSVcount);
         }
         else {
             Reporter.log("No customers present on customers page");
