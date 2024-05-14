@@ -6,6 +6,12 @@
     <groupId>groupId</groupId>
     <artifactId>LearnMaven</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <testng.xml.path>${basedir}/Testng/testng.xml</testng.xml.path>
+    </properties>
     <build>
         <plugins>
             <plugin>
@@ -20,7 +26,8 @@
                     <version>3.0.0-M7</version>
                     <configuration>
                         <suiteXmlFiles>
-                            <suiteXmlFile>D:\XGLFinal_Mine\Testng\testng.xml</suiteXmlFile>
+                            <!--suiteXmlFile>D:\XGLFinal_Mine\Testng\testng.xml</suiteXmlFile-->
+                            <suiteXmlFile>${testng.xml.path}</suiteXmlFile>
                         </suiteXmlFiles>
                         <argLine>--add-opens java.base/java.lang=ALL_UNNAMED</argLine>
                     </configuration>
@@ -157,10 +164,4 @@
         </dependency-->
 
     </dependencies>
-    <properties>
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
 </project>
