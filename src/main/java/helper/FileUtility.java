@@ -1,7 +1,10 @@
 package helper;
 
+import org.openqa.selenium.support.ui.FluentWait;
+
 import java.io.File;
 import java.io.FilenameFilter;
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -62,5 +65,18 @@ public class FileUtility
         public boolean accept(File dir, String name) {
             return name.toLowerCase().endsWith(".csv");
         }
+    }
+
+    public boolean waitforfiletodownload(String downloadDir,String filename)
+    {
+        boolean flag=false;
+        File file= new File(downloadDir,filename);
+        FluentWait<File> wait= new FluentWait<File>(file)
+                .withTimeout(Duration.ofMinutes(5))
+                .pollingEvery(Duration.ofSeconds(5))
+                .ignoring(Exception.class)
+                .withMessage("File is not downloaded");
+       flag= wait.until(f->f.exists() && f.canRead());
+        return flag;
     }
 }

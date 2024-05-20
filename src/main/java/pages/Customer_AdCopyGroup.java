@@ -5,13 +5,17 @@ import helper.CommonUtility;
 import helper.ExceptionHandling;
 import helper.Utility;
 import helper.WaitUtility;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
 public class Customer_AdCopyGroup extends BaseClass {
+
+
 
     @FindBy(xpath = "//p[contains(text(),'Ad Copy Groups')]")
     WebElement adcopyGrouptab;
@@ -30,6 +34,11 @@ public class Customer_AdCopyGroup extends BaseClass {
 
     @FindBy(xpath = "//button[@id='cancelSave.save']")
     WebElement Save;
+
+    public Customer_AdCopyGroup(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
 
     public void createaddcopyGroup() {
         CustomerSearchPage csp = new CustomerSearchPage(driver);

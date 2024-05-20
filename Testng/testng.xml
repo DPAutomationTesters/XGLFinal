@@ -12,7 +12,7 @@
         <parameter name="browser" value="Chrome"></parameter>
         <parameter name="inventorytype" value="DEFAULT | Default (unallocated)Inventory"></parameter>
         <classes>
-            <!--class name="XGLT_15177_Test"/>
+            <class name="XGLT_15177_Test"/>
             <class name="Create_Network"/>
             <class name="XGLT_6748_Test"/>
             <class name="XGLT_6693_Test"/>
@@ -28,7 +28,7 @@
             <class name="XGLT_6685_Test"/>
             <class name="XGLT_6687_Test"/>
             <class name="pingTest"/>
-            <class name="XGLT_6756_Test"/-->
+            <class name="XGLT_6756_Test"/>
             <class name="XGL_CustomerCSVexport"/>
         </classes>
     </test>
