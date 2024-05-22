@@ -8,28 +8,19 @@ import org.testng.asserts.SoftAssert;
 import pages.CustomerPage;
 import pages.OrdersPage;
 
-import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.io.File;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Date;
-import java.util.logging.Logger;
 
-
-
-public class XGL_CustomerCSVexport extends BaseClass
+public class XGL_OrderCSVexport extends BaseClass
 {
     @Test(priority = 1,enabled = true)
-    public void CustomerExportCSV()
+    public void OrderExportCSV()
     {
-
-        CustomerPage cp= new CustomerPage(driver);
+        OrdersPage cp= new OrdersPage(driver);
         cp.menuOrders.click();
-        cp.menuCustomers.click();
+        cp.submenuOrders.click();
         SoftAssert sa=new SoftAssert();
-        sa.assertTrue(cp.breadcrumvalue.getText().equalsIgnoreCase("Customers"));
+        sa.assertTrue(cp.breadcrumvalue.getText().equalsIgnoreCase("Orders"));
         //Download file
         String downloadDir = ConfigReader.getPropertyvalue("Downloadfolder");
 
@@ -40,9 +31,9 @@ public class XGL_CustomerCSVexport extends BaseClass
         {
             CommonUtility.clickElement(cp.exportCSV);
             String currentTime = new SimpleDateFormat("HHmmss").format(new Date());
-            String expected= "Customers_"+DateUtility.getDateinformat()+"_"+currentTime+".csv";
+            String expected= "Orders_"+ DateUtility.getDateinformat()+"_"+currentTime+".csv";
             System.out.println("Expected file name "+expected);
-
+            DownloadPopup.handleDownloadPopup();
             // Find the latest downloaded file of a specific type (e.g., .pdf)
             FileUtility fu=new FileUtility();
 
@@ -56,7 +47,6 @@ public class XGL_CustomerCSVexport extends BaseClass
                 int pagecount = xcs.getrecordcountoflastpage();
                 System.out.println("Page count is " + pagecount);
                 CSVUtilities cu = new CSVUtilities();
-               // int CSVcount = cu.countCSVRecords(fu.getvisbilefilecount(downloadDir)) - 1;
                 int CSVcount =cu.countCSVRecords(downloadDir+"\\"+expected)-1;
                 System.out.println("File count is " + CSVcount);
                 Assert.assertEquals(pagecount, CSVcount);
@@ -69,7 +59,7 @@ public class XGL_CustomerCSVexport extends BaseClass
             }
         }
         else {
-            Reporter.log("No customers present on customers page");
+            Reporter.log("No orders present on orders page");
         }
     }
 }

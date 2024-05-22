@@ -30,6 +30,7 @@
             <class name="pingTest"/>
             <class name="XGLT_6756_Test"/>
             <class name="XGL_CustomerCSVexport"/>
+            <class name="XGL_OrderCSVexport"/>
         </classes>
     </test>
 </suite>

@@ -1,3 +1,4 @@
+package pages;
 import base.BaseClass;
 import org.testng.annotations.Test;
 import pages.CustomerAdcopy;
