@@ -10,9 +10,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class BrowserFactory extends BaseClass
@@ -30,13 +33,11 @@ public class BrowserFactory extends BaseClass
         ChromeOptions options  = new ChromeOptions();
         //Using the accept insecure cert method with true as parameter to accept the untrusted certificate
         options .setAcceptInsecureCerts(true);
-
         options.addArguments("download.default_directory=" + ConfigReader.getPropertyvalue("Downloadfolder"));
 
         if (browserName.contains("Chrome")) {
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver(options );
-            //driver = new ChromeDriver();
+            driver = new ChromeDriver(options);
 
         } else if (browserName.contains("Edge")) {
             WebDriverManager.edgedriver().setup();
