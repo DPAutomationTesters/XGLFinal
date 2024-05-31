@@ -1,7 +1,6 @@
 package browserfactory;
 
 import base.BaseClass;
-import com.fasterxml.jackson.databind.ser.Serializers;
 import dataProvider.ConfigReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import listners.WebEventListener;
@@ -10,17 +9,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.time.Duration;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class BrowserFactory extends BaseClass
 {
-
 
     public static WebDriver getBrowserInstance() {
         return driver;
@@ -32,13 +27,19 @@ public class BrowserFactory extends BaseClass
         //Create instance of ChromeOptions Class
         ChromeOptions options  = new ChromeOptions();
         //Using the accept insecure cert method with true as parameter to accept the untrusted certificate
-        options .setAcceptInsecureCerts(true);
-        options.addArguments("download.default_directory=" + ConfigReader.getPropertyvalue("Downloadfolder"));
+        options.setAcceptInsecureCerts(true);
+       /* options.addArguments("--disable-extensions");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");*/
+        //options.addArguments("download.default_directory=" + ConfigReader.getPropertyvalue("Downloadfolder"));
 
         if (browserName.contains("Chrome")) {
-            WebDriverManager.chromedriver().setup();
+           WebDriverManager.chromedriver().setup();
+            //System.setProperty("webdriver.chrome.driver","D:\\XGLFinal\\chromedriver.exe");
             driver = new ChromeDriver(options);
-
+            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(120));
+            driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(120));
         } else if (browserName.contains("Edge")) {
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
@@ -55,7 +56,7 @@ public class BrowserFactory extends BaseClass
         //end of event listener initialization
 
         driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         driver.get(applicationURL);
         driver.navigate().refresh();
         driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);

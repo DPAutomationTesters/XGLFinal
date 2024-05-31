@@ -5,6 +5,9 @@ import dataProvider.ConfigReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class JavaScriptExecutor extends BaseClass
 {
@@ -35,7 +38,17 @@ public class JavaScriptExecutor extends BaseClass
     }
     public void scrolltobottombyJS()
     {
-        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+       js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+    }
+    public void zoomout(int zoomPercentage)
+    {
+        if (zoomPercentage >= 10 && zoomPercentage <= 500) { // Adjust range as needed
+        // Execute JavaScript to set the zoom level
+        js.executeScript("document.body.style.zoom = '" + zoomPercentage + "%'");
+    } else
+    {
+        System.out.println("Invalid zoom percentage. Please enter a value between 10 and 500.");
+    }
     }
 
     // This method is specific to XGL pages getting scroll down, this is different from windows scroll down
