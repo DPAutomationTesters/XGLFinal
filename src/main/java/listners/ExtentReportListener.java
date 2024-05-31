@@ -10,7 +10,7 @@ import java.util.Date;
 import browserfactory.BrowserFactory;
 import dataProvider.ConfigReader;
 import helper.JiraCreateIssue;
-import helper.JiraServiceProvider;
+//import helper.JiraServiceProvider;
 import helper.Utility;
 import org.apache.commons.lang.exception.ExceptionUtils;
 import org.openqa.selenium.WebDriver;
