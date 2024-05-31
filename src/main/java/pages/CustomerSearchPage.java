@@ -89,9 +89,10 @@ public class CustomerSearchPage extends BaseClass
         CommonUtility.sendKeys(custsearchinput,Customername);
         try {
             Robot robot = new Robot();
-            robot.mouseMove(search_button.getLocation().getX(), search_button.getLocation().getY()); // Move mouse to the dropdown
-            robot.keyPress(KeyEvent.VK_ENTER);
-            robot.keyRelease(KeyEvent.VK_ENTER);
+           // robot.mouseMove(search_button.getLocation().getX(), search_button.getLocation().getY()); // Move mouse to the dropdown
+           // robot.keyPress(KeyEvent.VK_ENTER);
+           // robot.keyRelease(KeyEvent.VK_ENTER);
+            CommonUtility.clickElement(search_button);
         }
         catch (Exception e)
         {

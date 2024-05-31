@@ -42,7 +42,7 @@ public class Create_Network extends BaseClass
         Boolean result=np.create_Network(Network);
         Assert.assertTrue(result);
         System.out.println("Network "+Network+" is created");
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
     @AfterClass
     public void tearDown()

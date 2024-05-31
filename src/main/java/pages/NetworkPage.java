@@ -41,7 +41,7 @@ public class NetworkPage extends BaseClass
     @FindBy(xpath = "//button[@id='networksGridDrtv.add']")// + button
     WebElement add_network;
 
-    @FindBy//div[contains(@id,'subMenuRotationGroups')](xpath = "//input[@id='networkSetup.network']")// netowrk id
+    @FindBy(xpath = "//input[@id='networkSetup.network']")// netowrk id
     WebElement network_id;
 
     @FindBy(xpath = "//input[@id='networkSetup.description']")//network description

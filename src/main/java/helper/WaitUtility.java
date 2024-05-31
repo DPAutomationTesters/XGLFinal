@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.time.Duration;
 
 public class WaitUtility extends BaseClass
 {
@@ -28,7 +29,7 @@ public class WaitUtility extends BaseClass
     {
         try
         {
-            WebDriverWait wait = new WebDriverWait(driver, maxSecondsToWait);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(maxSecondsToWait));
             ExpectedCondition<Boolean> attributeNotEmpty = new ExpectedCondition<Boolean>() {
                 @Override
                 public Boolean apply(WebDriver driver) {
@@ -49,7 +50,7 @@ public class WaitUtility extends BaseClass
     {
         try
         {
-            WebDriverWait wait = new WebDriverWait(driver, maxSecondsToWait);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(maxSecondsToWait));
             ExpectedCondition<Boolean> attributeNotZero = new ExpectedCondition<Boolean>() {
                 @Override
                 public Boolean apply(WebDriver driver) {
@@ -71,7 +72,7 @@ public class WaitUtility extends BaseClass
     {
         try
         {
-        WebDriverWait wait = new WebDriverWait(driver, maxSecondsToWait);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(maxSecondsToWait));
         ExpectedCondition<Boolean> attributeProperty = new ExpectedCondition<Boolean>() {
             @Override
             public Boolean apply(WebDriver driver) {
@@ -92,7 +93,7 @@ public class WaitUtility extends BaseClass
     {
         try
         {
-            WebDriverWait wait = new WebDriverWait(driver, maxSecondsToWait);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(maxSecondsToWait));
             ExpectedCondition<Boolean> attributeProperty = new ExpectedCondition<Boolean>() {
                 @Override
                 public Boolean apply(WebDriver driver) {
@@ -111,7 +112,7 @@ public class WaitUtility extends BaseClass
     }
     public static void WaitForAPIResponse()
     {
-        WebDriverWait wait = new WebDriverWait(driver, 30);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
         // URL of the API endpoint you want to check
         String apiUrl = "http://10.96.200.236/xglweb/Setup/GetMarkets?$top=2000";
@@ -145,7 +146,7 @@ public class WaitUtility extends BaseClass
     {
         try
         {
-            WebDriverWait wait = new WebDriverWait(driver, maxSecondsToWait);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(maxSecondsToWait));
             ExpectedCondition<Boolean> attributeProperty = new ExpectedCondition<Boolean>() {
                 @Override
                 public Boolean apply(WebDriver driver) {
@@ -165,7 +166,7 @@ public class WaitUtility extends BaseClass
     {
         try
         {
-            WebDriverWait wait = new WebDriverWait(driver, maxSecondsToWait);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(maxSecondsToWait));
             wait.until(ExpectedConditions.elementToBeClickable(element));
             element.click();
         }
@@ -179,7 +180,7 @@ public class WaitUtility extends BaseClass
     {
         try
         {
-            WebDriverWait wait = new WebDriverWait(driver, maxSecondsToWait);
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(maxSecondsToWait));
             ExpectedCondition<Boolean> attributeNotEmpty = new ExpectedCondition<Boolean>() {
                 @Override
                 public Boolean apply(WebDriver driver) {
