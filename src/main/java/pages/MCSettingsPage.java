@@ -212,7 +212,7 @@ public class MCSettingsPage extends BaseClass
         Duration timeout = Duration.ofSeconds(50);
         // Convert the Duration to milliseconds
         long timeoutMilliseconds = timeout.toMillis();
-        wait= new WebDriverWait(driver,timeoutMilliseconds);
+        wait= new WebDriverWait(driver,timeout);
         wait.until(WebDriver->ExpectedConditions.visibilityOf(ele));
     }
 }

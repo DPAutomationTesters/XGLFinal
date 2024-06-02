@@ -34,7 +34,7 @@ public class XGLT_6692_Test  extends BaseClass
     }
 
 
-    @Test(priority = 2,enabled = true,dependsOnMethods = "MCsetUser",groups = {"Mission-Control-Users"})
+    @Test(priority = 2,enabled = true,dependsOnMethods = "MCsetUser",groups = {"Mission-Control-Users"}) //
     public void getMCUsercounts()  {
         String arr= "";
          MCUsersWidgetPage mcu= new MCUsersWidgetPage(driver);

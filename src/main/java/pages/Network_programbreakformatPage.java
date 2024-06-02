@@ -85,7 +85,7 @@ public class Network_programbreakformatPage extends BaseClass
         catch(StaleElementReferenceException e)
         {
             driver.navigate().refresh();
-            WebDriverWait wait = new WebDriverWait(driver,30);
+            WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
             wait.until(ExpectedConditions.elementToBeClickable(program_break_format));
             program_break_format= driver.findElement(By.xpath("//div[@id='NetworkEntity.BreakFormats']"));
             program_break_format.click();

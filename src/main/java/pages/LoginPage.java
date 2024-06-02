@@ -2,6 +2,9 @@ package pages;
 
 import ORParcer.RespositoryParser;
 import base.BaseClass;
+import dataProvider.ConfigReader;
+import helper.BrowserUtilities;
+import helper.WaitUtility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -70,7 +73,7 @@ public class LoginPage extends BaseClass
         Duration timeout = Duration.ofSeconds(50);
         // Convert the Duration to milliseconds
         long timeoutMilliseconds = timeout.toMillis();
-        wait= new WebDriverWait(driver,timeoutMilliseconds);
+        wait= new WebDriverWait(driver,timeout);
         wait.until(ExpectedConditions.visibilityOfElementLocated(getMissionControl()));
     }
 }
