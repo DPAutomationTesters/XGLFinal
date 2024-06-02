@@ -56,15 +56,11 @@ public class XGL_CountRecordOnScreen extends BaseClass
             int ht=gridCanvas.getSize().getHeight();
             System.out.println("Height is "+ht);
             List<WebElement> recordsOnPage = driver.findElements(By.xpath("//div[@class='grid-canvas']/div[contains(@class,'ui-widget-content slick-row')]"));
-            System.out.println("Record size on last page "+recordsOnPage.size());
-            if(recordsOnPage.size()<=20 || ht <= 516)
+            if(ht>516) {
+                totalRecords = totalRecords + (ht / 30);
+            } else if(ht<=516)
             {
                 totalRecords = totalRecords + recordsOnPage.size();
-            }
-            else {
-                if (ht > 516) {
-                    totalRecords = totalRecords + (ht / 30);
-                }
             }
         }
         return totalRecords;

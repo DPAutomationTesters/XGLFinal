@@ -13,11 +13,11 @@ import org.testng.Reporter;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.util.concurrent.TimeUnit;
 
 public class CustomerSearchPage extends BaseClass
 {
-    public CustomerSearchPage(WebDriver driver)
+    public
+    CustomerSearchPage(WebDriver driver)
     {
         this.driver=driver;
         PageFactory.initElements(driver, this);
@@ -58,7 +58,10 @@ public class CustomerSearchPage extends BaseClass
     @FindBy(xpath = "//div[@class='dropDown']/div[contains(text(),'Customer Name')]")
     WebElement custnameselect;
 
-    @FindBy(xpath = "//*[contains(@class, 'ng-pristine') and @ng-model='tempModel.value']")
+//    @FindBy(xpath = "//*[contains(@class, 'ng-pristine') and @ng-model='tempModel.value']")
+//    WebElement custsearchinput; // click, send key
+
+    @FindBy(xpath = "//input[@ng-model='tempModel.value']")
     WebElement custsearchinput; // click, send key
 
     @FindBy(xpath = "//div[@class='textContent']/h1") //No Items to Display
@@ -87,12 +90,15 @@ public class CustomerSearchPage extends BaseClass
         String Customername=spd.getprojectData("Standard Cust");
         custsearchinput.clear();
         CommonUtility.sendKeys(custsearchinput,Customername);
+        WaitUtility.waitTillElementtobeClickable(driver, 10, custsearchinput);
         try {
             Robot robot = new Robot();
-            robot.mouseMove(search_button.getLocation().getX(), search_button.getLocation().getY()); // Move mouse to the dropdown
+            //robot.mouseMove(search_button.getLocation().getX(), search_button.getLocation().getY()); // Move mouse to the dropdown
             robot.keyPress(KeyEvent.VK_ENTER);
             robot.keyRelease(KeyEvent.VK_ENTER);
+
         }
+
         catch (Exception e)
         {
             ExceptionHandling.handleException(e);
@@ -105,12 +111,13 @@ public class CustomerSearchPage extends BaseClass
         {
             flag=true;
         }
-        String str= "//div[@class='slick-cell l3 r3']/div[contains(text(),'"+Customername+"')]";
+        String str= "//div[contains(text(),'"+Customername+"')]";
         Assert.assertTrue(driver.findElement(By.xpath(str)).isDisplayed());
         return flag;
     }
 
-    public boolean openCustomerProfile()
+    public boolean
+    openCustomerProfile()
     {
         Boolean flag=false;
         SaveProjectData spd=new SaveProjectData();

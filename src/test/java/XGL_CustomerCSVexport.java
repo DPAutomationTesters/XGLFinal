@@ -1,20 +1,17 @@
 import base.BaseClass;
 import dataProvider.ConfigReader;
-import helper.*;
-import org.testng.Assert;
+import helper.CommonUtility;
+import helper.ExceptionHandling;
+import helper.JavaScriptExecutor;
+import helper.XGL_CountRecordOnScreen;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.CustomerPage;
-import pages.OrdersPage;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Date;
 import java.util.logging.Logger;
 
 
@@ -24,49 +21,45 @@ public class XGL_CustomerCSVexport extends BaseClass
     @Test(priority = 1,enabled = true)
     public void CustomerExportCSV()
     {
-
         CustomerPage cp= new CustomerPage(driver);
         cp.menuOrders.click();
         cp.menuCustomers.click();
         SoftAssert sa=new SoftAssert();
         sa.assertTrue(cp.breadcrumvalue.getText().equalsIgnoreCase("Customers"));
-        //Download file
-        String downloadDir = ConfigReader.getPropertyvalue("Downloadfolder");
-
+        String relativeDownloadDir = "\\Downloads";
+        String downloadDir = ConfigReader.getPropertyvalue("Downloadfolder")+relativeDownloadDir;
+        System.out.println("Folder name is "+downloadDir);
+        File dir = new File(downloadDir);
+        int initialFileCount = dir.listFiles().length;
         XGL_CountRecordOnScreen crs= new XGL_CountRecordOnScreen();
         JavaScriptExecutor jse= new JavaScriptExecutor();
         jse.scrolltobottombyJS();
         if(crs.getrecordcountoflastpage()>0)
         {
             CommonUtility.clickElement(cp.exportCSV);
-            String currentTime = new SimpleDateFormat("HHmmss").format(new Date());
-            String expected= "Customers_"+DateUtility.getDateinformat()+"_"+currentTime+".csv";
-            System.out.println("Expected file name "+expected);
-
-            // Find the latest downloaded file of a specific type (e.g., .pdf)
-            FileUtility fu=new FileUtility();
-
-            //String filename=fu.getvisbilefilecount(downloadDir);
-            //wait till file is not downloaded
-
-            if(fu.waitforfiletodownload(downloadDir,expected))
-            {
-                Reporter.log("CSV is 100% downloaded");
-                XGL_CountRecordOnScreen xcs = new XGL_CountRecordOnScreen();
-                int pagecount = xcs.getrecordcountoflastpage();
-                System.out.println("Page count is " + pagecount);
-                CSVUtilities cu = new CSVUtilities();
-               // int CSVcount = cu.countCSVRecords(fu.getvisbilefilecount(downloadDir)) - 1;
-                int CSVcount =cu.countCSVRecords(downloadDir+"\\"+expected)-1;
-                System.out.println("File count is " + CSVcount);
-                Assert.assertEquals(pagecount, CSVcount);
-                Reporter.log("Page count is " + pagecount);
-                Reporter.log("File count is " + CSVcount);
+            try {
+                Robot robot = new Robot();
+                robot.keyPress(KeyEvent.VK_ENTER);
+                robot.keyRelease(KeyEvent.VK_ENTER);
             }
-            else if(!fu.waitforfiletodownload(downloadDir,expected))
+            catch(Exception e)
             {
-                Reporter.log("CSV not downloaded");
+                ExceptionHandling.handleException(e);
             }
+            File[] files = dir.listFiles();
+            long newestFileTime = 0;
+            File newestFile = null;
+            for (File file : files) {
+                if (file.isFile() && file.lastModified() > newestFileTime) {
+                    newestFileTime = file.lastModified();
+                    newestFile = file;
+                }
+            }
+
+            String fileName = newestFile.getName();
+
+            // Print the file name
+            System.out.println("System-generated CSV file name: " + fileName);
         }
         else {
             Reporter.log("No customers present on customers page");

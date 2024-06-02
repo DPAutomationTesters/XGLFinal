@@ -1,20 +1,12 @@
+/*
 package helper;
-import net.rcarz.jiraclient.*;
-import net.rcarz.jiraclient.BasicCredentials;
 
-import net.rcarz.jiraclient.Field;
-
-import net.rcarz.jiraclient.Issue;
-
-import net.rcarz.jiraclient.Issue.FluentCreate;
-
-import net.rcarz.jiraclient.JiraClient;
-
-import net.rcarz.jiraclient.JiraException;
+//import net.rcarz.jiraclient.*;
+//import net.rcarz.jiraclient.Issue.FluentCreate;
 
 // JiraServiceProvider.java
 public class JiraServiceProvider {
-    private JiraClient Jira;
+//    private JiraClient Jira;
     private String project;
     private String JiraUrl;
 
@@ -24,10 +16,10 @@ public class JiraServiceProvider {
 
         // create basic authentication object
 
-        BasicCredentials creds = new BasicCredentials(username, password);
+//        BasicCredentials creds = new BasicCredentials(username, password);
         // initialize the Jira client with the url and the credentials
 
-        Jira = new JiraClient(JiraUrl, creds);
+//        Jira = new JiraClient(JiraUrl, creds);
 
         this.project = project;
 
@@ -77,4 +69,5 @@ try {
 
     }
 
-}
+
+}*/

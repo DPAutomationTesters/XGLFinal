@@ -11,7 +11,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.InputEvent;
 import java.util.List;
@@ -111,7 +110,7 @@ public class CustomerPage extends BaseClass
                 ac.click(ele1);
                 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
                 js.clickElementByJS(ele.get(0));*/
-                flag = true;
+//                flag = true;
             }
             else if (type.equalsIgnoreCase("Standard"))
             {
@@ -138,7 +137,7 @@ public class CustomerPage extends BaseClass
                 ac.click(ele1);
                 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
                 js.clickElementByJS(ele.get(1));*/
-                flag = true;
+//                flag = true;
             }
         }
         return flag;
@@ -146,7 +145,7 @@ public class CustomerPage extends BaseClass
     public boolean selectSalesperson()
     {
         Boolean flag=false;
-        List<WebElement> ele=driver.findElements(By.xpath("//div[@id='customersProfile.salespersonVid']/div[last()]/div/div"));
+        List<WebElement> ele=driver.findElements(By.xpath("//div[@id='customersProfile.salespersonVid']/div[last()]/div[1]/div[2]"));
         for (WebElement e:ele)
         {
                e.click();
@@ -174,12 +173,13 @@ public class CustomerPage extends BaseClass
         SoftAssert sa=new SoftAssert();
         sa.assertTrue(breadcrumvalue.getText().equalsIgnoreCase("Customers"));
         CommonUtility.clickElement(addCustomers);
-        //driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         sa.assertTrue(selectCustType("Standard"));
         Utility ut= new Utility();
         String init=ut.randomAlphaNumeric(2);
         CommonUtility.clickElement(custname);
         CommonUtility.sendKeys(custname,init);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         CommonUtility.clickElement(salespersondrpdwn);
         sa.assertTrue(selectSalesperson());
         CommonUtility.clickElement(commoditydrpdown);
