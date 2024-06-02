@@ -32,7 +32,7 @@ public class Customer_AdCopyGroup extends BaseClass {
     @FindBy(xpath = "//input[@id='rotationGroupsEntity.title']")
     WebElement GroupDescription;
 
-    @FindBy(xpath = "//*[@id='rotationGroupsEntity.length']")
+    @FindBy(xpath = "//input[@id='rotationGroupsEntity.length']")
     WebElement Grouplength;
 
     @FindBy(xpath = "//i[@class='add']")
@@ -71,8 +71,8 @@ public class Customer_AdCopyGroup extends BaseClass {
                 robot.keyRelease(KeyEvent.VK_A);
                 robot.keyPress(KeyEvent.VK_A);
                 robot.keyRelease(KeyEvent.VK_A);
-                CommonUtility.sendKeys(Grouplength, String.valueOf(digit[1]));
                 CommonUtility.sendKeys(Grouplength, String.valueOf(digit[0]));
+                CommonUtility.sendKeys(Grouplength, String.valueOf(digit[1]));
             } catch (AWTException e) {
                 ExceptionHandling.handleException(e);
             }

@@ -58,13 +58,13 @@ public class CustomerPage extends BaseClass
     @FindBy(xpath = "//input[@id='customersProfile.company']")
     WebElement custname;
 
-    @FindBy(xpath = "//div[@id='customersProfile.salespersonVid']/div[last()]")
+    @FindBy(xpath = "//div[@id='customersProfile.salespersonVid']")
     WebElement salespersondrpdwn;
 
     @FindBy(xpath = "//div[@id='customersProfile.salespersonVid']/div[last()]/div/div")
     WebElement spdropdownvalues;
 
-    @FindBy(xpath = "//div[@id='customersProfile.secondaryCommodityVid']/div[last()]/i")
+    @FindBy(xpath = "//div[@id='customersProfile.secondaryCommodityVid']")
     WebElement commoditydrpdown;
 
     @FindBy(xpath = "//div[@id='customersProfile.secondaryCommodityVid']/div[last()]/div/div")
@@ -145,7 +145,7 @@ public class CustomerPage extends BaseClass
     public boolean selectSalesperson()
     {
         Boolean flag=false;
-        List<WebElement> ele=driver.findElements(By.xpath("//div[@id='customersProfile.salespersonVid']/div[last()]/div[1]/div[2]"));
+        List<WebElement> ele=driver.findElements(By.xpath("(//div[@class='auto-complete-list-drop-down ng-isolate-scope']//div[@class='option ng-scope'])[3]"));
         for (WebElement e:ele)
         {
                e.click();
@@ -157,7 +157,7 @@ public class CustomerPage extends BaseClass
     public boolean selectcommodity()
     {
         Boolean flag=false;
-        List<WebElement> ele=driver.findElements(By.xpath("//div[@id='customersProfile.secondaryCommodityVid']/div[last()]/div/div"));
+        List<WebElement> ele=driver.findElements(By.xpath("(//div[@class='auto-complete-list-drop-down ng-isolate-scope']//div[@class='option ng-scope'])[5]"));
         for (WebElement e:ele)
         {
             e.click();
@@ -173,17 +173,21 @@ public class CustomerPage extends BaseClass
         SoftAssert sa=new SoftAssert();
         sa.assertTrue(breadcrumvalue.getText().equalsIgnoreCase("Customers"));
         CommonUtility.clickElement(addCustomers);
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         sa.assertTrue(selectCustType("Standard"));
         Utility ut= new Utility();
-        String init=ut.randomAlphaNumeric(2);
+        String init=ut.randomAlphaNumeric(5);
         CommonUtility.clickElement(custname);
         CommonUtility.sendKeys(custname,init);
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         CommonUtility.clickElement(salespersondrpdwn);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         sa.assertTrue(selectSalesperson());
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         CommonUtility.clickElement(commoditydrpdown);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         sa.assertTrue(selectcommodity());
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         CommonUtility.clickElement(savecustbtn);
         if(custbreadcrum.isDisplayed())
         {
@@ -199,7 +203,7 @@ public class CustomerPage extends BaseClass
         SoftAssert sa=new SoftAssert();
         sa.assertTrue(breadcrumvalue.getText().equalsIgnoreCase("Customers"));
         CommonUtility.clickElement(addCustomers);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         sa.assertTrue(selectCustType("Agency"));
         Assert.assertEquals(typeValue.getText(),"Agency");
         Utility ut= new Utility();
@@ -226,7 +230,7 @@ public class CustomerPage extends BaseClass
         SoftAssert sa=new SoftAssert();
         sa.assertTrue(breadcrumvalue.getText().equalsIgnoreCase("Customers"));
         CommonUtility.clickElement(addCustomers);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         sa.assertTrue(selectCustType("Rep"));
         Assert.assertEquals(typeValue.getText(),"Rep");
         Utility ut= new Utility();

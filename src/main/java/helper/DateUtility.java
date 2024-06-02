@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import wrapper.WebDriverWrapper;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import static helper.Utility.waitForElementPresent;
 
 public class DateUtility extends WebDriverWrapper
@@ -46,5 +49,12 @@ public class DateUtility extends WebDriverWrapper
     public static String[] getMonthYear(String monthYearVal)
     {
         return monthYearVal.split(" ");
+    }
+
+    public static String getDateinformat()
+    {
+        // Get today's date formatted as MMddyyyy
+        String todayDate = new SimpleDateFormat("MMddyyyy").format(new Date());
+        return todayDate;
     }
 }

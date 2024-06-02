@@ -73,7 +73,7 @@ public class LoginPage extends BaseClass
         Duration timeout = Duration.ofSeconds(50);
         // Convert the Duration to milliseconds
         long timeoutMilliseconds = timeout.toMillis();
-        wait= new WebDriverWait(driver,timeout);
+        wait= new WebDriverWait(driver,50);
         wait.until(ExpectedConditions.visibilityOfElementLocated(getMissionControl()));
     }
 }

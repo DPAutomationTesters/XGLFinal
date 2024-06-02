@@ -76,7 +76,7 @@ public class Utility extends WebDriverWrapper {
 
     public static void waitForElementPresent(WebDriver driver, WebElement Locator, int maxSecondsToWait) {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(maxSecondsToWait));
+            WebDriverWait wait = new WebDriverWait(driver, maxSecondsToWait);
             wait.until(ExpectedConditions.visibilityOf(Locator));
         } catch (Exception e) {
             ExceptionHandling.handleException(e);
@@ -177,7 +177,7 @@ public class Utility extends WebDriverWrapper {
     {
         try {
 
-            WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(maxSecondsToWait));
+            WebDriverWait wait = new WebDriverWait(driver, maxSecondsToWait);;
             wait.until(driver1 -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete"));
         }
         catch(WebDriverException e)
@@ -190,7 +190,7 @@ public class Utility extends WebDriverWrapper {
     {
         try
         {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(maxSecondsToWait));
+            WebDriverWait wait = new WebDriverWait(driver, maxSecondsToWait);;
             wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//*")));
             log.info("Element is present");
         }
@@ -286,7 +286,7 @@ public class Utility extends WebDriverWrapper {
     {
         try
         {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(maxSecondsToWait));
+            WebDriverWait wait = new WebDriverWait(driver, maxSecondsToWait);;
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*")));
             log.info("Element is present");
         }

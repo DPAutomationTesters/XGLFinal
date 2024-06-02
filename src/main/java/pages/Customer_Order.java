@@ -53,7 +53,8 @@ public class Customer_Order extends BaseClass {
         PageFactory.initElements(driver, this);
 
     }
-        public void Customer_OrderAdd ()
+        public void
+        Customer_OrderAdd ()
         {
             CustomerSearchPage csp = new CustomerSearchPage(driver);
             if (csp.openCustomerProfile())

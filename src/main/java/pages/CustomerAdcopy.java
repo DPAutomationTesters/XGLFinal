@@ -92,10 +92,11 @@ public class CustomerAdcopy extends BaseClass
                 Robot robot=new Robot();
                 robot.keyPress(KeyEvent.VK_A);
                 robot.keyRelease(KeyEvent.VK_A);
+
                 robot.keyPress(KeyEvent.VK_A);
                 robot.keyRelease(KeyEvent.VK_A);
-                CommonUtility.sendKeys(length, String.valueOf(digit[1]));
-                CommonUtility.sendKeys(length,String.valueOf(digit[0]));
+                CommonUtility.sendKeys(length, String.valueOf(digit[9]));
+                CommonUtility.sendKeys(length,String.valueOf(digit[2]));
             }
             catch (AWTException e)
             {

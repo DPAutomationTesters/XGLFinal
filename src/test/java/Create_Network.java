@@ -2,12 +2,14 @@ import base.BaseClass;
 import com.aventstack.extentreports.ExtentTest;
 import dataProvider.ConfigReader;
 import helper.Utility;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.NetworkPage;
 
 import java.lang.reflect.Method;
-import java.time.Duration;
+//import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import static listners.ExtentManager.extent;
@@ -42,7 +44,7 @@ public class Create_Network extends BaseClass
         Boolean result=np.create_Network(Network);
         Assert.assertTrue(result);
         System.out.println("Network "+Network+" is created");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
     }
     @AfterClass
     public void tearDown()
