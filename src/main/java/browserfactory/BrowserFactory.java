@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.time.Duration;
@@ -48,18 +49,23 @@ public class BrowserFactory extends BaseClass
             driver = new FirefoxDriver();
         }
         //Event Listener initialization
-        e_driver = new EventFiringWebDriver(driver);
+        /*//e_driver = new EventFiringWebDriver(driver);
+         new EventFiringDecorator().decorate(e_driver);
         // Now create object of EventListerHandler to register it with EventFiringWebDriver
         eventListener = new WebEventListener();
         e_driver.register(eventListener);
-        driver = e_driver;
+        driver = e_driver;*/
+
+        WebEventListener webEventListener = new WebEventListener();
+        EventFiringDecorator<WebDriver> decorator = new EventFiringDecorator<>(webEventListener);
+        driver = decorator.decorate(driver);
         //end of event listener initialization
 
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         driver.get(applicationURL);
         driver.navigate().refresh();
-        driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
         return driver;
     }
 }
