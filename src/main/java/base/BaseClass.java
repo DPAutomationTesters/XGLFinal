@@ -11,6 +11,7 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.Configurator;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.Assert;
 import org.testng.ITestContext;
@@ -32,7 +33,8 @@ public class BaseClass
     public static final Logger logger = LogManager.getLogger(BaseClass.class);
     protected static org.apache.logging.log4j.Logger log;
     protected static Logger errorLog;
-    public  static EventFiringWebDriver e_driver;
+    //public  static EventFiringWebDriver e_driver;
+    public static EventFiringDecorator e_driver;
     public static WebEventListener eventListener;
     public RespositoryParser parser;
 
