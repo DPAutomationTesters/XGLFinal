@@ -55,7 +55,7 @@ public class XglRotationGroup
     public void about(String version)
     {
         driver.findElement(By.xpath("//div[@id='header.menuHelp']")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement ele1= driver.findElement(By.xpath("//div[@id='header.subMenuAbout/profile']"));
         Assert.assertTrue(ele1.isDisplayed(),"About is displayed");
         ele1.click();

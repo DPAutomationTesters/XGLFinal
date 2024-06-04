@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pages.NetworkPage;
 import pages.UserRolePage;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class XGLT_6756_Test extends BaseClass
@@ -36,7 +37,7 @@ public class XGLT_6756_Test extends BaseClass
         Boolean result=np.create_user_role(user_role);
         Assert.assertTrue(result);
         System.out.println("User role "+user_role+" is created");
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
 }
