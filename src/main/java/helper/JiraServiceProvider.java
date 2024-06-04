@@ -1,4 +1,4 @@
-package helper;
+/*package helper;
 import net.rcarz.jiraclient.*;
 import net.rcarz.jiraclient.BasicCredentials;
 
@@ -77,4 +77,4 @@ try {
 
     }
 
-}
+}*/

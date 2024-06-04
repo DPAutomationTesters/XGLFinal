@@ -10,10 +10,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 public class BrowserFactory extends BaseClass
 {

@@ -11,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class SalesOfficePage extends BaseClass
@@ -61,7 +62,7 @@ public class SalesOfficePage extends BaseClass
         String so_name=init+"salesperson";
         CommonUtility.sendKeys(salesofficename,so_name);
         CommonUtility.clickElement(sosave);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
         if(spbreadcrum.isDisplayed())
         {
             Assert.assertTrue(spbreadcrum.getText().contains("New Sales Office"));

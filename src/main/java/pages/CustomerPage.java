@@ -14,6 +14,7 @@ import org.testng.asserts.SoftAssert;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.InputEvent;
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -118,7 +119,7 @@ public class CustomerPage extends BaseClass
                 WebElement ele1=driver.findElement(By.xpath("//div[@class='dropDown']/div[contains(text(),'Standard')]"));
                 new Actions(driver).moveToElement(ele1).perform();
                 ac.click(ele1);
-                driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
                 js.clickElementByJS(ele.get(2));
                 flag = true;
             } else if (type.equalsIgnoreCase("Rep"))
@@ -199,7 +200,7 @@ public class CustomerPage extends BaseClass
         SoftAssert sa=new SoftAssert();
         sa.assertTrue(breadcrumvalue.getText().equalsIgnoreCase("Customers"));
         CommonUtility.clickElement(addCustomers);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         sa.assertTrue(selectCustType("Agency"));
         Assert.assertEquals(typeValue.getText(),"Agency");
         Utility ut= new Utility();
@@ -226,7 +227,7 @@ public class CustomerPage extends BaseClass
         SoftAssert sa=new SoftAssert();
         sa.assertTrue(breadcrumvalue.getText().equalsIgnoreCase("Customers"));
         CommonUtility.clickElement(addCustomers);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         sa.assertTrue(selectCustType("Rep"));
         Assert.assertEquals(typeValue.getText(),"Rep");
         Utility ut= new Utility();

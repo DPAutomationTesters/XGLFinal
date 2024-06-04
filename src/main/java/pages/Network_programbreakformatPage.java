@@ -94,16 +94,16 @@ public class Network_programbreakformatPage extends BaseClass
         handle_Popup();
      //   System.out.println(program_break_format.getCssValue("width"));
 
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         program_break_add.click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         program_break_title.sendKeys(title);
         program_break_episode.sendKeys(title);
         program_break_length.sendKeys("01:00:00");
         program_break_visible.click();
         // Add break
         program_break_add_break.click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         break_name.sendKeys(title);
         break_inventory_type.click();
         //move to a method
@@ -119,10 +119,10 @@ public class Network_programbreakformatPage extends BaseClass
         break_start_date.sendKeys("00:00:00");
         break_length.sendKeys("00:01:00");
         break_save.click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         jsExecutor.executeScript("arguments[0].click();", program_break_save);
         //program_break_save.click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         System.out.println(new_break_format.getAttribute("innerHTML"));
         Assert.assertTrue(new_break_format.isDisplayed());
         return title;

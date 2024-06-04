@@ -9,6 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
+
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -33,7 +35,7 @@ public class AboutPage extends BaseClass
                 WebElement about_ok;
     public void clickhelp(){
         help.click();
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
     }
     public WebElement getProfile()
     {
@@ -41,7 +43,7 @@ public class AboutPage extends BaseClass
     }
     public void clickAbout(){
         CommonUtility.clickElement(profile);
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
     }
     public String getVersion(){
         return about_version.getText();
