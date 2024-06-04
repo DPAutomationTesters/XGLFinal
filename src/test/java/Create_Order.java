@@ -1,10 +1,12 @@
-package pages;
 import base.BaseClass;
 import org.testng.annotations.Test;
 import pages.CustomerAdcopy;
 import pages.CustomerPage;
 import pages.Customer_AdCopyGroup;
 import pages.Customer_Order;
+import pages.Customer_Order;
+import pages.Rotationgroup_copy;
+
 
 
 public class Create_Order extends BaseClass
@@ -15,6 +17,7 @@ public class Create_Order extends BaseClass
         CustomerPage cp=new CustomerPage(driver);
         cp.createStandardCustomer();
     }
+
     @Test(priority = 2,enabled = true)
     public void createNewaddcopy()
     {
@@ -24,7 +27,8 @@ public class Create_Order extends BaseClass
     }
 
     @Test(priority = 3,enabled = true)
-    public void createNewcopygroup()
+
+    public void createNewCopyGroup()
     {
         Customer_AdCopyGroup AC=new Customer_AdCopyGroup(driver);
         AC.createaddcopyGroup();

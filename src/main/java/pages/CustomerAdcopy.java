@@ -2,23 +2,16 @@ package pages;
 
 import base.BaseClass;
 import helper.*;
-import org.codehaus.plexus.logging.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.Reporter;
 
 import java.awt.*;
-import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.concurrent.TimeUnit;
 
 public class CustomerAdcopy extends BaseClass
 {
@@ -93,17 +86,20 @@ public class CustomerAdcopy extends BaseClass
             String date = dateObj.format(formatter);
             CommonUtility.sendKeys(inputRecieveddate,date);
             CommonUtility.clickElement(encodedchckbox);
-            String strLen=String.valueOf(len);
-            char[] digit=strLen.toCharArray();
+            String strLen = String.valueOf(30);
+            char[] digit = strLen.toCharArray();
             try {
+
                 Robot robot=new Robot();
                 robot.keyPress(KeyEvent.VK_A);
                 robot.keyRelease(KeyEvent.VK_A);
+
                 robot.keyPress(KeyEvent.VK_A);
                 robot.keyRelease(KeyEvent.VK_A);
                 CommonUtility.sendKeys(length, String.valueOf(digit[1]));
                 CommonUtility.sendKeys(length,String.valueOf(digit[0]));
             }
+
             catch (AWTException e)
             {
                 ExceptionHandling.handleException(e);
