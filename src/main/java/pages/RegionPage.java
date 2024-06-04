@@ -15,6 +15,7 @@ import org.testng.asserts.SoftAssert;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -125,7 +126,7 @@ public class RegionPage extends BaseClass
         js.clickElementByJS(rdSubCount);
         js.clickElementByJS(rdRoundtopenny);
         js.clickElementByJS(btnaddRegion);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         if(retailpopup.isDisplayed())
         {
             CommonUtility.clickElement(drodownRetailUnit);
@@ -141,7 +142,7 @@ public class RegionPage extends BaseClass
                     break;
                 }
             }
-            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
             CommonUtility.clickElement(saveRetailunit);
         }
 

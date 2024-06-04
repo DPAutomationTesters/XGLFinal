@@ -12,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import static helper.WaitUtility.waittillElementInteractable;
@@ -73,7 +74,7 @@ public class RevenueTypesPage extends BaseClass
         SalesPersonPage sp= new SalesPersonPage(driver);
         sp.selectdropdownvalue();
         CommonUtility.clickElement(rtSave);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         if(spbreadcrum.isDisplayed())
         {
             System.out.println("RT value is "+spbreadcrum.getText());

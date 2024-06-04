@@ -13,6 +13,7 @@ import org.testng.asserts.SoftAssert;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -155,7 +156,7 @@ public class SalesPersonPage extends BaseClass
         }
 
         CommonUtility.clickElement(spSave);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         if(spbreadcrum.isDisplayed())
         {
             Assert.assertTrue(spbreadcrum.getText().contains("New Salesperson"));

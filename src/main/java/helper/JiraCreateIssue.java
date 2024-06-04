@@ -1,4 +1,4 @@
-package helper;
+/*package helper;
 import java.lang.annotation.RetentionPolicy;
 
 import java.lang.annotation.Retention;
@@ -9,3 +9,4 @@ public @interface JiraCreateIssue
 {
     boolean isCreateIssue();
 }
+*/
