@@ -2,6 +2,7 @@ package helper;
 
 import base.BaseClass;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -195,5 +196,35 @@ public class WaitUtility extends BaseClass
             ExceptionHandling.handleException(e);
             log.error("Element did not become visible within the specified time: " +e.getMessage());
         }
+    }
+    public static void waitforPageload(long maxSecondsToWait)
+    {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(maxSecondsToWait));
+        wait.until(driver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete"));
+
+    }
+
+    public static WebElement waitforelementtext(By ele,String text,long maxSecondsToWait)
+    {
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(maxSecondsToWait));
+        WebElement element=driver.findElement(ele);;
+        try{
+            WebElement finalElement = element;
+            element= wait.until(new ExpectedCondition<WebElement>()
+           {
+               @Override
+               public WebElement apply(WebDriver driver) {
+                   if (finalElement.getText().contains(text)) {
+                       return finalElement;
+                   } else {
+                       return null;
+                   }
+               }
+            });
+        }catch(Exception e)
+        {
+            ExceptionHandling.handleException(e);
+        }
+        return element;
     }
 }
