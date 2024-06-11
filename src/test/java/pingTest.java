@@ -1,13 +1,11 @@
 import base.BaseClass;
 import dataProvider.ConfigReader;
 import helper.ExceptionHandling;
-import org.junit.runner.Description;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.net.InetAddress;
-import java.net.UnknownHostException;
 
 public class pingTest extends BaseClass
 {

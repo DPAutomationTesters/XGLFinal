@@ -39,7 +39,7 @@ public class CustomerPage extends BaseClass
     @FindBy(xpath = "//button[@id='customersGrid.add']")
     WebElement addCustomers;
 
-    @FindBy(xpath = "//div[@id='customersProfile.type']/div[@class='iconContainer']/i")
+    @FindBy(xpath = "//div[@id='customersProfile.type']/div[@class='iconContainer']")
     WebElement typedropdwn;
 
     @FindBy(xpath = "//div[@id='customersProfile.type']/div[1]")
@@ -60,13 +60,13 @@ public class CustomerPage extends BaseClass
     @FindBy(xpath = "//input[@id='customersProfile.company']")
     WebElement custname;
 
-    @FindBy(xpath = "//div[@id='customersProfile.salespersonVid']/div[last()]")
+    @FindBy(xpath = "//div[@id='customersProfile.salespersonVid']")
     WebElement salespersondrpdwn;
 
     @FindBy(xpath = "//div[@id='customersProfile.salespersonVid']/div[last()]/div/div")
     WebElement spdropdownvalues;
 
-    @FindBy(xpath = "//div[@id='customersProfile.secondaryCommodityVid']/div[last()]/i")
+    @FindBy(xpath = "//div[@id='customersProfile.secondaryCommodityVid']")
     WebElement commoditydrpdown;
 
     @FindBy(xpath = "//div[@id='customersProfile.secondaryCommodityVid']/div[last()]/div/div")
@@ -78,6 +78,16 @@ public class CustomerPage extends BaseClass
     @FindBy(xpath = "//div[last()]/div[contains(@id,'breadCrumbs')]")
     WebElement custbreadcrum;// New Customer
 
+    @FindBy(xpath = "//*[@id='customersProfile.salespersonVid']/div[2]/div[1]")
+    WebElement dropdownvalue;
+
+    @FindBy(xpath = "//div[@name='salesPersonVid']/div[@class='iconContainer']/i")
+    WebElement salesofficeibutton;
+
+    @FindBy(xpath = "//div[@id='customersProfile.secondaryCommodityVid']/div[@class='iconContainer']/i")
+    WebElement commodityibutton;
+    @FindBy(xpath = "//*[@id='customersProfile.secondaryCommodityVid']/div[2]/div[2]")
+    WebElement commoditydropdownvalue;
     public CustomerPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -87,58 +97,39 @@ public class CustomerPage extends BaseClass
     {
         Boolean flag=false;
         Actions ac=new Actions(driver);
-        JavaScriptExecutor js=new JavaScriptExecutor();
+        WaitUtility.waitforPageload(10);
+         JavaScriptExecutor js=new JavaScriptExecutor();
+
         js.clickElementByJS(typedropdwn);
+        try{
         while(!custtypevalue.isDisplayed()) {
-            new Actions(driver).moveToElement(typedropdwn).perform();
-            ac.click(typedropdwn);
+           ac.click(typedropdwn);driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        }}
+        catch(Exception e)
+        {
+            ExceptionHandling.handleException(e);
         }
         if(custtypevalue.isDisplayed()) {
-            List<WebElement> ele = driver.findElements(By.xpath("//div[@id='customersProfile.type']/div[last()]/div/div"));
             if (type.equalsIgnoreCase("Agency"))
             {
                 WebElement ele1=driver.findElement(By.xpath("//div[@class='dropDown']/div[contains(text(),'Agency')]"));
-               try {
-                   Robot robot = new Robot();
-                   robot.mouseMove(ele1.getLocation().getX(), ele1.getLocation().getY()); // Move mouse to the dropdown
-                   robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-                   robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-               }
-               catch (Exception e)
-               {
-                   ExceptionHandling.handleException(e);
-               }
-                /*new Actions(driver).moveToElement(ele1).perform();
-                ac.click(ele1);
-                driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-                js.clickElementByJS(ele.get(0));*/
+                //WebElement ele1=driver.findElement(By.xpath("//div[@class='dropDown']/div[1]"));
+                js.clickElementByJS(ele1);
+                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
                 flag = true;
             }
             else if (type.equalsIgnoreCase("Standard"))
             {
                 WebElement ele1=driver.findElement(By.xpath("//div[@class='dropDown']/div[contains(text(),'Standard')]"));
-                new Actions(driver).moveToElement(ele1).perform();
-                ac.click(ele1);
+                js.clickElementByJS(ele1);
                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-                js.clickElementByJS(ele.get(2));
                 flag = true;
-            } else if (type.equalsIgnoreCase("Rep"))
+            }
+            else if (type.equalsIgnoreCase("Rep"))
             {
                 WebElement ele1=driver.findElement(By.xpath("//div[@class='dropDown']/div[contains(text(),'Rep')]"));
-                try {
-                    Robot robot = new Robot();
-                    robot.mouseMove(ele1.getLocation().getX(), ele1.getLocation().getY()); // Move mouse to the dropdown
-                    robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-                    robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-                }
-                catch (Exception e)
-                {
-                    ExceptionHandling.handleException(e);
-                }
-               /* new Actions(driver).moveToElement(ele1).perform();
-                ac.click(ele1);
-                driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-                js.clickElementByJS(ele.get(1));*/
+                js.clickElementByJS(ele1);
+                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
                 flag = true;
             }
         }
@@ -181,10 +172,41 @@ public class CustomerPage extends BaseClass
         String init=ut.randomAlphaNumeric(2);
         CommonUtility.clickElement(custname);
         CommonUtility.sendKeys(custname,init);
-        CommonUtility.clickElement(salespersondrpdwn);
-        sa.assertTrue(selectSalesperson());
-        CommonUtility.clickElement(commoditydrpdown);
-        sa.assertTrue(selectcommodity());
+
+        try{
+            if(salesofficeibutton.isDisplayed())
+            {
+                CommonUtility.clickElement(salesofficeibutton);
+                WaitUtility.waitStatic(500);
+                CommonUtility.selectdropdownvalue();
+                WaitUtility.waitStatic(100);
+            }
+        }catch(Exception e)
+        {
+            ExceptionHandling.handleException(e);
+            CommonUtility.clickElement(salespersondrpdwn);
+            WaitUtility.waitStatic(500);//
+            CommonUtility.selectdropdownvalue(dropdownvalue);
+            WaitUtility.waitStatic(100);
+        }
+
+        try{
+            if(commodityibutton.isDisplayed())
+            {
+                CommonUtility.clickElement(commodityibutton);
+                WaitUtility.waitStatic(500);
+                CommonUtility.selectdropdownvalue();
+                WaitUtility.waitStatic(100);
+            }
+        }catch(Exception e)
+        {
+            ExceptionHandling.handleException(e);
+            CommonUtility.clickElement(commoditydrpdown);
+            WaitUtility.waitStatic(500);//
+            CommonUtility.selectdropdownvalue(commoditydropdownvalue);
+            WaitUtility.waitStatic(100);
+        }
+
         CommonUtility.clickElement(savecustbtn);
         if(custbreadcrum.isDisplayed())
         {
@@ -208,10 +230,39 @@ public class CustomerPage extends BaseClass
         CommonUtility.clickElement(custname);
         CommonUtility.sendKeys(custname,init);
         System.out.println("Customer name is "+init);
-        CommonUtility.clickElement(salespersondrpdwn);
-        sa.assertTrue(selectSalesperson());
-        CommonUtility.clickElement(commoditydrpdown);
-        sa.assertTrue(selectcommodity());
+        try{
+            if(salesofficeibutton.isDisplayed())
+            {
+                CommonUtility.clickElement(salesofficeibutton);
+                WaitUtility.waitStatic(500);
+                CommonUtility.selectdropdownvalue();
+                WaitUtility.waitStatic(100);
+            }
+        }catch(Exception e)
+        {
+            ExceptionHandling.handleException(e);
+            CommonUtility.clickElement(salespersondrpdwn);
+            WaitUtility.waitStatic(500);//
+            CommonUtility.selectdropdownvalue(dropdownvalue);
+            WaitUtility.waitStatic(100);
+        }
+
+        try{
+            if(commodityibutton.isDisplayed())
+            {
+                CommonUtility.clickElement(commodityibutton);
+                WaitUtility.waitStatic(500);
+                CommonUtility.selectdropdownvalue();
+                WaitUtility.waitStatic(100);
+            }
+        }catch(Exception e)
+        {
+            ExceptionHandling.handleException(e);
+            CommonUtility.clickElement(commoditydrpdown);
+            WaitUtility.waitStatic(500);//
+            CommonUtility.selectdropdownvalue(commoditydropdownvalue);
+            WaitUtility.waitStatic(100);
+        }
         CommonUtility.clickElement(savecustbtn);
         if(custbreadcrum.isDisplayed())
         {
@@ -234,10 +285,39 @@ public class CustomerPage extends BaseClass
         String init=ut.randomAlphaNumeric(2);
         CommonUtility.clickElement(custname);
         CommonUtility.sendKeys(custname,init);
-        CommonUtility.clickElement(salespersondrpdwn);
-        sa.assertTrue(selectSalesperson());
-        CommonUtility.clickElement(commoditydrpdown);
-        sa.assertTrue(selectcommodity());
+        try{
+            if(salesofficeibutton.isDisplayed())
+            {
+                CommonUtility.clickElement(salesofficeibutton);
+                WaitUtility.waitStatic(500);
+                CommonUtility.selectdropdownvalue();
+                WaitUtility.waitStatic(100);
+            }
+        }catch(Exception e)
+        {
+            ExceptionHandling.handleException(e);
+            CommonUtility.clickElement(salespersondrpdwn);
+            WaitUtility.waitStatic(500);//
+            CommonUtility.selectdropdownvalue(dropdownvalue);
+            WaitUtility.waitStatic(100);
+        }
+
+        try{
+            if(commodityibutton.isDisplayed())
+            {
+                CommonUtility.clickElement(commodityibutton);
+                WaitUtility.waitStatic(500);
+                CommonUtility.selectdropdownvalue();
+                WaitUtility.waitStatic(100);
+            }
+        }catch(Exception e)
+        {
+            ExceptionHandling.handleException(e);
+            CommonUtility.clickElement(commoditydrpdown);
+            WaitUtility.waitStatic(500);//
+            CommonUtility.selectdropdownvalue(commoditydropdownvalue);
+            WaitUtility.waitStatic(100);
+        }
         CommonUtility.clickElement(savecustbtn);
         if(custbreadcrum.isDisplayed())
         {
