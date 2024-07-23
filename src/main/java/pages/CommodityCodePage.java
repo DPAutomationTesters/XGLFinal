@@ -1,9 +1,7 @@
 package pages;
 
 import base.BaseClass;
-import helper.CommonUtility;
-import helper.SaveProjectData;
-import helper.Utility;
+import helper.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -97,7 +95,10 @@ public class CommodityCodePage extends BaseClass
         {
             CommonUtility.clickElement(coSave);
         }
-        Assert.assertTrue(cobreadcrum.getText().contains("New Commodity"));
+        BrowserUtilities bu=new BrowserUtilities();
+        bu.refreshbrowser();
+        WaitUtility.waitforPageload(10);
+        Assert.assertTrue(cobreadcrum.getText().contains("Commodity"));
         SaveProjectData sp=new SaveProjectData();
         sp.saveprojectData("Commodity code",init);
     }
