@@ -78,6 +78,7 @@ public class CustomerAdcopy extends BaseClass
         CustomerSearchPage csp=new CustomerSearchPage(driver);
         if(csp.openCustomerProfile())
         {
+
             CommonUtility.clickElement(adcopytab);
            WaitUtility.waitTillElementtobeClickable(driver,30,addAdcopy);
             Utility ut= new Utility();
@@ -132,6 +133,10 @@ public class CustomerAdcopy extends BaseClass
                 SaveProjectData spd=new SaveProjectData();
                 spd.saveprojectData("Ad copy",init);
             }
+        }
+        else
+        {
+            Reporter.log("Could not open customer profile");
         }
     }
 }

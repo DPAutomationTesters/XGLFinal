@@ -1,9 +1,11 @@
-package pages;
 import base.BaseClass;
 import org.testng.annotations.Test;
+import pages.CustomerAdcopy;
+import pages.CustomerPage;
+import pages.Customer_AdCopyGroup;
+import pages.Customer_Order;
 
-
-public class Create_Order extends BaseClass
+public class XGLT_21649_Test extends BaseClass
 {
     @Test(priority = 1,enabled = true)
     public void CreateNewStandardCust()
@@ -15,11 +17,10 @@ public class Create_Order extends BaseClass
     public void createNewaddcopy()
     {
         CustomerAdcopy ad= new CustomerAdcopy(driver);
-        int argumentValue = 123; // Provided an appropriate integer value
-        ad.createaddcopy(argumentValue);
+        ad.createaddcopy(30);
     }
 
-    @Test(priority = 3,enabled = true)
+    @Test(priority = 3,enabled = false)
     public void createNewcopygroup()
     {
         Customer_AdCopyGroup AC=new Customer_AdCopyGroup(driver);

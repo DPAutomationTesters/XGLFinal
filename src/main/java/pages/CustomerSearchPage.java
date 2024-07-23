@@ -10,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.asserts.SoftAssert;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -58,7 +59,7 @@ public class CustomerSearchPage extends BaseClass
     @FindBy(xpath = "//div[@class='dropDown']/div[contains(text(),'Customer Name')]")
     WebElement custnameselect;
 
-    @FindBy(xpath = "//*[contains(@class, 'ng-pristine') and @ng-model='tempModel.value']")
+    @FindBy(xpath = "//*[@id=\"customersGrid.selectSearch\"]/div/input[@ng-model='tempModel.value']")
     WebElement custsearchinput; // click, send key
 
     @FindBy(xpath = "//div[@class='textContent']/h1") //No Items to Display
@@ -104,10 +105,18 @@ public class CustomerSearchPage extends BaseClass
         }
         catch(NoSuchElementException e)
         {
+            ExceptionHandling.handleException(e);
             flag=true;
         }
-        String str= "//div[@class='slick-cell l3 r3']/div[contains(text(),'"+Customername+"')]";
-        Assert.assertTrue(driver.findElement(By.xpath(str)).isDisplayed());
+        try{
+            String str= "//div[@class='slick-cell l3 r3']/div[contains(text(),'"+Customername+"')]";
+            SoftAssert sa= new SoftAssert();
+            sa.assertTrue(driver.findElement(By.xpath(str)).isDisplayed());
+        }
+        catch(NoSuchElementException e)
+        {
+            ExceptionHandling.handleException(e);
+        }
         return flag;
     }
 

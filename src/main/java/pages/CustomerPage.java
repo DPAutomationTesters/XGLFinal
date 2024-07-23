@@ -24,6 +24,9 @@ public class CustomerPage extends BaseClass
     public
     WebElement menuOrders;
 
+    @FindBy(id="header.menuReconciliation")
+    public WebElement menuRecon;
+
     @FindBy(id="header.subMenuCustomers")
     public
     WebElement menuCustomers;
@@ -162,8 +165,8 @@ public class CustomerPage extends BaseClass
     public void createStandardCustomer()
     {
         CommonUtility.clickElement(menuOrders);
-        CommonUtility.clickElement(menuCustomers);
-        SoftAssert sa=new SoftAssert();
+       CommonUtility.clickElement(menuCustomers);
+       SoftAssert sa=new SoftAssert();
         sa.assertTrue(breadcrumvalue.getText().equalsIgnoreCase("Customers"));
         CommonUtility.clickElement(addCustomers);
         //driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
