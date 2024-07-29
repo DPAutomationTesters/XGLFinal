@@ -21,7 +21,6 @@ public class orderReconciliationPageThird extends BaseClass
     @FindBy(xpath = "//button[@id='orderReconciliation.search']")
     WebElement searchOrderReconciliation;
 
-
     @FindBy(xpath = "//div[contains(@class,'actionHighlight')]")
     //div[@class='slick-cell l0 r0 actionHighlight active']
     WebElement ClickOnOrder;
@@ -29,7 +28,6 @@ public class orderReconciliationPageThird extends BaseClass
     @FindBy(xpath = "//div[contains(@class,'checkBoxSelection')]")
     //div[@class='fa fa-square']
     WebElement ClickAdUnitCheckbox;
-
 
     public orderReconciliationPageThird(WebDriver driver) {
         this.driver = driver;
