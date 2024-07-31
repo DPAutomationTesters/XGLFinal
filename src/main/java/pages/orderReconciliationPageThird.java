@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class orderReconciliationPageThird extends BaseClass
 {
@@ -43,13 +44,6 @@ public class orderReconciliationPageThird extends BaseClass
         CommonUtility.clickElement(ClickOnOrder);
         Utility.waitforPagetoLoad(driver,20);
         CommonUtility.clickElement(ClickAdUnitCheckbox);
-        //String Linenumber = "str";
-        // String str= "//div[@class='slick-cell l1 r1']/div[contains(text(),'"+Linenumber+"')]";
-        // Assert.assertTrue(driver.findElement(By.xpath(str)).isDisplayed());
-        // return flag;
-
+        Assert.assertTrue(ClickAdUnitCheckbox.isDisplayed());
     }
-
-
-
 }

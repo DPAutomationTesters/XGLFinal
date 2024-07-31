@@ -2,8 +2,6 @@ import base.BaseClass;
 import org.testng.annotations.*;
 import pages.orderReconciliationPageThird;
 
-import static listners.ExtentManager.extent;
-
 public class reconciliationAdUnits extends BaseClass
 {
 
