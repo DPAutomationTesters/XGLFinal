@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-public class massEdit280 extends BaseClass
+public class massEdit2539 extends BaseClass
 {
     @FindBy(id="header.menuOrders")
     public
@@ -26,19 +26,19 @@ public class massEdit280 extends BaseClass
     public
     WebElement enterCustomerName;
 
-    @FindBy(xpath="(//input[@class='defaultTextInput ng-pristine ng-untouched ng-valid ng-empty ng-valid-required'])[10]")
+    @FindBy(xpath="//div[@id='customersProfile.secondaryCommodityVid']//i[@class='fa fa-angle-down']")
     public
     WebElement commodityDropdown;
 
-    @FindBy(xpath="//span[contains(text(),'ALC_BEER')]")
+    @FindBy(xpath="//div[contains(text(),'00')]")
     public
     WebElement selectCommodity;
 
-    @FindBy(xpath = "//div[@id='customersProfile.salespersonVid']//input[@class='defaultTextInput ng-pristine ng-untouched ng-valid ng-empty ng-valid-required']")
+    @FindBy(xpath = "//div[@id='customersProfile.salespersonVid']//i[@class='fa fa-angle-down']")
     public
     WebElement salespersonDropdown;
 
-    @FindBy(xpath = "//span[@title='GAB | Grace A. Bowen']")
+    @FindBy(xpath = "//div[contains(text(),'1F6')]")
     public
     WebElement selectSalesperson;
 
@@ -122,19 +122,19 @@ public class massEdit280 extends BaseClass
     public
     WebElement clickOnQuantity;
 
-    @FindBy(xpath = "(//input[@class='defaultTextInput ng-pristine ng-untouched ng-valid ng-empty ng-valid-required'])[1]")
+    @FindBy(xpath = "(//i[@class='fa fa-angle-down'])[3]")
     public
     WebElement clickOnNetworkDropdown;
 
-    @FindBy(xpath = "//span[@title='AEN | * Arts & Entertainment']")
+    @FindBy(xpath = "//div[contains(text(),'AEN')]")
     public
     WebElement selectNetwork;
 
-    @FindBy(xpath = "(//input[@class='defaultTextInput ng-pristine ng-untouched ng-valid ng-empty ng-valid-required'])[1]")
+    @FindBy(xpath = "(//i[@class='fa fa-angle-down'])[4]")
     public
     WebElement  clickOnRetailDropdown;
 
-    @FindBy(xpath = "//span[contains(text(),'BXLY | Bexley')]")
+    @FindBy(xpath = "//div[@class='dropDown']//div[1]")
     public
     WebElement selectRetail;
 
@@ -194,7 +194,7 @@ public class massEdit280 extends BaseClass
     public
     WebElement success;
 
-    public massEdit280(WebDriver driver) {
+    public massEdit2539(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
