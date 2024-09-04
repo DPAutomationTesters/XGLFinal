@@ -1,9 +1,8 @@
 import base.BaseClass;
+import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
-import pages.CustomerAdcopy;
-import pages.CustomerPage;
-import pages.Customer_AdCopyGroup;
-import pages.Customer_Order;
+import pages.*;
 
 public class XGLT_21649_Test extends BaseClass
 {
@@ -14,23 +13,38 @@ public class XGLT_21649_Test extends BaseClass
         cp.createStandardCustomer();
     }
     @Test(priority = 2,enabled = true)
-    public void createNewaddcopy()
+    public void createStandardCopygroup()
     {
         CustomerAdcopy ad= new CustomerAdcopy(driver);
         ad.createaddcopy(30);
-    }
-
-    @Test(priority = 3,enabled = false)
-    public void createNewcopygroup()
-    {
         Customer_AdCopyGroup AC=new Customer_AdCopyGroup(driver);
-        AC.createaddcopyGroup();
+        AC.createaddcopytypeGroup("Standard");
     }
 
-    @Test(priority=4, enabled = false)
+    @Test(priority=3, enabled = true)
     public void Customer_NewOrder()
     {
         Customer_Order CO =new Customer_Order(driver);
         CO.Customer_OrderAdd();
+    }
+
+    @Test(priority = 4,enabled = true)
+    public void Customer_NewOrderRetailline()
+    {
+      Customer_Orderline col= new Customer_Orderline(driver);
+       Assert.assertTrue(col.Customer_OrderlineAdd());
+        OL_approve oa=new OL_approve(driver);
+        oa.approveOL();
+
+        if(oa.editapproveOL())
+        {        oa.verifypriorityvalues();
+                oa.verifyrevenuetypevalues();
+        Reporter.log("AP/SC orderline updated successfully");}
+        else {
+            Reporter.log("Edit orderline failed");
+            Assert.fail("Edit orderline failed");
+        }
+
+
     }
 }

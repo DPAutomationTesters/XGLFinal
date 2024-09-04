@@ -40,6 +40,12 @@ public class JavaScriptExecutor extends BaseClass
     {
        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
     }
+
+    public void scrolltotopbyJS()
+    {
+        js.executeScript("window.scrollTo(0, 0);");
+    }
+
     public void zoomout(int zoomPercentage)
     {
         if (zoomPercentage >= 10 && zoomPercentage <= 500) { // Adjust range as needed

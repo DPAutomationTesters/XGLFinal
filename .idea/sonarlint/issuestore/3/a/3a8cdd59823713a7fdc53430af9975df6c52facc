@@ -1,21 +1,19 @@
 
-o	java:S116&"SRename this field "AdCopyId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õîÊ¸8¡ª‰Ø¸1
-k	java:S116A"ORename this field "Save" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ªóÏ8¢ª‰Ø¸1
+o	java:S116&"SRename this field "AdCopyId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õîÊ¸8¯Àö®Œ2
+k	java:S116A"ORename this field "Save" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜ªóÏ8°Àö®Œ2
 R
-java:S3252"5Use static access with "base.BaseClass" for "driver".(ÁÜÑ¥8¨ª‰Ø¸1
+java:S3252"5Use static access with "base.BaseClass" for "driver".(ÁÜÑ¥8ıÉÀî2
 R
-java:S2209"5Change this instance-reference to a static reference.(ÁÜÑ¥8¨ª‰Ø¸1
+java:S2209"5Change this instance-reference to a static reference.(ÁÜÑ¥8ıÉÀî2
 \
-java:S1128"?Remove this unused import 'org.codehaus.plexus.logging.Logger'.(Ü¹ÈŒ8±ª‰Ø¸1
+java:S1128"?Remove this unused import 'org.codehaus.plexus.logging.Logger'.(Ü¹ÈŒ8ÊÀî2
 P
-java:S1128"3Remove this unused import 'org.openqa.selenium.By'.(ÿŠŞ›8²ª‰Ø¸1
+java:S1128"3Remove this unused import 'org.openqa.selenium.By'.(ÿŠŞ›8ÊÀî2
 j
-java:S1128"MRemove this unused import 'org.openqa.selenium.support.ui.ExpectedCondition'.(Ü¥ö’8²ª‰Ø¸1
+java:S1128"MRemove this unused import 'org.openqa.selenium.support.ui.ExpectedCondition'.(Ü¥ö’8ÊÀî2
 f
-java:S1128"IRemove this unused import 'org.openqa.selenium.support.ui.WebDriverWait'.(¥÷ó8²ª‰Ø¸1
-R
-java:S1128"0Remove this unused import 'org.testng.Reporter'.(ÿ±«ùıÿÿÿÿ8²ª‰Ø¸1
+java:S1128"IRemove this unused import 'org.openqa.selenium.support.ui.WebDriverWait'.(¥÷ó8ÊÀî2
 S
-java:S1128"6Remove this unused import 'java.awt.event.InputEvent'.(öï‚—8²ª‰Ø¸1
+java:S1128"6Remove this unused import 'java.awt.event.InputEvent'.(öï‚—8ÊÀî2
 W
-java:S1128":Remove this unused import 'java.util.concurrent.TimeUnit'.(Æ™ş8²ª‰Ø¸1
+java:S1128":Remove this unused import 'java.util.concurrent.TimeUnit'.(Æ™ş8‘ÊÀî2

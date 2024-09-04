@@ -1,11 +1,13 @@
 
-m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿìŞû8©Šúµ›1
-m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿìŞû8©Šúµ›1
-m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿìŞû8©Šúµ›1
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿìŞû8©Šúµ›1
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿìŞû8©Šúµ›1
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿìŞû8©Šúµ›1
+~
+java:S14889"aImmediately return this expression instead of assigning it to the temporary variable "todayDate".(ËÑ¶÷8óÙÂÂ2
 T
-java:S2629!"7Use the built-in formatting to construct this argument.(Ïµ¥À8ªŠúµ›1
+java:S2629$"7Use the built-in formatting to construct this argument.(Ïµ¥À8ªŠúµ›1
 ^
-java:S3457!"AFormat specifiers should be used instead of string concatenation.(Ïµ¥À8¶Šúµ›1
-X	java:S125 "<This block of commented-out lines of code should be removed.(ÃÄ™8¶Šúµ›1
+java:S3457$"AFormat specifiers should be used instead of string concatenation.(Ïµ¥À8¶Šúµ›1
+X	java:S125#"<This block of commented-out lines of code should be removed.(ÃÄ™8¶Šúµ›1
 ^
-java:S3457'"AFormat specifiers should be used instead of string concatenation.(±¿©8ÖŞúµ›1
+java:S3457*"AFormat specifiers should be used instead of string concatenation.(±¿©8ÖŞúµ›1

@@ -204,13 +204,12 @@ public class WaitUtility extends BaseClass
 
     }
 
-    public static WebElement waitforelementtext(By ele,String text,long maxSecondsToWait)
+    public static WebElement waitforelementtext(WebElement ele,String text,long maxSecondsToWait)
     {
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(maxSecondsToWait));
-        WebElement element=driver.findElement(ele);;
         try{
-            WebElement finalElement = element;
-            element= wait.until(new ExpectedCondition<WebElement>()
+            WebElement finalElement = ele;
+            ele= wait.until(new ExpectedCondition<WebElement>()
            {
                @Override
                public WebElement apply(WebDriver driver) {
@@ -225,6 +224,6 @@ public class WaitUtility extends BaseClass
         {
             ExceptionHandling.handleException(e);
         }
-        return element;
+        return ele;
     }
 }

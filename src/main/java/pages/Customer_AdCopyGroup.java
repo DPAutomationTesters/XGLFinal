@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+import org.testng.Reporter;
 import org.testng.asserts.SoftAssert;
 import java.util.List;
 import java.awt.*;
@@ -118,11 +118,20 @@ public class Customer_AdCopyGroup extends BaseClass {
             //dropdown.selectByIndex(0);
             List<WebElement> elements = driver.findElements(By.xpath("//div[@name='rotationId']//div[contains(@class,'auto-complete-list-drop-down')]/div"));
             elements.get(0).click();
-
-            CommonUtility.clickElement(SaveCopyItem);
+            try{
+                while(SaveCopyItem.isDisplayed())
+                {
+                  CommonUtility.clickElement(SaveCopyItem);}}
+            catch(Exception e){
+                ExceptionHandling.handleException(e);
+            }
             CommonUtility.clickElement(SaveGroup);
             SoftAssert sa=new SoftAssert();
             sa.assertTrue(breadcrumvalue.getText().equalsIgnoreCase("Customer"));
+            if(breadcrumvalue.getText().equalsIgnoreCase("Customer"))
+            {
+                Reporter.log("Standard copy group created with group description "+init);
+            }
 
         }
 

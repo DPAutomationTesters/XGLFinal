@@ -9,6 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.asserts.SoftAssert;
 
 import javax.swing.*;
@@ -20,6 +21,7 @@ import java.util.concurrent.TimeUnit;
 
 public class CustomerPage extends BaseClass
 {
+
     @FindBy(id="header.menuOrders")
     public
     WebElement menuOrders;
@@ -91,11 +93,50 @@ public class CustomerPage extends BaseClass
     WebElement commodityibutton;
     @FindBy(xpath = "//*[@id='customersProfile.secondaryCommodityVid']/div[2]/div[2]")
     WebElement commoditydropdownvalue;
+
+    @FindBy(xpath = "//button[@class='removeAll']")
+    WebElement clearAll;
+
+    @FindBy(xpath = "//div[@class='popupWindow ng-scope']")
+    WebElement confirmpopup;
+
+    @FindBy(xpath = "//button[@value='ok']")
+    WebElement confirmOK;
+
+    @FindBy(xpath = "//div[contains(@class,'pageSettingsDrtv')]")
+    WebElement savefilters;
+
+    @FindBy(xpath = "//button[contains(text(),'Save')]")
+    WebElement savesettings;
+
     public CustomerPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
+    public boolean resetUserbasedpersistnanceCP()
+    {
+        boolean flag=false;
+        CommonUtility.clickElement(menuOrders);
+        CommonUtility.clickElement(menuCustomers);
+        SoftAssert sa=new SoftAssert();
+        sa.assertTrue(breadcrumvalue.getText().equalsIgnoreCase("Customers"));
+        try{
+        CommonUtility.clickElement(clearAll);
+        if(confirmpopup.isDisplayed())
+        {
+            CommonUtility.clickElement(confirmOK);
+            CommonUtility.clickElement(savefilters);
+            CommonUtility.clickElement(savesettings);
+            flag=true;
+        }}
+        catch(Exception e)
+        {
+            ExceptionHandling.handleException(e);
+            Reporter.log("No filter is present");
+        }
+        return flag;
+    }
     public boolean selectCustType(String type)
     {
         Boolean flag=false;
@@ -172,7 +213,7 @@ public class CustomerPage extends BaseClass
         //driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         sa.assertTrue(selectCustType("Standard"));
         Utility ut= new Utility();
-        String init=ut.randomAlphaNumeric(2);
+        String init=ut.randomAlphaNumeric(2)+"automation";
         CommonUtility.clickElement(custname);
         CommonUtility.sendKeys(custname,init);
 

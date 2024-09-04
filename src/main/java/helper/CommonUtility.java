@@ -44,4 +44,17 @@ public class CommonUtility extends BaseClass
             ExceptionHandling.handleException(et);
         }
     }
+
+    public static void selectdropdownvaluefromlist(WebElement ele)
+    {
+        try {
+
+            CommonUtility.clickElement(ele);
+            Reporter.log("Value selected is " + ele.getText());
+        }
+        catch(Exception et)
+        {
+            ExceptionHandling.handleException(et);
+        }
+    }
 }

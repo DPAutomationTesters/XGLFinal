@@ -1,10 +1,23 @@
 
-r	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¿©Èùÿÿÿÿ8¬ÇÂÏ¨1
+r	java:S117z"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¿©Èùÿÿÿÿ8¬ÇÂÏ¨1
+{	java:S116M"ZRename this field "CEdropdownvalue" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›»Àúÿÿÿÿ8°Ú™¢2
 R
-java:S3252;"5Use static access with "base.BaseClass" for "driver".(ÁÜÑ¥8ÍöÓÑ¨1
+java:S3252O"5Use static access with "base.BaseClass" for "driver".(ÁÜÑ¥8ÍöÓÑ¨1
 R
-java:S2209;"5Change this instance-reference to a static reference.(ÁÜÑ¥8ÎöÓÑ¨1
+java:S2209O"5Change this instance-reference to a static reference.(ÁÜÑ¥8ÎöÓÑ¨1
+a
+java:S1128"?Remove this unused import 'org.apache.tools.ant.taskdefs.Java'.(ä™»¢ÿÿÿÿÿ8¡Ü™¢2
+b
+java:S1128"ERemove this unused import 'org.openqa.selenium.interactions.Actions'.(ÅÑÃ8¡Ü™¢2
+B
+java:S1128"%Remove this unused import 'java.awt'.(ï´µ©8¡Ü™¢2
+Q
+java:S1128"4Remove this unused import 'java.awt.event.KeyEvent'.(¬ğİÍ8¡Ü™¢2
 M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8¯şó ±1
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8¯şó ±1
+W
+java:S1128":Remove this unused import 'java.util.concurrent.TimeUnit'.(Æ™ş8¡Ü™¢2
+h
+java:S1128"KRemove this unused import 'helper.WaitUtility.waittillElementInteractable'.(Éì¸œ8¡Ü™¢2
 \
-java:S1128"?Remove this unused import 'org.openqa.selenium.Keys.PAGE_DOWN'.(Õã‰8¯şó ±1
+java:S1128"?Remove this unused import 'org.openqa.selenium.Keys.PAGE_DOWN'.(Õã‰8¯şó ±1

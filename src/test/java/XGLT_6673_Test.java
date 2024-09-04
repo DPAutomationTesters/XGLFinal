@@ -40,9 +40,9 @@ public class XGLT_6673_Test extends BaseClass
     @Test(priority = 5,enabled = true)
     public void createPiggybackCopygroup()
     {
-       /* CustomerAdcopy ad= new CustomerAdcopy(driver);
+        CustomerAdcopy ad= new CustomerAdcopy(driver);
         ad.createaddcopy(15);
-        ad.createaddcopy(15);*/
+        ad.createaddcopy(15);
         Customer_AdCopyGroup AC=new Customer_AdCopyGroup(driver);
         AC.createaddcopytypeGroup("Piggyback");
     }

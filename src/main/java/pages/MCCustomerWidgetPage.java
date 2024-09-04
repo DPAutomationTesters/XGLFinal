@@ -21,6 +21,8 @@ import java.util.List;
 public class MCCustomerWidgetPage extends BaseClass
 {
     WebDriverWait wait;
+    @FindBy(id = "header.missionControl")
+    WebElement missioncontrol;
     @FindBy(xpath = "//div[contains(@class,'btnBig') and contains(@ng-click,'goToCustomersGrid')and contains(@ng-click,'activeWithRevenue')]")
     WebElement activewithrev;
 
@@ -67,6 +69,7 @@ public class MCCustomerWidgetPage extends BaseClass
         Boolean flag= false;
         MCSettingsPage mc= new MCSettingsPage(driver);
         BrowserUtilities bu= new BrowserUtilities();
+        CommonUtility.clickElement(missioncontrol);
             mc.openMcSettings();
             mc.resetSettings();
             mc.addwait(mc.mcsettingbtn);
@@ -78,6 +81,7 @@ public class MCCustomerWidgetPage extends BaseClass
             flag=true;
         return flag;
     }
+
     public String getactiverevcount(WebElement ele)
     {
         WaitUtility.waitTillElementVisible(driver,30,ele);
@@ -128,9 +132,9 @@ public class MCCustomerWidgetPage extends BaseClass
             int ht=gridCanvas.getSize().getHeight();
             System.out.println("Height is "+ht);
             List<WebElement> recordsOnPage = driver.findElements(By.xpath("//div[@class='grid-canvas']/div[contains(@class,'ui-widget-content slick-row')]"));
-            if(ht>516) {
+            if(ht>534) {
                 totalRecords = totalRecords + (ht / 30);
-            } else if(ht<=516)
+            } else if(ht<=534)
             {
                 totalRecords = totalRecords + recordsOnPage.size();
             }
@@ -177,7 +181,6 @@ public class MCCustomerWidgetPage extends BaseClass
         }
         return flag;
     }
-    //activewithoutrev,inactivewithoutrevvalue
     public Boolean verifyactivewithoutrevcount()
     {
         BrowserUtilities bu=new BrowserUtilities();
