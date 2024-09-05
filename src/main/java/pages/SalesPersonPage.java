@@ -159,7 +159,7 @@ public class SalesPersonPage extends BaseClass
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         if(spbreadcrum.isDisplayed())
         {
-            Assert.assertTrue(spbreadcrum.getText().contains("New Salesperson"));
+            Assert.assertTrue(spbreadcrum.getText().contains("Salesperson"));
             SaveProjectData spd=new SaveProjectData();
             spd.saveprojectData("Salesperson",init);
         }

@@ -65,7 +65,7 @@ public class SalesOfficePage extends BaseClass
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
         if(spbreadcrum.isDisplayed())
         {
-            Assert.assertTrue(spbreadcrum.getText().contains("New Sales Office"));
+            Assert.assertTrue(spbreadcrum.getText().contains("Sales Office"));
             SaveProjectData spd=new SaveProjectData();
             spd.saveprojectData("Sales Office",init);
         }

@@ -1,8 +1,0 @@
-
-m	java:S117C"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÞ˜å8µ”Û ±1
-R
-java:S32524"5Use static access with "base.BaseClass" for "driver".(ÁÜÑ¥8Á”Û ±1
-R
-java:S22094"5Change this instance-reference to a static reference.(ÁÜÑ¥8Á”Û ±1
-o	java:S1008"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á‹žåüÿÿÿÿ8Á”Û ±1
-U	java:S106O"9Replace this use of System.out or System.err by a logger.(ºªÀš8Æ”Û ±1

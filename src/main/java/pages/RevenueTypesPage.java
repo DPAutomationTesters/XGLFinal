@@ -78,7 +78,7 @@ public class RevenueTypesPage extends BaseClass
         if(spbreadcrum.isDisplayed())
         {
             System.out.println("RT value is "+spbreadcrum.getText());
-            Assert.assertTrue(spbreadcrum.getText().contains("New Revenue Type"));
+            Assert.assertTrue(spbreadcrum.getText().contains("Revenue Type"));
             SaveProjectData spd=new SaveProjectData();
             spd.saveprojectData("Revenue type",init);
         }

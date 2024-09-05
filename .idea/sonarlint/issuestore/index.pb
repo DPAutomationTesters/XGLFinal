@@ -117,8 +117,6 @@ M
 0test-output/Command line suite/testng-failed.xml,a\1\a1b21eda41ddee7ce416532877773fb740546c6d
 N
 test-output/testng-results.xml,0\0\00e0b2ae7f44da7a9e12fd1418e328ac78839661
-Y
-)src/main/java/pages/RevenueTypesPage.java,b\1\b1e533d4b997c624e3c264d7cd556b58302acc83
 [
 +src/main/java/dataProvider/ExcelReader.java,0\7\07a1f55c3c640887244bb95ce48bab68004c8d12
 W
@@ -164,8 +162,6 @@ Z
 Q
 !src/test/java/XGLT_6752_Test.java,6\6\66f6ff3a1f4c16f8f7d8b76b0f9fd88c18be2b0b
 W
-'src/main/java/pages/RetailUnitPage.java,3\4\3499eed3e8aac123109b8363592437ba2c912396
-W
 'src/main/java/pages/MCSettingsPage.java,a\6\a68e840db653fed941edc042fed3c512cc8c48b1
 Q
 !src/test/java/XGLT_6693_Test.java,a\e\ae2424b8a0ba8611636ac174ff933dbcbe0f20bb
@@ -195,20 +191,14 @@ W
 'src/main/java/pages/CustomerAdcopy.java,3\a\3a8cdd59823713a7fdc53430af9975df6c52facc
 \
 ,src/main/java/pages/MCFinanceWidgetPage.java,8\7\87b304f558c13d811c2008e3ab6064d5d075a26c
-X
-(src/main/java/pages/SalesOfficePage.java,b\1\b1df1c63adf06e58f172192c9ada05053fc95d68
 Q
 !src/main/java/base/BaseClass.java,a\2\a2ecdf21ff1153ba24b05ac2f5487a082ef289e7
 U
 %src/main/java/helper/DateUtility.java,3\b\3b794890ebfb2331f2472b9c1fbe951d2b97df8d
-S
-#src/main/java/pages/RegionPage.java,7\b\7bfd41930f4a7b1af17471f32db45d20229c5623
 Q
 !src/test/java/XGLT_6692_Test.java,c\f\cf802b826579d32cdf8f1fd4450b12bd2d50d94f
 W
 'src/main/java/helper/CommonUtility.java,e\9\e905315ff89d6f8e1d81c7b8a7d2356c51d195b8
-X
-(src/main/java/pages/SalesPersonPage.java,c\a\ca10984bfc3181f36f6cb9fc03bdefab7a384565
 \
 ,src/main/java/helper/JavaScriptExecutor.java,d\1\d11652c308c81b2d46e574cab3e3e6a0b73978ac
 [

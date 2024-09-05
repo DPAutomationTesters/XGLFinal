@@ -19,20 +19,20 @@ public class XGLT_6685_Test extends BaseClass
         Assert.assertTrue(mcw.setMCCustomer());
         Assert.assertTrue(mcw.verifyactivewithrevcount());
     }
-    @Test(priority = 2,enabled = false,groups = {"Mission Control - Customers"})
+    @Test(priority = 2,enabled = true,groups = {"Mission Control - Customers"})
     public void MCinactivewithrev()
     {
         MCCustomerWidgetPage mcw=new MCCustomerWidgetPage(driver);
         Assert.assertTrue(mcw.verifyinactivewithrevcount());
     }
-    @Test(priority = 3,groups = {"Mission Control - Customers"},enabled = false)
+    @Test(priority = 3,groups = {"Mission Control - Customers"},enabled = true)
     public void MCCredithold()
     {
         MCCustomerWidgetPage mcw=new MCCustomerWidgetPage(driver);
         Assert.assertTrue(mcw.verifycreditholdcount());
     }
 
-    @Test(priority = 3,enabled = false,groups = {"Mission Control - Customers"})
+    @Test(priority = 3,enabled = true,groups = {"Mission Control - Customers"})
     public void MCactivewithoutrev()
     {
         MCCustomerWidgetPage mcw=new MCCustomerWidgetPage(driver);

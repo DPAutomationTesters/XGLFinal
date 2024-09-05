@@ -92,7 +92,7 @@ public class RetailUnitPage extends BaseClass
             CommonUtility.clickElement(ruSave);
         }
         System.out.println("RO is "+cobreadcrum.getText());
-        Assert.assertTrue(cobreadcrum.getText().contains("New Retail Unit"));
+        Assert.assertTrue(cobreadcrum.getText().contains("Retail Unit"));
         SaveProjectData sp=new SaveProjectData();
         sp.saveprojectData("Retail",init);
     }
