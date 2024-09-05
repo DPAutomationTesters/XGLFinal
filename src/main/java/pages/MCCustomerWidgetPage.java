@@ -2,10 +2,7 @@ package pages;
 
 import base.BaseClass;
 //import dataProvider.ConfigReader;
-import helper.BrowserUtilities;
-import helper.CommonUtility;
-import helper.JavaScriptExecutor;
-import helper.WaitUtility;
+import helper.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -100,7 +97,12 @@ public class MCCustomerWidgetPage extends BaseClass
         int totalRecords = 0;
         while (next8pagebtn.isEnabled())
         {
-            next8pagebtn.click();
+            try {
+                next8pagebtn.click();
+            }catch (Exception e)
+            {
+                ExceptionHandling.handleException(e);
+            }
             if(driver.findElements(By.xpath("//div[@class='grid-canvas']/div[contains(@class,'ui-widget-content slick-row')]")).size()==0)
             {
                 return totalRecords;
